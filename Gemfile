@@ -22,6 +22,8 @@ gem 'pg'
 
 gem 'dotenv'
 
+gem 'tux'
+
 # Test requirements
 
 # Padrino Stable Gem

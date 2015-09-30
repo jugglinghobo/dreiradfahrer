@@ -7,9 +7,9 @@
     <![endif]-->
     %meta{:content => 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
     %meta{:name => :viewport, :content => 'width=device-width,initial-scale=1'}
-    %title= @title.present? ? "#{@title} | Padrino Admin" : "#{pat('login.title')} | Padrino Admin"
+    %title Velo Login
     = favicon_tag 'favicon.ico'
-    = stylesheet_link_tag 'bootstrap', 'application'
+    =stylesheet_link_tag '/stylesheets/bootstrap', '/stylesheets/application'
   %body
     = form_tag url(:sessions, :create), :class=>'login form-horizontal' do
       .login-header.modal-header
@@ -34,5 +34,4 @@
       .login-footer.modal-footer
         = submit_tag(pat('login.sign_in'), :class => 'btn btn-primary pull-right')
 
-        =javascript_include_tag 'jquery-1.11.0.min', (Padrino.env == :production ? 'bootstrap/bootstrap.min' : %w[bootstrap/affix bootstrap/alert bootstrap/button bootstrap/carousel bootstrap/collapse bootstrap/dropdown  bootstrap/tooltip bootstrap/transition  bootstrap/modal bootstrap/popover bootstrap/scrollspy bootstrap/tab]), :application
-
+    =javascript_include_tag '/javascripts/jquery-1.11.0.min', (Padrino.env == :production ? '/javascripts/bootstrap/bootstrap.min' : %w[/javascripts/bootstrap/affix /javascripts/bootstrap/alert /javascripts/bootstrap/button /javascripts/bootstrap/carousel /javascripts/bootstrap/collapse /javascripts/bootstrap/dropdown /javascripts/bootstrap/tooltip /javascripts/bootstrap/transition /javascripts/bootstrap/modal /javascripts/bootstrap/popover /javascripts/bootstrap/scrollspy /javascripts/bootstrap/tab]), "application"
