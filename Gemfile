@@ -22,6 +22,8 @@ gem 'pg'
 
 gem 'dotenv'
 
+gem 'paperclip'
+gem 'paperclip-rack'
 gem 'tux'
 
 # Test requirements

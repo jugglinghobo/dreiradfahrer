@@ -18,6 +18,10 @@ GEM
     bcrypt (3.1.10)
     bond (0.5.1)
     builder (3.2.2)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.7)
+      climate_control (>= 0.0.3, < 1.0)
     dotenv (2.0.2)
     haml (4.0.7)
       tilt
@@ -30,6 +34,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mimemagic (0.3.0)
     minitest (5.8.1)
     moneta (0.7.20)
     padrino (0.12.5)
@@ -67,6 +72,14 @@ GEM
       padrino-core (= 0.12.5)
     padrino-support (0.12.5)
       activesupport (>= 3.1)
+    paperclip (4.3.1)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (= 0.3.0)
+    paperclip-rack (0.0.2)
+      paperclip (>= 3.0)
     pg (0.18.3)
     polyglot (0.3.5)
     rack (1.5.5)
@@ -113,6 +126,8 @@ DEPENDENCIES
   dotenv
   haml
   padrino (= 0.12.5)
+  paperclip
+  paperclip-rack
   pg
   rake
   sass

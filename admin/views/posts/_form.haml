@@ -1,6 +1,6 @@
 - error = @post.errors.include?(:title)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :title, :class => 'control-label'
+  = f.label :title, :class => 'control-label'
   .controls
     =f.text_field :title, :class => 'form-control input-large input-with-feedback', :autofocus => true
     %span.help-inline=error ? f.error_message_on(:title, :class => 'text-error') : pat(:example)
@@ -10,6 +10,13 @@
   .controls
     ~f.text_area :body, :class => 'form-control input-large input-with-feedback'
     %span.help-inline=error ? f.error_message_on(:body, :class => 'text-error') : pat(:example)
+
+= f.fields_for :photos, @post.photos.new do |ff|
+  %fieldset.control-group{:class => error ? 'has-error' : ''}
+    = ff.label :photo, :class => 'control-label'
+    .controls
+      = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
+      %span.help-inline=error ? f.error_message_on(:body, :class => 'text-error') : pat(:example)
 
 .form-actions
   =f.submit pat(:save), :class => 'btn btn-primary'

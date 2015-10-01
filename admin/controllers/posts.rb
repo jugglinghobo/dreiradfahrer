@@ -13,6 +13,7 @@ Velo::Admin.controllers :posts do
 
   post :create do
     @post = Post.new(params[:post])
+    puts params.inspect
     if @post.save
       @title = pat(:create_title, :model => "post #{@post.id}")
       flash[:success] = pat(:create_success, :model => 'Post')
@@ -37,6 +38,7 @@ Velo::Admin.controllers :posts do
 
   put :update, :with => :id do
     @title = pat(:update_title, :model => "post #{params[:id]}")
+    puts params.inspect
     @post = Post.find(params[:id])
     if @post
       if @post.update_attributes(params[:post])
