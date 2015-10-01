@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 7) do
+ActiveRecord::Schema.define(version: 12) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,20 @@ ActiveRecord::Schema.define(version: 7) do
     t.datetime "updated_at"
   end
 
+  create_table "groups", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.integer  "post_id"
+    t.integer  "number"
+    t.string   "layout"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "paragraphs", force: :cascade do |t|
     t.text     "content"
     t.datetime "created_at"
@@ -33,7 +47,7 @@ ActiveRecord::Schema.define(version: 7) do
   end
 
   create_table "photos", force: :cascade do |t|
-    t.integer  "post_id"
+    t.integer  "page_id"
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
@@ -54,7 +68,7 @@ ActiveRecord::Schema.define(version: 7) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "layout",     default: "default"
+    t.integer  "group_id"
   end
 
 end

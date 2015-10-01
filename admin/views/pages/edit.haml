@@ -1,0 +1,13 @@
+%ul.nav.nav-tabs
+  %li=link_to tag_icon(:list, pat(:list)), url(:pages, :index)
+  %li=link_to tag_icon(:plus, pat(:new)), url(:pages, :new)
+  %li.active=link_to tag_icon(:edit, pat(:edit)), url(:pages, :edit, :id => @page.id)
+
+.tabs-content#page_form
+  = form_for :page, url(:pages, :update_layout, :id => @page.id), :method => :put, :class => 'form-horizontal' do |f|
+    %fieldset.control-group
+      = f.label :layout
+      .controls
+        = f.select :layout, :options => Layout.as_hash.to_a, :id => "layout_select", :class => "form-control input-large input-with-feedback"
+  #layout
+    = partial "pages/#{@page.layout}"

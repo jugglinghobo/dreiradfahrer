@@ -32,6 +32,8 @@ module Velo
     end
 
     access_control.roles_for :admin do |role|
+      role.project_module :pages, '/pages'
+      role.project_module :groups, '/groups'
       role.project_module :posts, '/posts'
     end
 
