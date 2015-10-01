@@ -11,6 +11,12 @@ Velo::Admin.controllers :posts do
     render 'posts/new'
   end
 
+  put :update_layout, :with => :id do
+    @post = Post.find params[:id]
+    @post.update_attributes params[:post]
+    partial "posts/#{@post.layout}"
+  end
+
   post :create do
     @post = Post.new(params[:post])
     puts params.inspect
@@ -37,6 +43,7 @@ Velo::Admin.controllers :posts do
   end
 
   put :update, :with => :id do
+    puts params.inspect
     @title = pat(:update_title, :model => "post #{params[:id]}")
     puts params.inspect
     @post = Post.find(params[:id])
@@ -78,9 +85,9 @@ Velo::Admin.controllers :posts do
     end
     ids = params[:post_ids].split(',').map(&:strip)
     posts = Post.find(ids)
-    
+
     if Post.destroy posts
-    
+
       flash[:success] = pat(:destroy_many_success, :model => 'Posts', :ids => "#{ids.to_sentence}")
     end
     redirect url(:posts, :index)

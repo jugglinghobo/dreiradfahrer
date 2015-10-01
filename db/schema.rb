@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 4) do
+ActiveRecord::Schema.define(version: 7) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 4) do
     t.datetime "picture_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rank"
+  end
+
+  create_table "post_layouts", force: :cascade do |t|
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -47,6 +54,7 @@ ActiveRecord::Schema.define(version: 4) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "layout",     default: "default"
   end
 
 end

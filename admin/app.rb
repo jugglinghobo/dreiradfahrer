@@ -19,7 +19,6 @@ module Velo
     # disable :sessions               # Disabled sessions by default (enable if needed)
     # disable :flash                  # Disables sinatra-flash (enabled by default if Sinatra::Flash is defined)
     # layout  :my_layout              # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
-    #
 
     set :admin_model, 'Account'
     set :login_page,  '/sessions/new'
@@ -34,6 +33,10 @@ module Velo
 
     access_control.roles_for :admin do |role|
       role.project_module :posts, '/posts'
+    end
+
+    get "/" do
+      redirect_to "admin/posts"
     end
 
     # Custom error management

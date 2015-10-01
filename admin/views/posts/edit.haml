@@ -3,6 +3,11 @@
   %li=link_to tag_icon(:plus, pat(:new)), url(:posts, :new)
   %li.active=link_to tag_icon(:edit, pat(:edit)), url(:posts, :edit, :id => @post.id)
 
-.tabs-content
-  = form_for :post, url(:posts, :update, :id => @post.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
-    =partial 'posts/form', :locals => { :f => f }
+.tabs-content#post_form
+  = form_for :post, url(:posts, :update_layout, :id => @post.id), :method => :put, :class => 'form-horizontal' do |f|
+    %fieldset.control-group
+      = f.label :layout
+      .controls
+        = f.select :layout, :options => Layout.as_hash.to_a, :id => "layout_select", :class => "form-control input-large input-with-feedback"
+  #layout
+    = partial "posts/#{@post.layout}"

@@ -25,6 +25,7 @@ gem 'dotenv'
 gem 'paperclip'
 gem 'paperclip-rack'
 gem 'tux'
+gem 'pry'
 
 # Test requirements
 
