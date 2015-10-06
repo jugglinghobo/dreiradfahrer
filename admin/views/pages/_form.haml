@@ -1,9 +1,9 @@
-- error = @page.errors.include?(:post_id)
+- error = @page.errors.include?(:page_id)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :post_id, :class => 'control-label'
+  =f.label :page_id, :class => 'control-label'
   .controls
-    =f.text_field :post_id, :class => 'form-control input-large input-with-feedback', :autofocus => true
-    %span.help-inline=error ? f.error_message_on(:post_id, :class => 'text-error') : pat(:example)
+    =f.text_field :page_id, :class => 'form-control input-large input-with-feedback', :autofocus => true
+    %span.help-inline=error ? f.error_message_on(:page_id, :class => 'text-error') : pat(:example)
 - error = @page.errors.include?(:number)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
   =f.label :number, :class => 'control-label'

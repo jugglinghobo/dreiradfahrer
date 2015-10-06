@@ -11,7 +11,7 @@ Velo::Admin.controllers :pages do
     render 'pages/new'
   end
 
-  post :create do
+  put :create do
     @page = Page.new(params[:page])
     if @page.save
       @title = pat(:create_title, :model => "page #{@page.id}")
@@ -22,6 +22,12 @@ Velo::Admin.controllers :pages do
       flash.now[:error] = pat(:create_error, :model => 'page')
       render 'pages/new'
     end
+  end
+
+  put :update_layout, :with => :id do
+    @page = Page.find params[:id]
+    @page.update_attributes params[:page]
+    partial "pages/#{@page.layout}"
   end
 
   get :edit, :with => :id do

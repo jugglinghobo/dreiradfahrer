@@ -1,0 +1,9 @@
+- paragraph = page.paragraphs.find_or_initialize_by(:rank => 0)
+.row
+  .col-xs-12
+    = simple_format(paragraph)
+
+- photo = page.photos.find_or_initialize_by(:rank => 0)
+.row
+  .col-xs-6
+    = image_tag photo.picture.url(:small) if photo.picture.exists?

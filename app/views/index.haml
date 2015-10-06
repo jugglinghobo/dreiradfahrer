@@ -1,4 +1,5 @@
-- Post.all.each do |post|
+- Page.all.each do |page|
+  = partial "pages/#{page.layout}", :locals => {:page => page}
   %hr
-  %h3= post.title
-  %p= post.body
+  %h3= page.title
+  %p= page.body

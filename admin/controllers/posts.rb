@@ -11,12 +11,6 @@ Velo::Admin.controllers :posts do
     render 'posts/new'
   end
 
-  put :update_layout, :with => :id do
-    @post = Post.find params[:id]
-    @post.update_attributes params[:post]
-    partial "posts/#{@post.layout}"
-  end
-
   post :create do
     @post = Post.new(params[:post])
     puts params.inspect
