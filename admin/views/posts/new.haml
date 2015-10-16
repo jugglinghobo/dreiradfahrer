@@ -4,10 +4,4 @@
 
 .tabs-content#post_form
   = form_for @post, url(:posts, :create), :class => 'form-horizontal' do |f|
-    %fieldset.control-group
-      = f.label :layout
-      .controls
-        = f.select :layout, :options => Layout.as_hash.to_a, :id => "layout_select", :class => "form-control input-large input-with-feedback"
-    .form-actions
-      = f.submit pat(:save), :class => 'btn btn-primary'
-      = link_to pat(:cancel), url(:posts, :index), :class => 'btn btn-default'
+    = partial 'posts/form', :locals => { :f => f }

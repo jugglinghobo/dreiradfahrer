@@ -1,17 +1,23 @@
-= form_for @page, url(:pages, :update, :id => @page.id), :multipart => true, :method => :put, :class => 'form-horizontal' do |f|
-  - error = @page.errors.include?(:title)
-  %fieldset.control-group{:class => error ? 'has-error' : ''}
-    = f.label :title, :class => 'control-label'
-    .controls
-      =f.text_field :title, :class => 'form-control input-large input-with-feedback', :autofocus => true
+= form_for :page, url(:pages, :update, :id => page.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
+  - paragraph = page.paragraphs.find_or_initialize_by(:rank => 0)
+  = f.fields_for :paragraphs, paragraph do |ff|
+    = ff.hidden_field :rank, :value => paragraph.rank
+    .row
+      .col-xs-12
+        = ff.text_area :content, :class => 'form-control '
 
-  - error = @page.errors.include?(:body)
-  %fieldset.control-group{:class => error ? 'has-error' : ''}
-    =f.label :body, :class => 'control-label'
-    .controls
-      ~f.text_area :body, :class => 'form-control input-large input-with-feedback'
-
+  - photo = page.photos.find_or_initialize_by(:rank => 0)
+  = f.fields_for :photos, photo do |ff|
+    = ff.hidden_field :rank, :value => photo.rank
+    .row
+      .col-xs-6
+        %fieldset.control-group
+          = ff.label :photo, :class => 'control-label'
+          .controls
+            = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
+      .col-xs-6
+        = image_tag photo.picture.url(:small) if photo.picture.exists?
   .form-actions
-    = f.submit pat(:save), :class => 'btn btn-primary'
-    = f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue'
-    = link_to pat(:cancel), url(:pages, :index), :class => 'btn btn-default'
+    =f.submit pat(:save), :class => 'btn btn-primary'
+    =f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue'
+    =link_to pat(:cancel), url(:posts, :edit, :id => page.post_id), :class => 'btn btn-default'

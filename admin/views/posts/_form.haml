@@ -1,0 +1,14 @@
+%fieldset.control-group.row
+  .col-xs-1
+    = f.label :title
+  .controls.col-xs-5
+    = f.text_field :title, :class => "form-control input-large input-with-feedback"
+  .col-xs-6
+    .form-actions
+      = f.submit pat(:save), :class => 'btn btn-primary'
+      = link_to pat(:cancel), url(:posts, :index), :class => 'btn btn-default'
+%fieldset.control-group.row
+  .col-xs-1
+    = f.label :group
+  .controls.col-xs-5
+    = f.select :group_id, :options => Group.all.map {|g| [g.to_s, g.id]}, :id => "layout_select", :class => "form-control input-large input-with-feedback"

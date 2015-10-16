@@ -9,7 +9,7 @@
     %meta{:name => :viewport, :content => 'width=device-width,initial-scale=1'}
     %title Velo
     =favicon_tag 'favicon.ico'
-    %link{:href => 'http://fonts.googleapis.com/css?family=Varela', :rel => :stylesheet}
+    /%link{:href => 'http://fonts.googleapis.com/css?family=Varela', :rel => :stylesheet}
     =stylesheet_link_tag '/stylesheets/bootstrap', '/stylesheets/application'
 
   %body
@@ -24,9 +24,10 @@
                 =content_tag :button, tag_icon('power-off'), :type => :submit, :title => pat(:logout), :class => 'navbar-nav-form-link'
 
           %ul.nav.navbar-nav.pull-left
-            - project_modules.each do |project_module|
-              %li{:class => "navbar-module #{('active' if request.path_info =~ /^#{project_module.path}/)}"}
-                =link_to project_module.human_name, url(project_module.path)
+            %li{:class => "navbar-module #{('active' if request.path_info =~ /groups/i)}"}
+              = link_to "Groups", url(:groups, :index)
+            %li{:class => "navbar-module #{('active' if request.path_info =~ /posts/i)}"}
+              = link_to "Posts", url(:posts, :index)
 
     .container.main
       .main-wrapper

@@ -16,6 +16,7 @@
       data: form.serialize(),
       success: replaceLayout,
       error: function(a, b, c) {
+        console.log('error');
         debugger;
       }
     });

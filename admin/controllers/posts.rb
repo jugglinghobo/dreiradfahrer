@@ -13,7 +13,6 @@ Velo::Admin.controllers :posts do
 
   post :create do
     @post = Post.new(params[:post])
-    puts params.inspect
     if @post.save
       @title = pat(:create_title, :model => "post #{@post.id}")
       flash[:success] = pat(:create_success, :model => 'Post')
@@ -86,4 +85,16 @@ Velo::Admin.controllers :posts do
     end
     redirect url(:posts, :index)
   end
+
+  get :pages, :with => :id do
+    @post = Post.find params[:id]
+    @pages = @post.pages
+  end
+
+  get :new_page, :with => :id do
+    @post = Post.find params[:id]
+    @page = @post.create_page
+    redirect_to url(:pages, :edit, :id => @page.id)
+  end
+
 end

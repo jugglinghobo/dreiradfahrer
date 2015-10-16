@@ -7,7 +7,7 @@ module Velo
 
     enable :sessions
 
-    get "/"do
+    get "/" do
       haml :index
     end
 

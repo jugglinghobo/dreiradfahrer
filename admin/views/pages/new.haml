@@ -1,13 +1,10 @@
-%ul.nav.nav-tabs
-  %li=link_to tag_icon(:list, pat(:list)), url(:pages, :index)
-  %li.active=link_to tag_icon(:plus, pat(:new)), url(:pages, :new)
-
 .tabs-content#page_form
-  = form_for @page, url(:pages, :create), :class => 'form-horizontal' do |f|
+  = form_for :page, url(:pages, :create), :method => :put, :class => 'form-horizontal' do |f|
+    = hidden_field_tag :post_id, :value => @page.post_id
     %fieldset.control-group
       = f.label :layout
       .controls
         = f.select :layout, :options => Layout.as_hash.to_a, :id => "layout_select", :class => "form-control input-large input-with-feedback"
     .form-actions
       = f.submit pat(:save), :class => 'btn btn-primary'
-      = link_to pat(:cancel), url(:pages, :index), :class => 'btn btn-default'
+      = link_to pat(:cancel), url(:posts, :edit, :id => @page.post_id), :class => 'btn btn-default'

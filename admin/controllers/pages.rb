@@ -1,22 +1,11 @@
 Velo::Admin.controllers :pages do
-  get :index do
-    @title = "Pages"
-    @pages = Page.all
-    render 'pages/index'
-  end
-
-  get :new do
-    @title = pat(:new_title, :model => 'page')
-    @page = Page.new
-    render 'pages/new'
-  end
-
   put :create do
-    @page = Page.new(params[:page])
+    @post = Post.find params[:post_id]
+    @page = @post.build_page params[:page]
     if @page.save
       @title = pat(:create_title, :model => "page #{@page.id}")
       flash[:success] = pat(:create_success, :model => 'Page')
-      params[:save_and_continue] ? redirect(url(:pages, :index)) : redirect(url(:pages, :edit, :id => @page.id))
+      redirect(url(:pages, :edit, :id => @page.id))
     else
       @title = pat(:create_title, :model => 'page')
       flash.now[:error] = pat(:create_error, :model => 'page')
@@ -27,7 +16,7 @@ Velo::Admin.controllers :pages do
   put :update_layout, :with => :id do
     @page = Page.find params[:id]
     @page.update_attributes params[:page]
-    partial "pages/#{@page.layout}"
+    partial "pages/#{@page.layout}", :locals => { :page => @page }
   end
 
   get :edit, :with => :id do
@@ -48,8 +37,8 @@ Velo::Admin.controllers :pages do
       if @page.update_attributes(params[:page])
         flash[:success] = pat(:update_success, :model => 'Page', :id =>  "#{params[:id]}")
         params[:save_and_continue] ?
-          redirect(url(:pages, :index)) :
-          redirect(url(:pages, :edit, :id => @page.id))
+          redirect(url(:pages, :edit, :id => @page.id)) :
+          redirect(url(:posts, :edit, :id => @page.post_id))
       else
         flash.now[:error] = pat(:update_error, :model => 'page')
         render 'pages/edit'
@@ -69,7 +58,7 @@ Velo::Admin.controllers :pages do
       else
         flash[:error] = pat(:delete_error, :model => 'page')
       end
-      redirect url(:pages, :index)
+      redirect url(:posts, :edit, :id => page.post_id)
     else
       flash[:warning] = pat(:delete_warning, :model => 'page', :id => "#{params[:id]}")
       halt 404
@@ -84,9 +73,9 @@ Velo::Admin.controllers :pages do
     end
     ids = params[:page_ids].split(',').map(&:strip)
     pages = Page.find(ids)
-    
+
     if Page.destroy pages
-    
+
       flash[:success] = pat(:destroy_many_success, :model => 'Pages', :ids => "#{ids.to_sentence}")
     end
     redirect url(:pages, :index)

@@ -1,5 +1,5 @@
-= form_for :page, url(:pages, :update, :id => @page.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
-  - photo = @page.photos.find_or_initialize_by(:rank => 0)
+= form_for :page, url(:pages, :update, :id => page.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
+  - photo = page.photos.find_or_initialize_by(:rank => 0)
   = f.fields_for :photos, photo do |ff|
     = ff.hidden_field :rank, :value => photo.rank
     .row
@@ -13,4 +13,4 @@
   .form-actions
     =f.submit pat(:save), :class => 'btn btn-primary'
     =f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue'
-    =link_to pat(:cancel), url(:pages, :index), :class => 'btn btn-default'
+    =link_to pat(:cancel), url(:posts, :edit, :id => page.post_id), :class => 'btn btn-default'
