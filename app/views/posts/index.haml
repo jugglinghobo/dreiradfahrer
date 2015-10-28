@@ -1,0 +1,6 @@
+#fullpage
+  - @posts.each do |post|
+    .section
+      - post.pages.each do |page|
+        .slide
+          = partial "pages/#{page.layout}", :locals => { :page => page }

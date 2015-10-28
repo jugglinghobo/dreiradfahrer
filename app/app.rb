@@ -8,7 +8,18 @@ module Velo
     enable :sessions
 
     get "/" do
-      haml :index
+      redirect_to "posts"
+    end
+
+    Blog.helpers do
+      def left_navigation
+        content_tag :ul, :class => "list-group" do
+          #concat content_tag :li, "dani", :class => "list-group-item"
+          Group.all.each do |group|
+            concat content_tag(:li, group.to_s, :class => "list-group-item")
+          end
+        end
+      end
     end
 
     ##

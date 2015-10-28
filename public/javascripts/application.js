@@ -115,4 +115,19 @@
     var error_input;
     if (error_input = $('.has-error :input').first()) { error_input.focus(); }
   });
+
+  $("#fullpage").fullpage({
+    fixedElements: '#navbar-fixed-top, #post-menu-container',
+    anchors: ['first', 'second'],
+    animateAnchor: false,
+    loopHorizontal: false,
+
+    menu: false,//'#post-menu',
+
+    navigation: false,
+    navigationPosition: 'right',
+    navigationTooltips: ['First', 'Second', 'Third'],
+    showActiveTooltip: true,
+  });
+
 }(window.jQuery);

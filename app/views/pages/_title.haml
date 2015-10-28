@@ -1,0 +1,14 @@
+#layout-title.layout
+  .row.form
+    .col-xs-4
+    #title.col-xs-4
+      - title = page.paragraphs.find_or_initialize_by(:rank => 0)
+      = title
+    .col-xs-4
+
+  .row
+    .col-xs-2
+    #subtitle.col-xs-8
+      - subtitle = page.paragraphs.find_or_initialize_by(:rank => 1)
+      = subtitle
+    .col-xs-2

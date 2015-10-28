@@ -20,6 +20,13 @@ body {
 .main-wrapper-push {
   height: 70px; /* same as the footer */
 }
+
+#post-menu-container {
+  position: fixed;
+  top: 50%;
+  left: 30px;
+}
+
 footer {
   margin-top: -70px;
   height: 70px;

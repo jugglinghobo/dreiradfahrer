@@ -4,6 +4,5 @@
       = f.label :layout
       .controls
         = f.select :layout, :options => Layout.as_hash.to_a, :id => "layout_select", :class => "form-control input-large input-with-feedback"
-  %hr
   #layout
     = partial "pages/#{@page.layout}", :locals => { :page => @page }
