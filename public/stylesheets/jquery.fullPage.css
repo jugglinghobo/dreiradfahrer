@@ -1,328 +1,102 @@
-/*!
- * fullPage 2.7.4
- * https://github.com/alvarotrigo/fullPage.js
- * MIT licensed
- *
- * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
- */
-html.fp-enabled,
-.fp-enabled body {
-    margin: 0;
-    padding: 0;
-    overflow:hidden;
+/*
+Error: Undefined variable: "$control-arrow-prev".
+        on line 80 of /Users/Simon/Projects/velo/app/stylesheets/jquery.fullPage.scss
 
-    /*Avoid flicker on slides transitions for mobile phones #336 */
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-#superContainer {
-    height: 100%;
-    position: relative;
+75:   transform: translate3d(0,0,0);
+76: 
+77:   &.fp-prev {
+78:     left: 15px;
+79:     width: 0;
+80:     border-width: $control-arrow-prev;
+81:     border-color: transparent #000 transparent transparent;
+82:   }
+83: 
+84:   &.fp-next {
+85:     right: 15px;
 
-    /* Touch detection for Windows 8 */
-    -ms-touch-action: none;
-
-    /* IE 11 on Windows Phone 8.1*/
-    touch-action: none;
-}
-.fp-section {
-    position: relative;
-    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
-    -moz-box-sizing: border-box; /* <=28 */
-    box-sizing: border-box;
-}
-.fp-slide {
-    float: left;
-}
-.fp-slide, .fp-slidesContainer {
-    height: 100%;
-    display: block;
-}
-.fp-slides {
-    z-index:1;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
-    transition: all 0.3s ease-out;
-}
-.fp-section.fp-table, .fp-slide.fp-table {
-    display: table;
-    table-layout:fixed;
-    width: 100%;
-}
-.fp-tableCell {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    height: 100%;
-}
-.fp-slidesContainer {
-    float: left;
-    position: relative;
-}
-.fp-controlArrow {
-    position: absolute;
-    z-index: 4;
-    top: 50%;
-    cursor: pointer;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    margin-top: -38px;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    opacity: .3;
-}
-.fp-controlArrow.fp-prev {
-    left: 15px;
-    width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent black transparent transparent;
-}
-.fp-controlArrow.fp-next {
-    right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent black;
-}
-.fp-scrollable {
-    overflow: scroll;
-}
-.fp-notransition {
-    -webkit-transition: none !important;
-    transition: none !important;
-}
-#fp-nav {
-    width: 100px;
-    position: fixed;
-    z-index: 100;
-    margin-top: -32px;
-    top: 50%;
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-}
-#fp-nav:hover ul li a .fp-tooltip {
-    -webkit-transition: opacity 0.2s ease-in;
-    transition: opacity 0.2s ease-in;
-    width: auto;
-    opacity: 1;
-}
-#fp-nav.right {
-    right: 17px;
-}
-#fp-nav.left {
-    left: 17px;
-}
-.fp-slidesNav{
-    position: absolute;
-    z-index: 4;
-    left: 50%;
-    opacity: 1;
-}
-.fp-slidesNav.bottom {
-    bottom: 17px;
-}
-.fp-slidesNav.top {
-    top: 17px;
-}
-#fp-nav ul,
-.fp-slidesNav ul {
-  margin: 0;
-  padding: 0;
-}
-#fp-nav ul li,
-.fp-slidesNav ul li {
-    display: block;
-    width: 14px;
-    height: 13px;
-    margin: 7px;
-    position:relative;
-}
-.fp-slidesNav ul li {
-    display: inline-block;
-}
-#fp-nav ul li a,
-.fp-slidesNav ul li a {
-    display: block;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    text-decoration: none;
-}
-#fp-nav ul li a.active span,
-.fp-slidesNav ul li a.active span,
-#fp-nav ul li:hover a.active span,
-.fp-slidesNav ul li:hover a.active span{
-    height: 12px;
-    width: 12px;
-    margin: -6px 0 0 -6px;
-    border-radius: 100%;
- }
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    height: 4px;
-    width: 4px;
-    border: 0;
-    background: #333;
-    left: 50%;
-    top: 50%;
-    margin: -2px 0 0 -2px;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-#fp-nav ul li:hover a span,
-.fp-slidesNav ul li:hover a span{
-    width: 10px;
-    height: 10px;
-    margin: -5px 0px 0px -5px;
-}
-#fp-nav ul li .fp-tooltip {
-    position: absolute;
-    top: -2px;
-    color: #000;
-    font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
-    white-space: nowrap;
-    max-width: 220px;
-    overflow: hidden;
-    display: block;
-    opacity: 0;
-    width: 0;
-}
-/* #fp-nav ul li:hover .fp-tooltip, */
-/* #fp-nav.fp-show-active a.active + .fp-tooltip { */
-/*     -webkit-transition: opacity 0.2s ease-in; */
-/*     transition: opacity 0.2s ease-in; */
-/*     width: auto; */
-/*     opacity: 1; */
-/* } */
-#fp-nav ul li .fp-tooltip.right {
-    right: 20px;
-}
-#fp-nav ul li .fp-tooltip.left {
-    left: 20px;
-}
-.fp-auto-height.fp-section,
-.fp-auto-height .fp-slide,
-.fp-auto-height .fp-tableCell{
-    height: auto !important;
-}
-
-@media print {
-    html.fp-enabled,
-    .fp-enabled body{
-        overflow: visible !important;
-        height: auto !important;
-    }
-
-    html {
-        background: #fff;
-        width: auto;
-        height: auto;
-        overflow: visible;
-    }
-    body {
-        background: #fff;
-        font-size: 20pt;
-        width: auto;
-        height: auto;
-        border: 0;
-        margin: 0 5%;
-        padding: 0;
-        overflow: visible;
-        float: none !important;
-    }
-
-    #fp-nav,
-    .fp-slidesNav,
-    .fp-controlArrow{
-        display: none !important;
-    }
-    /* Need to reduce the size of the fonts for printing */
-    h1 { font-size: 28pt !important;  }
-    h2 { font-size: 24pt !important; }
-    h3 { font-size: 22pt !important; }
-    h4 { font-size: 22pt !important; font-variant: small-caps; }
-    h5 { font-size: 21pt !important; }
-    h6 { font-size: 20pt !important; font-style: italic; }
-
-    .fp-section,
-    .fp-tableCell,
-    .slimScrollDiv,
-    .fp-scrollable{
-        width: 100% !important;
-        height: auto !important;
-        display: block !important;
-        position:relative;
-        float: none !important;
-    }
-    .fp-slidesContainer{
-        -webkit-transform: none !important;
-        -ms-transform: none !important;
-        transform: none !important;
-
-        -webkit-transition: none !important;
-           -moz-transition: none !important;
-            -ms-transition: none !important;
-                transition: none !important;
-    }
-
-    .fp-slides,
-    .fp-slidesContainer{
-        height: auto !important;
-        width: 100% !important;
-        float: none !important;
-        overflow: hidden !important;
-    }
-    .fp-slides{
-        height: 800px !important;
-        width: 800px !important;
-    }
-    .fp-slide{
-        float: none !important;
-        width: 100% !important;
-        position: static !important;
-    }
-    .fullpage-wrapper{
-         float: none !important;
-
-        -webkit-transform: none !important;
-        -ms-transform: none !important;
-        transform: none !important;
-
-      -webkit-transition: none !important;
-       -moz-transition: none !important;
-        -ms-transition: none !important;
-            transition: none !important;
-
-        position: static !important;
-        width: auto !important;
-        height: auto !important;
-
-        left: 0 !important;
-        top: 0 !important;
-        margin-left: 0 !important;
-        margin-top: 0 !important;
-        padding: 0 !important;
-        zoom: 1 !important;
-
-        overflow: visible !important;
-        display: block !important;
-
-        text-align: left !important;
-    }
-    .fp-section{
-        page-break-after: always !important;
-    }
-    .fp-slide{
-        page-break-after: always !important;
-    }
-
-}
+Backtrace:
+/Users/Simon/Projects/velo/app/stylesheets/jquery.fullPage.scss:80
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin/rack.rb:51:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/rack-1.5.5/lib/rack/head.rb:11:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/padrino-core-0.12.5/lib/padrino-core/reloader/rack.rb:22:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/padrino-core-0.12.5/lib/padrino-core/logger.rb:420:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/padrino-core-0.12.5/lib/padrino-core/router.rb:84:in `block in call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/padrino-core-0.12.5/lib/padrino-core/router.rb:75:in `each'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/padrino-core-0.12.5/lib/padrino-core/router.rb:75:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/rack-1.5.5/lib/rack/handler/webrick.rb:60:in `service'
+/Users/Simon/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+/Users/Simon/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+/Users/Simon/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$control-arrow-prev\".\A         on line 80 of /Users/Simon/Projects/velo/app/stylesheets/jquery.fullPage.scss\A \A 75:   transform: translate3d(0,0,0);\A 76: \A 77:   &.fp-prev {\A 78:     left: 15px;\A 79:     width: 0;\A 80:     border-width: $control-arrow-prev;\A 81:     border-color: transparent #000 transparent transparent;\A 82:   }\A 83: \A 84:   &.fp-next {\A 85:     right: 15px;"; }

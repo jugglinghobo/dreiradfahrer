@@ -1,0 +1,84 @@
+/*
+Error: Undefined variable: "$post-nav-padding".
+        on line 3 of /Users/Simon/Projects/velo/app/stylesheets/nav_menu.scss
+
+1: #post-nav {
+2:   position: fixed;
+3:   padding: $post-nav-padding;
+4: }
+
+Backtrace:
+/Users/Simon/Projects/velo/app/stylesheets/nav_menu.scss:3
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sass-3.4.18/lib/sass/plugin/rack.rb:51:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/rack-1.5.5/lib/rack/head.rb:11:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/padrino-core-0.12.5/lib/padrino-core/reloader/rack.rb:22:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/padrino-core-0.12.5/lib/padrino-core/logger.rb:420:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+/Users/Simon/.rvm/gems/ruby-2.2.3@velo/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/padrino-core-0.12.5/lib/padrino-core/router.rb:84:in `block in call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/padrino-core-0.12.5/lib/padrino-core/router.rb:75:in `each'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/padrino-core-0.12.5/lib/padrino-core/router.rb:75:in `call'
+/Users/Simon/.rvm/gems/ruby-2.2.3@global/gems/rack-1.5.5/lib/rack/handler/webrick.rb:60:in `service'
+/Users/Simon/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+/Users/Simon/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+/Users/Simon/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$post-nav-padding\".\A         on line 3 of /Users/Simon/Projects/velo/app/stylesheets/nav_menu.scss\A \A 1: #post-nav {\A 2:   position: fixed;\A 3:   padding: $post-nav-padding;\A 4: }"; }

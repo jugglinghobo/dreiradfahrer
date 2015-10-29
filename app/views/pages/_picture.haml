@@ -3,5 +3,5 @@
   .row.form
   .col-xs-2
   #photo.col-xs-8
-    = image_tag photo.picture.url(:small) if photo.picture.exists?
+    = image_tag photo.picture.url(:original) if photo.picture.exists?
   .col-xs-2

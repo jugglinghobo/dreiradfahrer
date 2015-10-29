@@ -13,4 +13,8 @@ class Post < ActiveRecord::Base
   def next_page_number
     pages.count
   end
+
+  def url_string
+    title.gsub(" ", "_")
+  end
 end

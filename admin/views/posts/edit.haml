@@ -46,7 +46,7 @@
                 %td.list-column.list-selectable
                   =check_box_tag 'page_ids[]', :value => page.id, :class => 'list-selectable-checkbox'
                 %td.list-column= page.number
-                %td.list-column= page.title
+                %td.list-column= link_to page.title, url(:pages, :edit, :id => page.id)
                 %td.list-column= page.layout
                 %td.list-column.list-row-action
                   .list-row-action-wrapper
