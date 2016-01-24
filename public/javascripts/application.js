@@ -119,7 +119,6 @@
   $("#fullpage").fullpage({
     controlArrows: false,
     paddingTop: '50px',
-    paddingBottom: '50px',
     fixedElements: '#navbar-fixed-top',
     animateAnchor: false,
     loopHorizontal: false,

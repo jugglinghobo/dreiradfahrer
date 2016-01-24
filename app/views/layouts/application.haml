@@ -6,7 +6,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     %meta{:content => 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
-    %meta{:name => :viewport, :content => 'width=device-width,initial-scale=1'}
+    -# %meta{:name => :viewport, :content => 'width=device-width,initial-scale=1'}
     %title Velo Reisli
     =favicon_tag 'favicon.ico'
     =stylesheet_link_tag 'application'
@@ -15,25 +15,26 @@
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          = link_to 'Velo', "/", :class => 'navbar-brand', :title => 'Velo home'
+          = link_to 'DreiRadFahrer', "/", :class => 'navbar-brand', :title => 'Velo home'
           %ul.nav.navbar-nav
-            %li=link_to "Sponsoren", "#", :class => 'navbar-nav-link'
-            %li=link_to "Sponsoren", "#", :class => 'navbar-nav-link'
-            %li=link_to "Sponsoren", "#", :class => 'navbar-nav-link'
-            %li=link_to "Sponsoren", "#", :class => 'navbar-nav-link'
+            %li=link_to "Projekt", '/projekt', :class => 'navbar-nav-link'
+          %ul.nav.navbar-nav
+            %li=link_to "Wir", '/wir', :class => 'navbar-nav-link'
+          %ul.nav.navbar-nav
+            %li=link_to "Sponsoren", '/sponsoren', :class => 'navbar-nav-link'
           %ul.nav.navbar-nav.navbar-right
             %li=link_to "Login", "/admin", :class => 'navbar-nav-link'
     .content
-      #post-nav
-        #post-nav-trigger
-          = link_to "#nav" do
-            %span.glyphicon.glyphicon-menu-hamburger
-        %ul#post-menu.list-unstyled
-          - Group.all.each do |group|
-            %li
-              %strong= group
-            - group.posts.each do |post|
-              %li= link_to post.title, "##{post.url_string}", :data => {:menuanchor => post.url_string}
+      -# #post-nav
+      -#   #post-nav-trigger
+      -#     = link_to "#nav" do
+      -#       %span.glyphicon.glyphicon-menu-hamburger
+      -#   %ul#post-menu.list-unstyled
+      -#     - Group.all.each do |group|
+      -#       %li
+      -#         %strong= group
+      -#       - group.posts.each do |post|
+      -#         %li= link_to post.title, "##{post.url_string}", :data => {:menuanchor => post.url_string}
       = yield
 
     =javascript_include_tag 'jquery-1.11.0.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min jquery.fullPage.min] : %w[bootstrap/alert bootstrap/button bootstrap/dropdown bootstrap/modal bootstrap/tab jquery.fullPage]), :application
