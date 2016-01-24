@@ -1,18 +1,18 @@
 !!! 5
-%html{:lang => 'en'}
+%html{:lang => 'de'}
   %head
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     %meta{:content => 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
-    -# %meta{:name => :viewport, :content => 'width=device-width,initial-scale=1'}
+    %meta{:name => :viewport, :content => 'width=device-width,initial-scale=1'}
     %title Velo Reisli
     =favicon_tag 'favicon.ico'
     =stylesheet_link_tag 'application'
 
   %body
-    .navbar.navbar-fixed-top
+    #velo-navigation.navbar.navbar-fixed-top
       .navbar-inner
         .container
           = link_to 'DreiRadFahrer', "/", :class => 'navbar-brand', :title => 'Velo home'

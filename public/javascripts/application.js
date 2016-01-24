@@ -118,8 +118,8 @@
 
   $("#fullpage").fullpage({
     controlArrows: false,
-    paddingTop: '50px',
-    fixedElements: '#navbar-fixed-top',
+    paddingTop: '80px',
+    fixedElements: '#velo-navigation',
     animateAnchor: false,
     loopHorizontal: false,
     slidesNavigation: true,

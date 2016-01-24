@@ -10,6 +10,7 @@
       position: absolute;
       bottom: 0;
       height: auto;
+      vertical-align: bottom;
       width: 100%;
       max-width: 100%;
       max-height: 100%; }
@@ -21,5 +22,10 @@
     position: relative; }
     .page .text .text-content {
       position: absolute; }
+
+#wir .page {
+  margin: 0 5% 0 0; }
+#wir .portrait {
+  vertical-align: bottom; }
 
 /*# sourceMappingURL=pages.css.map */

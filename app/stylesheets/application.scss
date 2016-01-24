@@ -3,7 +3,7 @@
 @import 'jquery.fullPage';
 @import 'post_nav';
 @import 'layouts';
-// @import 'pages';
+@import 'pages';
 
 html {
   height: 100%;
@@ -14,312 +14,312 @@ body {
   background-color: #F4F4F4;
 }
 
-.main {
-  // min-height: 100%;
-  // height: auto !important;
-  // margin: 0 auto -70px;
-  // padding: 0 10px;
-}
-.main-wrapper {
-  // padding-top: 70px;
-}
-.main-wrapper-push {
-  // height: 70px;
-}
-#post-menu-container {
-  position: fixed;
-  top: 50%;
-  left: 30px;
-}
-footer {
-  margin-top: -70px;
-  height: 70px;
-  border-top: 1px solid $color_gallery_approx;
-  padding: 10px 10px 0;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 1px 22px $mercury;
-  background-image: linear-gradient($color_wild_sand_approx, $color_gallery_approx 30%, $color_wild_sand_approx);
-  p {
-    margin-bottom: 0;
-    color: $color_tapa_approx;
-  }
-}
- .footer-links-link {
-   color: $color_suva_gray_approx;
-   &:hover {
-     color: $color_tapa_approx;
-     text-decoration: none;
-   }
- }
-.login {
-  padding-top: 10px;
-  width: 500px;
-  margin: 60px auto 0;
-}
-.login-logo {
-  text-align: center;
-  padding: 20px 0;
-}
-.login-controls {
-  margin-left: 120px;
-}
-.login-input-label {
-  width: 100px;
-}
-.login-control-group-last {
-  margin-bottom: 0 !important;
-}
-.login-bypass-label {
-  margin-bottom: 0 !important;
-}
-.login-body {
-  padding: 40px 20px !important;
-}
-.login-footer {
-  margin-top: 0 !important;
-}
-@media(max-device-height: 1024px) and(orientation:landscape) {
-  .login {
-    margin-top: 30px;
-  }
-}
-@media(-webkit-device-pixel-ratio: 2) and(orientation:portrait) {
-  .login {
-    margin-top: 30px;
-    width: 320px;
-  }
-  .login-header {
-    display: none;
-  }
-  .login-body {
-    padding: 10px 20px !important;
-  }
-  .login-controls {
-    margin-left: 0;
-  }
-}
-.custom-error {
-  font-family: $font_0, $font_1;
-  width: 500px;
-  margin: 100px auto 0;
-  text-transform: lowercase;
-}
-.custom-error-body {
-  border-top: 1px solid $mercury;
-  border-bottom: 1px solid $mercury;
-  padding: 30px 0;
-  i {
-    color: $color_flush_mahogany_approx;
-  }
-}
-.custom-error-go-back {
-  font-size: 1.2em;
-  padding: 6px 24px;
-}
-.custom-error-footer {
-  padding-top: 20px;
-}
-@media(-webkit-device-pixel-ratio: 2) and(orientation:landscape) {
-  .custom-error {
-    margin: 0 auto;
-  }
-}
-.alert {
-  text-align: center;
-}
-.tabs-content {
-  padding: 30px 0;
-}
-.form-actions {
-  text-align: right;
-}
-.form-controls-checkbox {
-  padding-top: 7px;
-}
-.form-controls-radio {
-  padding-top: 6px;
-}
-.navbar {
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  // box-shadow: 0 1px 10px $color_tapa_approx;
-  // background: $white;
-  .navbar-nav > .active > a {
-    color: $color_fuscous_gray_approx;
-    background-color: $color_mercury_approx;
-    &:hover {
-      color: $color_fuscous_gray_approx;
-      background-color: $color_mercury_approx;
-    }
-    &:focus {
-      color: $color_fuscous_gray_approx;
-      background-color: $color_mercury_approx;
-    }
-  }
-}
-.navbar-nav-link {
-  padding: 17px 15px 13px !important;
-}
-.navbar-nav-form {
-  margin: 0;
-}
-.navbar-nav-form-link {
-  border: none;
-  background: none;
-  color: $color_tapa_approx;
-  text-decoration: none;
-  //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  text-shadow: 0 1px 0 $white;
-  font-size: inherit;
-  padding: 17px 15px 13px;
-  &:hover {
-    color: $color_mine_shaft_approx;
-  }
-}
-.navbar-brand {
-  margin-top: 10px;
-  padding: 0 15px;
-  font-family: $font_0, $font_1;
-  text-transform: uppercase;
-  font-size: 2.5em;
-  line-height: 1em;
-}
-.list-column {
-  vertical-align: middle !important;
-}
-.list-selectable {
-  width: 40px;
-  text-align: center;
-}
-.list-selectable-checkbox {
-  margin: 0 !important;
-}
-.list-row-action-header {
-  width: 110px;
-  text-align: center;
-}
-.list-row-action-wrapper {
-  position: relative;
-  text-align: right;
-  height: 100%;
-}
-.list-row-action-wrapper-link {
-  font-size: 1.3em;
-  padding: 4px;
-  display: inline-block;
-  visibility: hidden;
-  &:hover {
-    text-decoration: none;
-  }
-}
-.list-row-action-popover-delete-one {
-  left: -120px;
-  top: -27px;
-  width: 200px;
-  text-align: center;
-}
-.list-row-action-popover-delete-one-btn {
-  margin-right: 10px;
-}
-.list-menu {
-  text-align: left;
-}
-.list-menu-toggle {
-  outline: none;
-  text-decoration: none;
-  &:hover {
-    outline: none;
-    text-decoration: none;
-  }
-}
-.list-menu-divider {
-  height: 2px !important;
-}
-.list-menu-link-disabled {
-  color: $color_mountain_mist_approx !important;
-  // background-color: $white !important;
-  background-image: inherit;
-  cursor: default !important;
-}
-.list-menu-popover-delete-selected {
-  left: 160px;
-  top: 37px;
-  width: 250px;
-  text-align: center;
-}
-.list-menu-popover-delete-selected-btn {
-  margin-right: 10px;
-}
-.base-text {
-  font-family: $font_0, $font_1;
-  width: 730px;
-  margin: 40px auto 0;
-  font-size: 1.45em;
-  line-height: 1.8em;
-}
-.base-icons {
-  text-align: center;
-  margin-top: 50px;
-  .btn {
-    float: left;
-    width: 150px;
-    padding: 20px 0;
-    cursor: default;
-  }
-  [class^="icon-"] {
-    display: block;
-    margin: 5px auto;
-    vertical-align: middle;
-  }
-}
-@media(-webkit-device-pixel-ratio: 2) {
-  .navbar-fixed-top {
-    position: relative !important;
-    margin: 0 0 20px 0;
-    padding: 0;
-  }
-  .navbar-brand {
-    float: left;
-  }
-  .navbar-module {
-    float: left;
-  }
-  .navbar-edit-account {
-    float: left;
-  }
-  .navbar-logout {
-    float: left;
-  }
-  .main-wrapper {
-    padding-top: 0;
-    .row {
-      padding: 0 20px;
-    }
-  }
-  footer {
-    display: none;
-  }
-  .navbar .nav {
-    margin: 0;
-    padding: 0;
-  }
-}
-.footer-links li {
-  display: inline-block;
-  margin-right: 10px;
-}
-.list-row-selected .list-column {
-  background-color: $color_wild_sand_approx !important;
-}
-.list-row:hover {
-  .list-row-action-wrapper-link {
-    visibility: visible;
-  }
-  .list-row-action-wrapper-link-active {
-    visibility: visible;
-  }
-}
-.list-menu-wrapper-disabled:hover .list-menu-link-disabled:hover {
-  background-color: $white !important;
-  background-image: inherit;
-  cursor: default !important;
-}
+//.main {
+//  min-height: 100%;
+//  height: auto !important;
+//  margin: 0 auto -70px;
+//  padding: 0 10px;
+//}
+//.main-wrapper {
+//  padding-top: 70px;
+//}
+//.main-wrapper-push {
+//  height: 70px;
+//}
+//#post-menu-container {
+//  position: fixed;
+//  top: 50%;
+//  left: 30px;
+//}
+//footer {
+//  margin-top: -70px;
+//  height: 70px;
+//  border-top: 1px solid $color_gallery_approx;
+//  padding: 10px 10px 0;
+//  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+//  box-shadow: 0 1px 22px $mercury;
+//  background-image: linear-gradient($color_wild_sand_approx, $color_gallery_approx 30%, $color_wild_sand_approx);
+//  p {
+//    margin-bottom: 0;
+//    color: $color_tapa_approx;
+//  }
+//}
+// .footer-links-link {
+//   color: $color_suva_gray_approx;
+//   &:hover {
+//     color: $color_tapa_approx;
+//     text-decoration: none;
+//   }
+// }
+//.login {
+//  padding-top: 10px;
+//  width: 500px;
+//  margin: 60px auto 0;
+//}
+//.login-logo {
+//  text-align: center;
+//  padding: 20px 0;
+//}
+//.login-controls {
+//  margin-left: 120px;
+//}
+//.login-input-label {
+//  width: 100px;
+//}
+//.login-control-group-last {
+//  margin-bottom: 0 !important;
+//}
+//.login-bypass-label {
+//  margin-bottom: 0 !important;
+//}
+//.login-body {
+//  padding: 40px 20px !important;
+//}
+//.login-footer {
+//  margin-top: 0 !important;
+//}
+//@media(max-device-height: 1024px) and(orientation:landscape) {
+//  .login {
+//    margin-top: 30px;
+//  }
+//}
+//@media(-webkit-device-pixel-ratio: 2) and(orientation:portrait) {
+//  .login {
+//    margin-top: 30px;
+//    width: 320px;
+//  }
+//  .login-header {
+//    display: none;
+//  }
+//  .login-body {
+//    padding: 10px 20px !important;
+//  }
+//  .login-controls {
+//    margin-left: 0;
+//  }
+//}
+//.custom-error {
+//  font-family: $font_0, $font_1;
+//  width: 500px;
+//  margin: 100px auto 0;
+//  text-transform: lowercase;
+//}
+//.custom-error-body {
+//  border-top: 1px solid $mercury;
+//  border-bottom: 1px solid $mercury;
+//  padding: 30px 0;
+//  i {
+//    color: $color_flush_mahogany_approx;
+//  }
+//}
+//.custom-error-go-back {
+//  font-size: 1.2em;
+//  padding: 6px 24px;
+//}
+//.custom-error-footer {
+//  padding-top: 20px;
+//}
+//@media(-webkit-device-pixel-ratio: 2) and(orientation:landscape) {
+//  .custom-error {
+//    margin: 0 auto;
+//  }
+//}
+//.alert {
+//  text-align: center;
+//}
+//.tabs-content {
+//  padding: 30px 0;
+//}
+//.form-actions {
+//  text-align: right;
+//}
+//.form-controls-checkbox {
+//  padding-top: 7px;
+//}
+//.form-controls-radio {
+//  padding-top: 6px;
+//}
+//.navbar {
+//  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+//  // box-shadow: 0 1px 10px $color_tapa_approx;
+//  // background: $white;
+//  .navbar-nav > .active > a {
+//    color: $color_fuscous_gray_approx;
+//    background-color: $color_mercury_approx;
+//    &:hover {
+//      color: $color_fuscous_gray_approx;
+//      background-color: $color_mercury_approx;
+//    }
+//    &:focus {
+//      color: $color_fuscous_gray_approx;
+//      background-color: $color_mercury_approx;
+//    }
+//  }
+//}
+//.navbar-nav-link {
+//  padding: 17px 15px 13px !important;
+//}
+//.navbar-nav-form {
+//  margin: 0;
+//}
+//.navbar-nav-form-link {
+//  border: none;
+//  background: none;
+//  color: $color_tapa_approx;
+//  text-decoration: none;
+//  //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+//  text-shadow: 0 1px 0 $white;
+//  font-size: inherit;
+//  padding: 17px 15px 13px;
+//  &:hover {
+//    color: $color_mine_shaft_approx;
+//  }
+//}
+//.navbar-brand {
+//  margin-top: 10px;
+//  padding: 0 15px;
+//  font-family: $font_0, $font_1;
+//  text-transform: uppercase;
+//  font-size: 2.5em;
+//  line-height: 1em;
+//}
+//.list-column {
+//  vertical-align: middle !important;
+//}
+//.list-selectable {
+//  width: 40px;
+//  text-align: center;
+//}
+//.list-selectable-checkbox {
+//  margin: 0 !important;
+//}
+//.list-row-action-header {
+//  width: 110px;
+//  text-align: center;
+//}
+//.list-row-action-wrapper {
+//  position: relative;
+//  text-align: right;
+//  height: 100%;
+//}
+//.list-row-action-wrapper-link {
+//  font-size: 1.3em;
+//  padding: 4px;
+//  display: inline-block;
+//  visibility: hidden;
+//  &:hover {
+//    text-decoration: none;
+//  }
+//}
+//.list-row-action-popover-delete-one {
+//  left: -120px;
+//  top: -27px;
+//  width: 200px;
+//  text-align: center;
+//}
+//.list-row-action-popover-delete-one-btn {
+//  margin-right: 10px;
+//}
+//.list-menu {
+//  text-align: left;
+//}
+//.list-menu-toggle {
+//  outline: none;
+//  text-decoration: none;
+//  &:hover {
+//    outline: none;
+//    text-decoration: none;
+//  }
+//}
+//.list-menu-divider {
+//  height: 2px !important;
+//}
+//.list-menu-link-disabled {
+//  color: $color_mountain_mist_approx !important;
+//  // background-color: $white !important;
+//  background-image: inherit;
+//  cursor: default !important;
+//}
+//.list-menu-popover-delete-selected {
+//  left: 160px;
+//  top: 37px;
+//  width: 250px;
+//  text-align: center;
+//}
+//.list-menu-popover-delete-selected-btn {
+//  margin-right: 10px;
+//}
+//.base-text {
+//  font-family: $font_0, $font_1;
+//  width: 730px;
+//  margin: 40px auto 0;
+//  font-size: 1.45em;
+//  line-height: 1.8em;
+//}
+//.base-icons {
+//  text-align: center;
+//  margin-top: 50px;
+//  .btn {
+//    float: left;
+//    width: 150px;
+//    padding: 20px 0;
+//    cursor: default;
+//  }
+//  [class^="icon-"] {
+//    display: block;
+//    margin: 5px auto;
+//    vertical-align: middle;
+//  }
+//}
+//@media(-webkit-device-pixel-ratio: 2) {
+//  .navbar-fixed-top {
+//    position: relative !important;
+//    margin: 0 0 20px 0;
+//    padding: 0;
+//  }
+//  .navbar-brand {
+//    float: left;
+//  }
+//  .navbar-module {
+//    float: left;
+//  }
+//  .navbar-edit-account {
+//    float: left;
+//  }
+//  .navbar-logout {
+//    float: left;
+//  }
+//  .main-wrapper {
+//    padding-top: 0;
+//    .row {
+//      padding: 0 20px;
+//    }
+//  }
+//  footer {
+//    display: none;
+//  }
+//  .navbar .nav {
+//    margin: 0;
+//    padding: 0;
+//  }
+//}
+//.footer-links li {
+//  display: inline-block;
+//  margin-right: 10px;
+//}
+//.list-row-selected .list-column {
+//  background-color: $color_wild_sand_approx !important;
+//}
+//.list-row:hover {
+//  .list-row-action-wrapper-link {
+//    visibility: visible;
+//  }
+//  .list-row-action-wrapper-link-active {
+//    visibility: visible;
+//  }
+//}
+//.list-menu-wrapper-disabled:hover .list-menu-link-disabled:hover {
+//  background-color: $white !important;
+//  background-image: inherit;
+//  cursor: default !important;
+//}
