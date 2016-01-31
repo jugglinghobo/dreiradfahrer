@@ -6172,6 +6172,9 @@ html.fp-enabled,
     .page .text .text-content {
       position: absolute; }
 
+#projekt {
+  padding-top: 80px; }
+
 #wir .portrait {
   vertical-align: bottom; }
 
@@ -6183,5 +6186,8 @@ body {
 
 #velo-navigation {
   background-color: #f4f4f4; }
+
+.content {
+  height: 100%; }
 
 /*# sourceMappingURL=application.css.map */
