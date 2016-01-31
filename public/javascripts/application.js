@@ -122,10 +122,12 @@
     fixedElements: '#velo-navigation',
     animateAnchor: false,
     loopHorizontal: false,
-    slidesNavigation: true,
+    slidesNavigation: false,
     slidesNavPosition: 'bottom',
-
-    menu: "#post-menu",
+    navigation: true,
+    navigationPosition: 'left',
+    navigationTooltips: ['Joachim', 'Noah', 'Sandro'],
+    showActiveTooltip: true,
   });
 
 }(window.jQuery);

@@ -194,7 +194,7 @@ html.fp-enabled,
       .fp-tooltip {
         position: absolute;
         top: -2px;
-        color: #fff;
+        color: $text-color;
         font-size: 14px;
         font-family: arial, helvetica, sans-serif;
         white-space: nowrap;
@@ -209,7 +209,7 @@ html.fp-enabled,
         }
 
         &.left {
-
+          left: 20px;
         }
       }
       &:hover {
