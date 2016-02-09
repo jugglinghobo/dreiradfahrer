@@ -20,22 +20,12 @@
             %li=link_to "Projekt", '/projekt', :class => 'navbar-nav-link'
           %ul.nav.navbar-nav
             %li=link_to "Wir", '/wir', :class => 'navbar-nav-link'
-          %ul.nav.navbar-nav
-            %li=link_to "Sponsoren", '/sponsoren', :class => 'navbar-nav-link'
+          -# %ul.nav.navbar-nav
+          -#   %li=link_to "Sponsoren", '/sponsoren', :class => 'navbar-nav-link'
           %ul.nav.navbar-nav.navbar-right
             %li=link_to "Login", "/admin", :class => 'navbar-nav-link'
     .content
-      -# #post-nav
-      -#   #post-nav-trigger
-      -#     = link_to "#nav" do
-      -#       %span.glyphicon.glyphicon-menu-hamburger
-      -#   %ul#post-menu.list-unstyled
-      -#     - Group.all.each do |group|
-      -#       %li
-      -#         %strong= group
-      -#       - group.posts.each do |post|
-      -#         %li= link_to post.title, "##{post.url_string}", :data => {:menuanchor => post.url_string}
       = yield
 
-    =javascript_include_tag 'jquery-1.11.0.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min jquery.fullPage.min] : %w[bootstrap/alert bootstrap/button bootstrap/dropdown bootstrap/modal bootstrap/tab https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.7/jquery.fullPage.min.js]), :application
+    =javascript_include_tag 'jquery-1.11.0.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min jquery.fullPage.min] : %w[bootstrap/alert bootstrap/button bootstrap/dropdown bootstrap/modal bootstrap/tab jquery.fullPage.js]), :application
 

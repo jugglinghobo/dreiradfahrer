@@ -32,6 +32,12 @@ gem 'pry'
 # Padrino Stable Gem
 gem 'padrino', '0.12.5'
 
+# Deployment with capistrano
+gem 'capistrano', '~> 3.4'
+
+gem 'capistrano-bundler', '~> 1.1', '>= 1.1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
 

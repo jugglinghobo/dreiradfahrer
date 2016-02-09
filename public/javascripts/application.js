@@ -127,7 +127,7 @@
     navigation: true,
     navigationPosition: 'left',
     navigationTooltips: ['Joachim', 'Noah', 'Sandro'],
-    showActiveTooltip: true,
+    showActiveTooltip: false
   });
 
 }(window.jQuery);
