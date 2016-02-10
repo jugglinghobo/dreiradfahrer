@@ -4,7 +4,7 @@
 set :application, 'dreiradfahrer'
 set :repo_url, 'git@github.com:jugglinghobo/dreiradfahrer.git'
 
-set :rvm_ruby_version, '2.3.0'
+set :rvm_ruby_version, '2.2.3'
 
 set :ssh_options, {
   port: 37797
