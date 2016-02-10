@@ -27,6 +27,9 @@ GEM
       sshkit (~> 1.2)
     capistrano-passenger (0.2.0)
       capistrano (~> 3.0)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -148,6 +151,7 @@ DEPENDENCIES
   capistrano (~> 3.4)
   capistrano-bundler (~> 1.1, >= 1.1.4)
   capistrano-passenger (~> 0.2.0)
+  capistrano-rvm (~> 0.1.2)
   dotenv
   haml
   padrino (= 0.12.5)
