@@ -35,6 +35,7 @@ gem 'padrino', '0.12.5'
 # Deployment with capistrano
 gem 'capistrano', '~> 3.4'
 
+gem 'capistrano-rvm', '~> 0.1.2'
 gem 'capistrano-bundler', '~> 1.1', '>= 1.1.4'
 gem 'capistrano-passenger', '~> 0.2.0'
 
