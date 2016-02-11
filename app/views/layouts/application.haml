@@ -18,6 +18,8 @@
         .container
           = link_to 'DreiRadFahrer', "/", :class => 'navbar-brand', :title => 'Velo home'
           %ul.nav.navbar-nav
+            %li=link_to "Tagebuch", '/tagebuch', :class => 'navbar-nav-link'
+          %ul.nav.navbar-nav
             %li=link_to "Map", '/map', :class => 'navbar-nav-link'
           %ul.nav.navbar-nav
             %li=link_to "Projekt", '/projekt', :class => 'navbar-nav-link'
