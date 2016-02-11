@@ -8,14 +8,17 @@
     %meta{:content => 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
     %meta{:name => :viewport, :content => 'width=device-width,initial-scale=1'}
     %title Dreiradfahrer
-    =favicon_tag 'favicon.ico'
-    =stylesheet_link_tag 'application'
+    = favicon_tag 'favicon.ico'
+    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css'
 
   %body
     #velo-navigation.navbar.navbar-fixed-top
       .navbar-inner
         .container
           = link_to 'DreiRadFahrer', "/", :class => 'navbar-brand', :title => 'Velo home'
+          %ul.nav.navbar-nav
+            %li=link_to "Map", '/map', :class => 'navbar-nav-link'
           %ul.nav.navbar-nav
             %li=link_to "Projekt", '/projekt', :class => 'navbar-nav-link'
           %ul.nav.navbar-nav
@@ -27,5 +30,5 @@
     .content
       = yield
 
-    =javascript_include_tag 'jquery-1.11.0.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min jquery.fullPage.min] : %w[bootstrap/alert bootstrap/button bootstrap/dropdown bootstrap/modal bootstrap/tab jquery.fullPage.js]), :application
+    = javascript_include_tag 'jquery-1.11.0.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min jquery.fullPage.min] : %w[bootstrap/alert bootstrap/button bootstrap/dropdown bootstrap/modal bootstrap/tab jquery.fullPage.js]), :application, :map
 

@@ -17,6 +17,13 @@ body {
   background-color: $body-bg;
 }
 
+#map {
+  width: 100%;
+  height: calc(100% - #{$header-height});
+  margin-top: $header-height;
+}
+
 .content {
+  width: 100%;
   height: 100%;
 }
