@@ -26,5 +26,4 @@ var WorldMap = function() {
 
 $(document).on('ready', function() {
   WorldMap.initialize();
-  // $('.content').css('background-color', 'red');
 });
