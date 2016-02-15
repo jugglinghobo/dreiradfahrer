@@ -1,5 +1,5 @@
 !!! 5
-%html{:lang => 'en'}
+%html{:lang => 'de'}
   %head
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -7,27 +7,22 @@
     <![endif]-->
     %meta{:content => 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
     %meta{:name => :viewport, :content => 'width=device-width,initial-scale=1'}
-    %title Velo
+    %title DreiRadFahrer
     =favicon_tag 'favicon.ico'
-    /%link{:href => 'http://fonts.googleapis.com/css?family=Varela', :rel => :stylesheet}
-    =stylesheet_link_tag '/stylesheets/bootstrap', '/stylesheets/application', '/stylesheets/layouts'
+    =stylesheet_link_tag 'application'
 
   %body
-    .navbar.navbar-fixed-top
+    #velo-navigation.navbar.navbar-fixed-top
       .navbar-inner
         .container
-          =link_to 'Velo', url(:base, :index), :class => 'navbar-brand', :title => 'Padrino Admin'
-          %ul.nav.navbar-nav.pull-right
-            %li.navbar-edit-account=link_to tag_icon(:user), url(:accounts, :edit, :id => current_account.id), :title => pat(:profile), :class => 'navbar-nav-link'
-            %li.navbar-logout
-              =button_to :logout, url(:sessions, :destroy), :method => :delete, :class => 'navbar-nav-form' do
-                =content_tag :button, tag_icon('power-off'), :type => :submit, :title => pat(:logout), :class => 'navbar-nav-form-link'
-
-          %ul.nav.navbar-nav.pull-left
-            %li{:class => "navbar-module #{('active' if request.path_info =~ /groups/i)}"}
-              = link_to "Groups", url(:groups, :index)
-            %li{:class => "navbar-module #{('active' if request.path_info =~ /posts/i)}"}
-              = link_to "Posts", url(:posts, :index)
+          = link_to 'DreiRadFahrer', "/", :class => 'navbar-brand', :title => 'DreiRadFahrer home'
+          %ul.nav.navbar-nav
+            %li=link_to "Länder", '/groups', :class => 'navbar-nav-link'
+          %ul.nav.navbar-nav
+            %li=link_to "Einträge", '/posts', :class => 'navbar-nav-link'
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              =button_to :logout, url(:sessions, :destroy), :method => :delete, :class => 'navbar-nav-form'
 
     .container.main
       .main-wrapper

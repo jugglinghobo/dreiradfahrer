@@ -1,6 +1,5 @@
 module Velo
   class Blog < Padrino::Application
-    register SassInitializer
     use ConnectionPoolManagement
     register Padrino::Mailer
     register Padrino::Helpers
