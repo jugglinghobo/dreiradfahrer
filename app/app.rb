@@ -8,7 +8,7 @@ module Velo
     enable :sessions
 
     get '/' do
-      redirect_to '/map'
+      redirect_to '/projekt'
     end
 
     get '/markers.geojson' do
