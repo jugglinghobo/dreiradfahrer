@@ -17,18 +17,18 @@
       .navbar-inner
         .container
           = link_to 'DreiRadFahrer', "/", :class => 'navbar-brand', :title => 'Velo home'
-          %ul.nav.navbar-nav
-            %li=link_to "Tagebuch", '/tagebuch', :class => 'navbar-nav-link'
-          %ul.nav.navbar-nav
-            %li=link_to "Map", '/map', :class => 'navbar-nav-link'
+          -# %ul.nav.navbar-nav
+          -#   %li=link_to "Tagebuch", '/tagebuch', :class => 'navbar-nav-link'
           %ul.nav.navbar-nav
             %li=link_to "Projekt", '/projekt', :class => 'navbar-nav-link'
+          %ul.nav.navbar-nav
+            %li=link_to "Map", '/map', :class => 'navbar-nav-link'
           %ul.nav.navbar-nav
             %li=link_to "Wir", '/wir', :class => 'navbar-nav-link'
           %ul.nav.navbar-nav
             %li=link_to "Sponsoren", '/sponsoren', :class => 'navbar-nav-link'
-          %ul.nav.navbar-nav.navbar-right
-            %li=link_to "Login", "/admin", :class => 'navbar-nav-link'
+          -# %ul.nav.navbar-nav.navbar-right
+          -#   %li=link_to "Login", "/admin", :class => 'navbar-nav-link'
     .content
       = yield
 

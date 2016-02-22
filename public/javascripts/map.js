@@ -7,11 +7,11 @@ var WorldMap = function() {
   function initMap() {
     L.mapbox.accessToken = accessToken;
 
-    var map = L.mapbox.map( 'map', mapId).setView([46.95, 7.45], 10);
+    var map = L.mapbox.map( 'map', mapId).setView([46.95, 7.45], 5);
 
-    var featureLayer = L.mapbox.featureLayer()
-    .loadURL(markersPath)
-    .addTo(map);
+    // var featureLayer = L.mapbox.featureLayer()
+    // .loadURL(markersPath)
+    // .addTo(map);
 
     return map;
   }
