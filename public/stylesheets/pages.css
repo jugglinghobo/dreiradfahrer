@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$header-height".
-        on line 37 of /Users/simon/Projects/velo/app/stylesheets/pages.scss
+        on line 15 of /Users/simon/Projects/velo/app/stylesheets/pages.scss
 
-32:     }
-33:   }
-34: }
-35: 
-36: #projekt {
-37:   padding-top: $header-height;
-38: }
-39: 
-40: #wir {
-41:   .portrait {
-42:     vertical-align: bottom;
+10:     }
+11:   }
+12: }
+13: 
+14: #projekt {
+15:   padding-top: $header-height;
+16: }
+17: 
+18: #wir {
+19:   .portrait {
+20:     vertical-align: bottom;
 
 Backtrace:
-/Users/simon/Projects/velo/app/stylesheets/pages.scss:37
+/Users/simon/Projects/velo/app/stylesheets/pages.scss:15
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -88,4 +88,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$header-height\".\A         on line 37 of /Users/simon/Projects/velo/app/stylesheets/pages.scss\A \A 32:     }\A 33:   }\A 34: }\A 35: \A 36: #projekt {\A 37:   padding-top: $header-height;\A 38: }\A 39: \A 40: #wir {\A 41:   .portrait {\A 42:     vertical-align: bottom;"; }
+  content: "Error: Undefined variable: \"$header-height\".\A         on line 15 of /Users/simon/Projects/velo/app/stylesheets/pages.scss\A \A 10:     }\A 11:   }\A 12: }\A 13: \A 14: #projekt {\A 15:   padding-top: $header-height;\A 16: }\A 17: \A 18: #wir {\A 19:   .portrait {\A 20:     vertical-align: bottom;"; }

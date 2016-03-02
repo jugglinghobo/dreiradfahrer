@@ -1955,8 +1955,9 @@
                     element.find(SCROLLABLE_SEL).slimScroll({
                         allowPageScroll: true,
                         height: scrollHeight + 'px',
-                        size: '10px',
-                        alwaysVisible: true
+                        size: '0px',
+                        alwaysVisible: false,
+                        touchScrollStep: 125,
                     });
                 }
             }

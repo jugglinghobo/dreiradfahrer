@@ -1,113 +1,114 @@
-#fullpage
-  #wir
-    .section{:data => {:anchor => 'joachim'}}
-      .page
-        .portrait
-          = image_tag 'joachim.png'
-        .text
-          .text-content
-            %p
-              Name
-              %br
-              Joachim von Sauberzweig
+.container-fluid
+  #fullpage
+    #wir
+      .section{:data => {:anchor => 'joachim'}}
+        .page
+          .text.col-xs-12.col-md-6.col-md-push-6
+            .text-content
+              %p
+                Name
+                %br
+                Joachim von Sauberzweig
 
-            %p
-              Alter
-              %br
-              25
+              %p
+                Alter
+                %br
+                25
 
-            %p
-              Fahrertyp
-              %br
-              Gemütlicher Trapper
+              %p
+                Fahrertyp
+                %br
+                Gemütlicher Trapper
 
-            %p
-              Beruf
-              %br
-              Sozial- und Heilpädagoge
+              %p
+                Beruf
+                %br
+                Sozial- und Heilpädagoge
 
-            %p
-              Meine Motivation für die Tour:
-              %br
-              Mit dieser Velotour geht für mich ein Traum in Erfüllung auf den ich mich schon  eine lange Zeit freue! Dies wird für mich eine Reise ins Ungewisse: Neue Landschaften, andere Kulturen, exotische Mahlzeiten und ganz verschiedene Menschen. Ich möchte durch diese Velotour einen kleinen Teil dieser Welt und nicht zuletzt auch mich selber ein bisschen genauer kennenlernen. Zudem reizt es mich  eine Weile ohne den ganzen „Luxus“ in unserem Alltag  zu leben und nur mit dem Nötigsten  auszukommen. Ich freue mich auf viele spannende Erfahrungen  auf unserer gemeinsamen Velotour nach China!
-    .section{:data => {:anchor => 'noah'}}
-      .page
-        .portrait
-          = image_tag 'noah.png'
-        .text
-          .text-content
-            %p
-              Name
-              %br
-              Noah Müller
-            %p
-              Alter
-              %br
-              26
-            %p
-              Fahrertyp
-              %br
-              Gemächlicher Sprinter
-            %p
-              Beruf
-              %br
-              Architekt
+              %p
+                Meine Motivation für die Tour:
+                %br
+                Mit dieser Velotour geht für mich ein Traum in Erfüllung auf den ich mich schon  eine lange Zeit freue! Dies wird für mich eine Reise ins Ungewisse: Neue Landschaften, andere Kulturen, exotische Mahlzeiten und ganz verschiedene Menschen. Ich möchte durch diese Velotour einen kleinen Teil dieser Welt und nicht zuletzt auch mich selber ein bisschen genauer kennenlernen. Zudem reizt es mich  eine Weile ohne den ganzen „Luxus“ in unserem Alltag  zu leben und nur mit dem Nötigsten  auszukommen. Ich freue mich auf viele spannende Erfahrungen  auf unserer gemeinsamen Velotour nach China!
+          .portrait.col-xs-12.col-md-6.col-md-pull-6
+            = image_tag 'joachim.png'
+      .section{:data => {:anchor => 'noah'}}
+        .page
+          .text.col-xs-12.col-md-6.col-md-push-6
+            .text-content
+              %p
+                Name
+                %br
+                Noah Müller
+              %p
+                Alter
+                %br
+                26
+              %p
+                Fahrertyp
+                %br
+                Gemächlicher Sprinter
+              %p
+                Beruf
+                %br
+                Architekt
 
-            %p
-              Meine Motivation für die Tour:
-              %br
-              Schon seit geraumer Zeit hege ich den Traum mit dem Fahrrad die
-              Welt zu bereisen.  Natürlich könnte ich auch per Flugzeug oder
-              Autostopp nach China gelangen, doch das Potenzial der
-              Fortbewegung mittels Fahrrad liegt für mich im gemächlichen
-              Tempo, welches  einem erlaubt die Umgebung mit allen Sinnen
-              aufzunehmen. Durch die stetige körperliche Anstrengung wirken die
-              Einflüsse besonders intensiv und vertiefen sich in meinen
-              Gedanken. Diese Erfahrung machte ich bei meiner ersten grösseren
-              Fahrradtour entlang dem Rhein bis zur Nordsee.
-            %p
-              Nebst der Fortbewegungsart habe ich eine grosse Leidenschaft für
-              Velos.  Ein Fahrrad besteht aus einer minimalen Anzahl von Teilen,
-              die in Geometrie und Material für ihre jeweiligen Funktionen
-              optimiert sind. Zusammen ergeben sie eine wunderbare Mechanik. Am
-              wichtigsten ist beim Fahrrad jedoch, dass es keine Schale hat.
+              %p
+                Meine Motivation für die Tour:
+                %br
+                Schon seit geraumer Zeit hege ich den Traum mit dem Fahrrad die
+                Welt zu bereisen.  Natürlich könnte ich auch per Flugzeug oder
+                Autostopp nach China gelangen, doch das Potenzial der
+                Fortbewegung mittels Fahrrad liegt für mich im gemächlichen
+                Tempo, welches  einem erlaubt die Umgebung mit allen Sinnen
+                aufzunehmen. Durch die stetige körperliche Anstrengung wirken die
+                Einflüsse besonders intensiv und vertiefen sich in meinen
+                Gedanken. Diese Erfahrung machte ich bei meiner ersten grösseren
+                Fahrradtour entlang dem Rhein bis zur Nordsee.
+              %p
+                Nebst der Fortbewegungsart habe ich eine grosse Leidenschaft für
+                Velos.  Ein Fahrrad besteht aus einer minimalen Anzahl von Teilen,
+                die in Geometrie und Material für ihre jeweiligen Funktionen
+                optimiert sind. Zusammen ergeben sie eine wunderbare Mechanik. Am
+                wichtigsten ist beim Fahrrad jedoch, dass es keine Schale hat.
 
-              Die Kombination von archaischer Verausgabung und der High-Tech
-              Entwicklung „Velo“ fasziniert mich. Das Verhältnis zwischen
-              Anstrengung und Geschwindigkeit der Fortbewegung wird durch die
-              Übersetzung der Muskelkraft auf das Hinterrad optimiert und
-              ermöglicht Grosses. Das will ich auskosten.
-    .section{:data => {:anchor => 'sandro'}}
-      .page
-        .portrait
-          = image_tag 'sandro.png'
-        .text
-          .text-content
-            %p
-              Name
-              %br
-              Sandro Röthlisberger
-            %p
-              Alter
-              %br
-              25
-            %p
-              Fahrertyp
-              %br
-              Immer der Nase nach
+                Die Kombination von archaischer Verausgabung und der High-Tech
+                Entwicklung „Velo“ fasziniert mich. Das Verhältnis zwischen
+                Anstrengung und Geschwindigkeit der Fortbewegung wird durch die
+                Übersetzung der Muskelkraft auf das Hinterrad optimiert und
+                ermöglicht Grosses. Das will ich auskosten.
+          .portrait.col-xs-12.col-md-6.col-md-pull-6
+            = image_tag 'noah.png'
+      .section{:data => {:anchor => 'sandro'}}
+        .page
+          .text.col-xs-12.col-md-6.col-md-push-6
+            .text-content
+              %p
+                Name
+                %br
+                Sandro Röthlisberger
+              %p
+                Alter
+                %br
+                25
+              %p
+                Fahrertyp
+                %br
+                Immer der Nase nach
 
 
-            %p
-              Beruf
-              %br
-              Klinischer Heilpädagoge
+              %p
+                Beruf
+                %br
+                Klinischer Heilpädagoge
 
-            %p
-              Meine Motivation für die Tour:
-              %br
-              Nicht nur in Karl May's Abenteuerbüchern davon lesen, sondern
-              selber fremde Kulturen entdecken und die Welt mit den eigenen
-              Sinnen wahrnehmen... Schon seit längerer Zeit verspüre ich diesen
-              Reise- und Abenteuerdrang. Nun ist es so weit und ich freue mich
-              auf eine ungewisse Zeit fernab vom gemütlichen Zuhause, fernab
-              vom Alltag und der üblichen Routine.
+              %p
+                Meine Motivation für die Tour:
+                %br
+                Nicht nur in Karl May's Abenteuerbüchern davon lesen, sondern
+                selber fremde Kulturen entdecken und die Welt mit den eigenen
+                Sinnen wahrnehmen... Schon seit längerer Zeit verspüre ich diesen
+                Reise- und Abenteuerdrang. Nun ist es so weit und ich freue mich
+                auf eine ungewisse Zeit fernab vom gemütlichen Zuhause, fernab
+                vom Alltag und der üblichen Routine.
+          .portrait.col-xs-12.col-md-6.col-md-pull-6
+            = image_tag 'sandro.png'

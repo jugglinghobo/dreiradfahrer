@@ -7,11 +7,27 @@ var WorldMap = function() {
   function initMap() {
     L.mapbox.accessToken = accessToken;
 
-    var map = L.mapbox.map( 'map', mapId).setView([46.95, 7.45], 5);
+    var smallLegend = document.getElementById('small-legend').innerHTML;
+    var legend = document.getElementById('legend').innerHTML;
 
-    // var featureLayer = L.mapbox.featureLayer()
-    // .loadURL(markersPath)
-    // .addTo(map);
+    var map = L.mapbox.map( 'map', mapId, {
+      legendControl: {
+        position: 'topright',
+      }
+    }).setView([46.95, 7.45], 5);
+
+    map.legendControl.addLegend(smallLegend);
+    map.legendControl.position = 'topright';
+
+    $(document).on('click', "#toggle-legend-on", function() {
+      map.legendControl.removeLegend(smallLegend);
+      map.legendControl.addLegend(legend);
+    });
+
+    $(document).on('click', '#toggle-legend-off', function() {
+      map.legendControl.removeLegend(legend);
+      map.legendControl.addLegend(smallLegend);
+    });
 
     return map;
   }

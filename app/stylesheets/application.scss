@@ -4,6 +4,7 @@
 @import 'post_nav';
 @import 'layouts';
 @import 'pages';
+@import 'map';
 
 html {
   height: 100%;
@@ -11,10 +12,6 @@ html {
 
 body {
   height: 100%;
-}
-
-#velo-navigation {
-  background-color: $body-bg;
 }
 
 #map {
@@ -26,4 +23,19 @@ body {
 .content {
   width: 100%;
   height: 100%;
+}
+
+.slimScrollBar {
+  background-color: transparent;
+  background: transparent;
+}
+
+#fp-nav {
+  display: none;
+}
+
+@media (min-width: $screen-md-min) {
+  #fp-nav {
+    display: initial;
+  }
 }
