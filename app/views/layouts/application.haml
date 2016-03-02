@@ -8,7 +8,8 @@
     %meta{:content => 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
     %meta{:name => :viewport, :content => 'width=device-width,initial-scale=1'}
     %title Dreiradfahrer
-    = favicon_tag 'favicon.ico'
+    -# = favicon_tag 'velo-icon.ico'
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
     = stylesheet_link_tag 'application'
     = stylesheet_link_tag 'https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css'
 

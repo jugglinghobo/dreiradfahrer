@@ -6167,6 +6167,7 @@ html.fp-enabled,
     .portrait img {
       position: absolute;
       bottom: 0; } }
+#small-legend,
 #legend {
   display: none; }
 
