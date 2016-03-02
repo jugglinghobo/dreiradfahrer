@@ -31,8 +31,7 @@
             %li=link_to 'Sponsoren', '/sponsoren', :class => 'navbar-nav-link'
           %ul.nav.navbar-nav.navbar-right
             %li=link_to 'Login', '/admin', :class => 'navbar-nav-link'
-    .content
-      = yield
+    = yield
 
     = javascript_include_tag 'jquery-1.11.0.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min jquery.fullPage.min] : %w[bootstrap/alert bootstrap/button bootstrap/collapse bootstrap/dropdown bootstrap/modal bootstrap/tab jquery.fullPage.js jquery.slimscroll.min.js]), :application, :map
 
