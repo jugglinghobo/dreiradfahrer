@@ -6167,6 +6167,25 @@ html.fp-enabled,
     .portrait img {
       position: absolute;
       bottom: 0; } }
+#legend {
+  display: none; }
+
+.toggle-legend {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  text-align: center; }
+
+.map-legend .route {
+  width: 25%;
+  height: 5px;
+  vertical-align: middle;
+  display: inline-block; }
+.map-legend .planned-route {
+  background-color: black; }
+.map-legend .cycled-route {
+  background-color: red; }
+
 html {
   height: 100%; }
 

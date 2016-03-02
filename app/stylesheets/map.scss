@@ -1,0 +1,27 @@
+#legend {
+  display: none;
+}
+
+.toggle-legend {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.map-legend {
+  .route {
+    width: 25%;
+    height: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .planned-route {
+    background-color: black;
+  }
+
+  .cycled-route {
+    background-color: red;
+  }
+}

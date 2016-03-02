@@ -1,2 +1,16 @@
 = javascript_include_tag 'https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'
+#small-legend
+  #toggle-legend-on.toggle-legend
+    %em i
+
+#legend
+  #toggle-legend-off
+    %strong Route der DreiRadFahrer
+    %nav.legend.map-legend.clearfix
+      %div
+        .route.planned-route
+        %label geplant
+      %div
+        .route.cycled-route
+        %label geradelt
 #map
