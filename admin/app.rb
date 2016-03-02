@@ -1,6 +1,6 @@
 module Velo
   class Admin < Padrino::Application
-    register SassInitializer
+    # register SassInitializer
     use ActiveRecord::ConnectionAdapters::ConnectionManagement
     register Padrino::Mailer
     register Padrino::Helpers

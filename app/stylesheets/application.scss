@@ -13,10 +13,6 @@ body {
   height: 100%;
 }
 
-#velo-navigation {
-  background-color: $body-bg;
-}
-
 #map {
   width: 100%;
   height: calc(100% - #{$header-height});
@@ -26,4 +22,19 @@ body {
 .content {
   width: 100%;
   height: 100%;
+}
+
+.slimScrollBar {
+  background-color: transparent;
+  background: transparent;
+}
+
+#fp-nav {
+  display: none;
+}
+
+@media (min-width: $screen-md-min) {
+  #fp-nav {
+    display: initial;
+  }
 }

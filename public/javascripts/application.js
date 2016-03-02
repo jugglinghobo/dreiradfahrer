@@ -119,7 +119,7 @@
   $("#fullpage").fullpage({
     controlArrows: false,
     paddingTop: '80px',
-    fixedElements: '#velo-navigation',
+    fixedElements: '#dreiradfahrer-navigation',
     animateAnchor: false,
     loopHorizontal: false,
     slidesNavigation: false,
@@ -127,7 +127,9 @@
     navigation: true,
     navigationPosition: 'left',
     navigationTooltips: ['Joachim', 'Noah', 'Sandro'],
-    showActiveTooltip: false
+    showActiveTooltip: false,
+    autoScrolling: true,
+    scrollOverflow: true,
   });
 
 }(window.jQuery);
