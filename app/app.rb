@@ -5,8 +5,6 @@ module Velo
     register Padrino::Mailer
     register Padrino::Helpers
 
-    enable :sessions
-
     get '/' do
       redirect_to '/projekt'
     end
