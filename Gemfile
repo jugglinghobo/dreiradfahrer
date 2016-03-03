@@ -30,7 +30,7 @@ gem 'pry'
 # Test requirements
 
 # Padrino Stable Gem
-gem 'padrino', '0.12.5'
+gem 'padrino', '~> 0.13.1'
 
 # Deployment with capistrano
 gem 'capistrano', '~> 3.4'
