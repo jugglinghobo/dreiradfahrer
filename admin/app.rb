@@ -20,12 +20,11 @@ module Velo
     # disable :sessions               # Disabled sessions by default (enable if needed)
     # disable :flash                  # Disables sinatra-flash (enabled by default if Sinatra::Flash is defined)
     layout  :application              # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
-    disable :cache
+    # disable :cache
 
     set :admin_model, 'Account'
     set :login_page,  '/sessions/new'
 
-    enable  :sessions
     disable :store_location
 
     access_control.roles_for :any do |role|
