@@ -8,29 +8,30 @@
     %meta{:content => 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
     %meta{:name => :viewport, :content => 'width=device-width,initial-scale=1'}
     %title DreiRadFahrer
-    =favicon_tag 'favicon.ico'
-    =stylesheet_link_tag '/admin'
+    =favicon_tag '/velo-icon.ico'
+    =stylesheet_link_tag '/stylesheets/admin'
 
   %body
-    #dreiradfahrer-nav.navbar.navbar-fixed-top
+    #dreiradfahrer-nav.navbar.navbar-default
       .navbar-inner
         .container
           = link_to 'DreiRadFahrer', "/", :class => 'navbar-brand', :title => 'DreiRadFahrer home'
           %ul.nav.navbar-nav
-            %li=link_to "Länder", '/groups', :class => 'navbar-nav-link'
+            %li=link_to "Länder", url(:groups, :index), :class => 'navbar-nav-link'
           %ul.nav.navbar-nav
-            %li=link_to "Einträge", '/posts', :class => 'navbar-nav-link'
+            %li=link_to "Einträge", url(:posts, :index), :class => 'navbar-nav-link'
           %ul.nav.navbar-nav.navbar-right
             %li
-              =button_to :logout, url(:sessions, :destroy), :method => :delete, :class => 'navbar-nav-form'
+              =link_to :logout, url(:sessions, :destroy), :class => 'navbar-nav-form'
 
     .container.main
       .main-wrapper
         ={:error => 'danger', :warning => 'warning', :success => 'success', :notice => 'info'}.map { |type, class_name| flash_tag(type, :class => "alert alert-#{class_name} fade in", :bootstrap => true) }.join.html_safe
-        .row=yield
+        .row
+          =yield
         .main-wrapper-push
 
     %footer
       .footer-wrapper.container
 
-    =javascript_include_tag '/javascripts/jquery-1.11.0.min', "application", "/javascripts/pages", (Padrino.env == :production ? '/javascripts/bootstrap/bootstrap.min' : %w[/javascripts/bootstrap/affix /javascripts/bootstrap/alert /javascripts/bootstrap/button /javascripts/bootstrap/carousel /javascripts/bootstrap/collapse /javascripts/bootstrap/dropdown /javascripts/bootstrap/tooltip /javascripts/bootstrap/transition /javascripts/bootstrap/modal /javascripts/bootstrap/popover /javascripts/bootstrap/scrollspy /javascripts/bootstrap/tab])
+    =javascript_include_tag '/javascripts/jquery-1.11.0.min', "/javascripts/pages", (Padrino.env == :production ? '/javascripts/bootstrap/bootstrap.min' : %w[/javascripts/bootstrap/affix /javascripts/bootstrap/alert /javascripts/bootstrap/button /javascripts/bootstrap/carousel /javascripts/bootstrap/collapse /javascripts/bootstrap/dropdown /javascripts/bootstrap/tooltip /javascripts/bootstrap/transition /javascripts/bootstrap/modal /javascripts/bootstrap/popover /javascripts/bootstrap/scrollspy /javascripts/bootstrap/tab])
