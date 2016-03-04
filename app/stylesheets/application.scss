@@ -30,6 +30,22 @@ body {
   background: transparent;
 }
 
+.vertical-center {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.vertical-bottom {
+  display: inline-block;
+  vertical-align: bottom;
+  float: none;
+}
+
+.top-buffer {
+  margin-top: 50px;
+}
+
 #fp-nav {
   display: none;
 }

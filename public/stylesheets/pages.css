@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$header-height".
-        on line 15 of /Users/simon/Projects/velo/app/stylesheets/pages.scss
+        on line 16 of /Users/simon/Projects/velo/app/stylesheets/pages.scss
 
-10:     }
 11:   }
 12: }
 13: 
-14: #projekt {
-15:   padding-top: $header-height;
-16: }
-17: 
-18: #wir {
-19:   .portrait {
-20:     vertical-align: bottom;
+14: #projekt,
+15: #sponsoren {
+16:   padding-top: $header-height;
+17: }
+18: 
+19: #sponsoren {
+20:   .h2 {
+21:     margin-top: 5px;
 
 Backtrace:
-/Users/simon/Projects/velo/app/stylesheets/pages.scss:15
+/Users/simon/Projects/velo/app/stylesheets/pages.scss:16
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -68,8 +68,8 @@ Backtrace:
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/rack-1.5.5/lib/rack/head.rb:11:in `call'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
-/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.12.5/lib/padrino-core/reloader/rack.rb:22:in `call'
-/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.12.5/lib/padrino-core/logger.rb:420:in `call'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.13.1/lib/padrino-core/reloader/rack.rb:25:in `call'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.13.1/lib/padrino-core/logger.rb:470:in `call'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:225:in `context'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:220:in `call'
@@ -77,9 +77,9 @@ Backtrace:
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
-/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.12.5/lib/padrino-core/router.rb:84:in `block in call'
-/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.12.5/lib/padrino-core/router.rb:75:in `each'
-/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.12.5/lib/padrino-core/router.rb:75:in `call'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:84:in `block in call'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `each'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `call'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/rack-1.5.5/lib/rack/handler/webrick.rb:60:in `service'
 /Users/simon/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
 /Users/simon/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
@@ -88,4 +88,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$header-height\".\A         on line 15 of /Users/simon/Projects/velo/app/stylesheets/pages.scss\A \A 10:     }\A 11:   }\A 12: }\A 13: \A 14: #projekt {\A 15:   padding-top: $header-height;\A 16: }\A 17: \A 18: #wir {\A 19:   .portrait {\A 20:     vertical-align: bottom;"; }
+  content: "Error: Undefined variable: \"$header-height\".\A         on line 16 of /Users/simon/Projects/velo/app/stylesheets/pages.scss\A \A 11:   }\A 12: }\A 13: \A 14: #projekt,\A 15: #sponsoren {\A 16:   padding-top: $header-height;\A 17: }\A 18: \A 19: #sponsoren {\A 20:   .h2 {\A 21:     margin-top: 5px;"; }

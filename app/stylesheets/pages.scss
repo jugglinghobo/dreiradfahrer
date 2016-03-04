@@ -11,8 +11,15 @@
   }
 }
 
-#projekt {
+#projekt,
+#sponsoren {
   padding-top: $header-height;
+}
+
+#sponsoren {
+  .h2 {
+    margin-top: 5px;
+  }
 }
 
 #wir {
