@@ -6,7 +6,6 @@ Velo::Admin.controllers :groups do
   end
 
   get :new do
-    @title = pat(:new_title, :model => 'group')
     @group = Group.new
     render 'groups/new'
   end
@@ -14,12 +13,10 @@ Velo::Admin.controllers :groups do
   post :create do
     @group = Group.new(params[:group])
     if @group.save
-      @title = pat(:create_title, :model => "group #{@group.id}")
-      flash[:success] = pat(:create_success, :model => 'Group')
-      params[:save_and_continue] ? redirect(url(:groups, :index)) : redirect(url(:groups, :edit, :id => @group.id))
+      flash[:success] = 'Land gespeichert'
+      redirect url(:groups, :index)
     else
-      @title = pat(:create_title, :model => 'group')
-      flash.now[:error] = pat(:create_error, :model => 'group')
+      flash.now[:error] = 'Land wurde nicht gespeichert'
       render 'groups/new'
     end
   end
@@ -40,10 +37,8 @@ Velo::Admin.controllers :groups do
     @group = Group.find(params[:id])
     if @group
       if @group.update_attributes(params[:group])
-        flash[:success] = pat(:update_success, :model => 'Group', :id =>  "#{params[:id]}")
-        params[:save_and_continue] ?
-          redirect(url(:groups, :index)) :
-          redirect(url(:groups, :edit, :id => @group.id))
+        flash[:success] = 'Land gespeichert'
+        redirect(url(:groups, :index))
       else
         flash.now[:error] = pat(:update_error, :model => 'group')
         render 'groups/edit'
@@ -59,7 +54,7 @@ Velo::Admin.controllers :groups do
     group = Group.find(params[:id])
     if group
       if group.destroy
-        flash[:success] = pat(:delete_success, :model => 'Group', :id => "#{params[:id]}")
+        flash[:success] = 'Land gelöscht'
       else
         flash[:error] = pat(:delete_error, :model => 'group')
       end

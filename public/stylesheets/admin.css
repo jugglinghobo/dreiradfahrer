@@ -5793,5 +5793,14 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+  margin-top: 0; }
+
+.top-buffer {
+  margin-top: 50px; }
 
 /*# sourceMappingURL=admin.css.map */

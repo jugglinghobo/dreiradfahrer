@@ -3,11 +3,11 @@
   =f.label :name, :class => 'control-label'
   .controls
     =f.text_field :name, :class => 'form-control input-large input-with-feedback', :autofocus => true
-    %span.help-inline=error ? f.error_message_on(:name, :class => 'text-error') : pat(:example)
+    - if error
+      %span.help-inline
+        = f.error_message_on(:name, :class => 'text-error')
 
 .form-actions
-  =f.submit pat(:save), :class => 'btn btn-primary'
+  = f.submit 'Speichern', :class => 'btn btn-primary'
   &nbsp;
-  =f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue'
-  &nbsp;
-  =link_to pat(:cancel), url(:groups, :index), :class => 'btn btn-default'
+  =link_to 'Cancel', url(:groups, :index), :class => 'btn btn-default'
