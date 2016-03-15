@@ -1,6 +1,5 @@
 Velo::Admin.controllers :groups do
   get :index do
-    @title = "Groups"
     @groups = Group.all
     render 'groups/index'
   end

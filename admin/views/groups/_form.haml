@@ -1,13 +1,16 @@
 - error = @group.errors.include?(:name)
-%fieldset.control-group{:class => error ? 'has-error' : ''}
-  =f.label :name, :class => 'control-label'
-  .controls
-    =f.text_field :name, :class => 'form-control input-large input-with-feedback', :autofocus => true
-    - if error
-      %span.help-inline
-        = f.error_message_on(:name, :class => 'text-error')
+.row
+  .form-group{:class => error ? 'has-error' : ''}
+    .col-md-1.col-md-offset-3
+      = f.label :name, :class => 'control-label'
+    .col-md-4
+      = f.text_field :name, :class => 'form-control input-large input-with-feedback', :autofocus => true
+      - if error
+        %span.help-inline
+          = f.error_message_on(:name, :class => 'text-error')
 
-.form-actions
-  = f.submit 'Speichern', :class => 'btn btn-primary'
-  &nbsp;
-  =link_to 'Cancel', url(:groups, :index), :class => 'btn btn-default'
+  .form-actions.form-group
+    .col-md-2.col-md-offset-4
+      = f.submit 'Speichern', :class => 'btn btn-success'
+    .col-md-2.col-md-offset-1
+      =link_to 'Cancel', url(:groups, :index), :class => 'btn btn-primary'

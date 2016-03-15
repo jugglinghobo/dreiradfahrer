@@ -1,12 +1,10 @@
 Velo::Admin.controllers :posts do
   get :index do
-    @title = "Posts"
     @posts = Post.all
     render 'posts/index'
   end
 
   get :new do
-    @title = pat(:new_title, :model => 'post')
     @post = Post.new
     render 'posts/new'
   end
