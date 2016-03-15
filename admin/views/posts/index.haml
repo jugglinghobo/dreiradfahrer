@@ -4,13 +4,10 @@
 .col-md-1.col-md-offset-1
   = link_to 'Neu', url(:posts, :new), :class => 'btn btn-success pull-right'
 
-%p
-%p
-
 .col-md-12.top-buffer
   - @posts.each do |post|
     .col-md-6
-      = link_to group.name, url(:posts, :show, :id => post.id)
+      = link_to post.title, url(:posts, :pages, :id => post.id)
     .col-md-1
       = link_to 'edit', url(:posts, :edit, id: post.id), class: 'btn btn-default'
     .col-md-1

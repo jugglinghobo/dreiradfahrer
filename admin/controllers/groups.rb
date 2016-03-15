@@ -10,7 +10,7 @@ Velo::Admin.controllers :groups do
   end
 
   post :create do
-    @group = Group.new(params[:group])
+    @group = Group.new params[:group]
     if @group.save
       flash[:success] = 'Land gespeichert'
       redirect url(:groups, :index)
@@ -21,61 +21,27 @@ Velo::Admin.controllers :groups do
   end
 
   get :edit, :with => :id do
-    @title = pat(:edit_title, :model => "group #{params[:id]}")
-    @group = Group.find(params[:id])
-    if @group
-      render 'groups/edit'
-    else
-      flash[:warning] = pat(:create_error, :model => 'group', :id => "#{params[:id]}")
-      halt 404
-    end
+    @group = Group.find params[:id]
+    render 'groups/edit'
   end
 
   put :update, :with => :id do
-    @title = pat(:update_title, :model => "group #{params[:id]}")
-    @group = Group.find(params[:id])
-    if @group
-      if @group.update_attributes(params[:group])
-        flash[:success] = 'Land gespeichert'
-        redirect(url(:groups, :index))
-      else
-        flash.now[:error] = pat(:update_error, :model => 'group')
-        render 'groups/edit'
-      end
+    @group = Group.find params[:id]
+    if @group.update_attributes params[:group]
+      flash[:success] = 'Land gespeichert'
+      redirect url(:groups, :index)
     else
-      flash[:warning] = pat(:update_warning, :model => 'group', :id => "#{params[:id]}")
-      halt 404
+      flash.now[:error] = 'Land wurde nicht gespeichert'
+      render 'groups/edit'
     end
   end
 
   delete :destroy, :with => :id do
-    @title = "Groups"
-    group = Group.find(params[:id])
-    if group
-      if group.destroy
-        flash[:success] = 'Land gelöscht'
-      else
-        flash[:error] = pat(:delete_error, :model => 'group')
-      end
-      redirect url(:groups, :index)
+    group = Group.find params[:id]
+    if group.destroy
+      flash[:success] = 'Land gelöscht'
     else
-      flash[:warning] = pat(:delete_warning, :model => 'group', :id => "#{params[:id]}")
-      halt 404
-    end
-  end
-
-  delete :destroy_many do
-    @title = "Groups"
-    unless params[:group_ids]
-      flash[:error] = pat(:destroy_many_error, :model => 'group')
-      redirect(url(:groups, :index))
-    end
-    ids = params[:group_ids].split(',').map(&:strip)
-    groups = Group.find(ids)
-    
-    if Group.destroy groups
-    
-      flash[:success] = pat(:destroy_many_success, :model => 'Groups', :ids => "#{ids.to_sentence}")
+      flash[:error] = 'Land wurde nicht gelöscht'
     end
     redirect url(:groups, :index)
   end
