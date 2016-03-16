@@ -17,5 +17,4 @@
       .col-xs-2
 
   .form-actions
-    =f.submit 'Speichern', :class => 'btn btn-success'
-    =link_to 'Cancel', url(:posts, :pages, :id => page.post_id), :class => 'btn btn-primary'
+    = partial 'pages/form_actions', :locals => { :f => f }

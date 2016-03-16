@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :group
-  has_many :pages
+  has_many :pages, :dependent => :destroy
 
   def self.pages
     super.order :number

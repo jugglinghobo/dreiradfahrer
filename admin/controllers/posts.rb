@@ -17,7 +17,7 @@ Velo::Admin.controllers :posts do
     @post = Post.new params[:post]
     if @post.save
       flash[:success] = 'Post gespeichert'
-      redirect url(:posts, :index)
+      redirect url(:posts, :pages, :id => @post.id)
     else
       flash.now[:error] = 'Post wurde nicht gespeichert'
       render 'posts/new'

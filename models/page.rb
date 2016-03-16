@@ -18,7 +18,11 @@ class Page < ActiveRecord::Base
   end
 
   def title
-    paragraphs.first.to_s
+    paragraphs.first
+  end
+
+  def title_image
+    photos.first
   end
 
   def layout

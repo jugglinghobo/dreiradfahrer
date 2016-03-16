@@ -10,7 +10,8 @@
     .col-md-3
       = page.title
     .col-md-3
-      = image_tag page.photos.first.picture.url(:small)
+      - if (title_image = page.title_image)
+        = image_tag title_image.picture.url(:small)
     .col-md-1
       = link_to 'edit', url(:pages, :edit, id: page.id), class: 'btn btn-default'
     .col-md-1

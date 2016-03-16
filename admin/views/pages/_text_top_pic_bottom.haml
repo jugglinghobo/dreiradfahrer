@@ -3,12 +3,12 @@
 = form_for :page, url(:pages, :update, :id => page.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
   #layout-text-top-pic-bottom.layout
     .row.form
-      .col-xs-3
-      #text.col-xs-6
+      .col-xs-2
+      #text.col-xs-8
         = f.fields_for :paragraphs, text do |ff|
           = ff.hidden_field :rank, :value => text.rank
           ~ ff.text_area :content, :placeholder => "Text...", :class => 'form-control'
-      .col-xs-3
+      .col-xs-2
 
     .row.form
       .col-xs-4
@@ -25,5 +25,4 @@
         = image_tag photo.picture.url(:small) if photo.picture.exists?
       .col-xs-2
   .form-actions
-    =f.submit 'Speichern', :class => 'btn btn-success'
-    =link_to 'Cancel', url(:posts, :pages, :id => page.post_id), :class => 'btn btn-primary'
+    = partial 'pages/form_actions', :locals => { :f => f }
