@@ -28,7 +28,7 @@ Velo::Admin.controllers :pages do
     @page = Page.find params[:id]
     if @page.update_attributes params[:page]
       flash[:success] = 'Seite angepasst'
-        redirect url(:posts, :edit, :id => @page.post_id)
+      redirect url(:posts, :pages, :id => @page.post_id)
     else
       flash.now[:error] = 'Seite wurde nicht angepasst'
       render 'pages/edit'

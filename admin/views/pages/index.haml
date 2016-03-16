@@ -1,12 +1,16 @@
-.col-md-6
-  %h3
-    Seiten
-.col-md-1.col-md-offset-1
-  = link_to 'Neu', url(:posts, :new_page, :id => @post.id), :class => 'btn btn-success pull-right'
+.row
+  .col-md-6
+    %h3
+      Seiten
+  .col-md-1.col-md-offset-1
+    = link_to 'Neu', url(:posts, :new_page, :id => @post.id), :class => 'btn btn-success pull-right'
 
-.col-md-12.top-buffer
-  - @pages.each do |page|
-    .col-md-6
+- @pages.each do |page|
+  .row.top-buffer
+    .col-md-3
+      = page.title
+    .col-md-3
+      = image_tag page.photos.first.picture.url(:small)
     .col-md-1
       = link_to 'edit', url(:pages, :edit, id: page.id), class: 'btn btn-default'
     .col-md-1
