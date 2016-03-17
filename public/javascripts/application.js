@@ -7,7 +7,7 @@
     fixedElements: '#dreiradfahrer-navigation',
     animateAnchor: false,
     loopHorizontal: false,
-    slidesNavigation: false,
+    slidesNavigation: true,
     slidesNavPosition: 'bottom',
     navigation: true,
     navigationPosition: 'left',
