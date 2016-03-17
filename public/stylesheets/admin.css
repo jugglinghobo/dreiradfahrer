@@ -5818,10 +5818,12 @@ button.close {
     height: auto; }
 
 #layout-title #title {
-  padding-top: 100px; }
+  padding-top: 100px;
+  text-align: center; }
 
 #layout-title #subtitle {
-  padding-top: 100px; }
+  padding-top: 100px;
+  text-align: center; }
 
 h1, .h1,
 h2, .h2,

@@ -5,6 +5,6 @@ class Layout
   end
 
   def self.default
-    'title'
+    as_hash.values.first
   end
 end

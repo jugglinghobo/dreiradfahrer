@@ -29,6 +29,10 @@ class Page < ActiveRecord::Base
     read_attribute(:layout) || Layout.default
   end
 
+  def layout_s
+    Layout.as_hash.key(layout)
+  end
+
   def set_number
     @number = post.next_page_number
   end
