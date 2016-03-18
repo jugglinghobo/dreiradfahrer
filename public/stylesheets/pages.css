@@ -1,22 +1,24 @@
 /*
 Error: Undefined variable: "$header-height".
-        on line 16 of /Users/simon/Projects/velo/app/stylesheets/pages.scss
+        on line 6 of /Users/simon/Projects/velo/app/stylesheets/pages.scss
 
-11:   }
-12: }
-13: 
-14: #projekt,
-15: #sponsoren {
-16:   padding-top: $header-height;
-17: }
-18: 
-19: #wir {
-20:   .portrait {
-21:     vertical-align: bottom;
+1: .page {
+2:   height: 100%;
+3: }
+4: #map {
+5:   width: 100%;
+6:   height: calc(100% - #{$header-height});
+7:   margin-top: $header-height;
+8: }
+9: 
+10: #projekt,
+11: #sponsoren {
 
 Backtrace:
-/Users/simon/Projects/velo/app/stylesheets/pages.scss:16
+/Users/simon/Projects/velo/app/stylesheets/pages.scss:6
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/script/tree/interpolation.rb:100:in `_perform'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
@@ -88,4 +90,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$header-height\".\A         on line 16 of /Users/simon/Projects/velo/app/stylesheets/pages.scss\A \A 11:   }\A 12: }\A 13: \A 14: #projekt,\A 15: #sponsoren {\A 16:   padding-top: $header-height;\A 17: }\A 18: \A 19: #wir {\A 20:   .portrait {\A 21:     vertical-align: bottom;"; }
+  content: "Error: Undefined variable: \"$header-height\".\A         on line 6 of /Users/simon/Projects/velo/app/stylesheets/pages.scss\A \A 1: .page {\A 2:   height: 100%;\A 3: }\A 4: #map {\A 5:   width: 100%;\A 6:   height: calc(100% - #{$header-height});\A 7:   margin-top: $header-height;\A 8: }\A 9: \A 10: #projekt,\A 11: #sponsoren {"; }

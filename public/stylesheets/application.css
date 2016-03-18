@@ -6107,6 +6107,24 @@ html.fp-enabled,
 
   .fp-slide {
     page-break-after: always !important; } }
+.page {
+  height: 100%; }
+
+#map {
+  width: 100%;
+  height: calc(100% - 50px);
+  margin-top: 50px; }
+
+#projekt,
+#sponsoren {
+  padding-top: 50px; }
+
+.portrait {
+  height: 100%; }
+  .portrait img {
+    position: absolute;
+    max-height: 100%; }
+
 #post-nav {
   vertical-align: middle;
   width: 200px;
@@ -6123,13 +6141,6 @@ html.fp-enabled,
 .post {
   height: 100%;
   margin: 0 5% 0 2%; }
-
-#projekt,
-#sponsoren {
-  padding-top: 50px; }
-
-#wir .portrait {
-  vertical-align: bottom; }
 
 #small-legend,
 #legend {
@@ -6157,10 +6168,15 @@ html {
 body {
   height: 100%; }
 
-#map {
-  width: 100%;
-  height: calc(100% - 50px);
-  margin-top: 50px; }
+.bottom {
+  vertical-align: bottom;
+  bottom: 0; }
+
+.relative {
+  position: relative; }
+
+.absolute {
+  position: absolute; }
 
 .content {
   width: 100%;

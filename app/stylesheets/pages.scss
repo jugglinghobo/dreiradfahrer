@@ -1,0 +1,22 @@
+.page {
+  height: 100%;
+}
+#map {
+  width: 100%;
+  height: calc(100% - #{$header-height});
+  margin-top: $header-height;
+}
+
+#projekt,
+#sponsoren {
+  padding-top: $header-height;
+}
+
+.portrait {
+  height: 100%;
+
+  img {
+    position: absolute;
+    max-height: 100%;
+  }
+}
