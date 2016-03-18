@@ -51,6 +51,10 @@ body {
 }
 
 @media (min-width: $screen-md-min) {
+  body {
+    font-size: 16px;
+  }
+
   #fp-nav {
     display: initial;
   }
