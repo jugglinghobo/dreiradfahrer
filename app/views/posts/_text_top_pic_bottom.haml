@@ -1,13 +1,9 @@
 #layout-text-top-pic-bottom.layout
   .row.form
-    .col-xs-3
-    #text.col-xs-6
+    .col-md-6.col-md-offset-3
       - paragraph = page.paragraphs.find_or_initialize_by(:rank => 0)
       = paragraph
-    .col-xs-3
   .row.form
-    .col-xs-2
-    #photo.col-xs-8
+    .col-md-8.col-md-offset-2
       - photo = page.photos.find_or_initialize_by(:rank => 0)
       = image_tag photo.picture.url(:small) if photo.picture.exists?
-    .col-xs-2

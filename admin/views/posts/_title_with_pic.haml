@@ -2,23 +2,24 @@
   - title = post.paragraphs.find_or_initialize_by(:rank => 0)
   - photo = post.photos.find_or_initialize_by(:rank => 0)
   .layout
-    .row.form
+    .row.form.top-buffer
       .col-md-4.col-md-offset-4
         = f.fields_for :paragraphs, title, :index => title.rank do |ff|
           = ff.hidden_field :rank, :value => title.rank
           %fieldset.control-group
             .controls
               ~ ff.text_field :content, :placeholder => "Titel", :class => 'form-control input-large input-with-feedback title'
-    .row.form
+    .row.form.top-buffer
       .col-md-4.col-md-offset-4
         = f.fields_for :photos, photo do |ff|
           = ff.hidden_field :rank, :value => photo.rank
           %fieldset.control-group
             .controls
               = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
-    .row
+    .row.form.top-buffer
       .col-md-8.col-md-offset-2
-        = image_tag photo.picture.url(:small) if photo.picture.exists?
+        - if photo.picture.exists?
+          = image_tag photo.picture.url(:small), :class => 'img-responsive center-block'
 
   .form-actions
     = partial 'posts/form_actions', :locals => { :f => f }
