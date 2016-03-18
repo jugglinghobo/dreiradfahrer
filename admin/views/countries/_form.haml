@@ -1,4 +1,4 @@
-- error = @group.errors.include?(:name)
+- error = @country.errors.include?(:name)
 .form-group{:class => error ? 'has-error' : ''}
   .col-md-1.col-md-offset-3
     = f.label :name, :class => 'control-label'
@@ -10,6 +10,6 @@
 
 .form-actions.form-group
   .col-md-2.col-md-offset-4
-    =link_to 'Cancel', url(:groups, :index), :class => 'btn btn-primary'
+    =link_to 'Cancel', url(:countries, :index), :class => 'btn btn-primary'
   .col-md-2
     = f.submit 'Speichern', :class => 'btn btn-success pull-right'

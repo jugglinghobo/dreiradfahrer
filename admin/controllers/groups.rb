@@ -1,48 +1,48 @@
-Velo::Admin.controllers :groups do
+Velo::Admin.controllers :countries do
   get :index do
-    @groups = Group.all
-    render 'groups/index'
+    @countries = Country.all
+    render 'countries/index'
   end
 
   get :new do
-    @group = Group.new
-    render 'groups/new'
+    @country = Country.new
+    render 'countries/new'
   end
 
   post :create do
-    @group = Group.new params[:group]
-    if @group.save
+    @country = Country.new params[:country]
+    if @country.save
       flash[:success] = 'Land gespeichert'
-      redirect url(:groups, :index)
+      redirect url(:countries, :index)
     else
       flash.now[:error] = 'Land wurde nicht gespeichert'
-      render 'groups/new'
+      render 'countries/new'
     end
   end
 
   get :edit, :with => :id do
-    @group = Group.find params[:id]
-    render 'groups/edit'
+    @country = Country.find params[:id]
+    render 'countries/edit'
   end
 
   put :update, :with => :id do
-    @group = Group.find params[:id]
-    if @group.update_attributes params[:group]
+    @country = Country.find params[:id]
+    if @country.update_attributes params[:country]
       flash[:success] = 'Land gespeichert'
-      redirect url(:groups, :index)
+      redirect url(:countries, :index)
     else
       flash.now[:error] = 'Land wurde nicht gespeichert'
-      render 'groups/edit'
+      render 'countries/edit'
     end
   end
 
   delete :destroy, :with => :id do
-    group = Group.find params[:id]
-    if group.destroy
+    country = Country.find params[:id]
+    if country.destroy
       flash[:success] = 'Land gelöscht'
     else
       flash[:error] = 'Land wurde nicht gelöscht'
     end
-    redirect url(:groups, :index)
+    redirect url(:countries, :index)
   end
 end

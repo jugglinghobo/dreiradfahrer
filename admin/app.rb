@@ -35,12 +35,10 @@ module Velo
 
     access_control.roles_for :admin do |role|
       role.project_module :pages, '/pages'
-      role.project_module :groups, '/groups'
-      role.project_module :posts, '/posts'
     end
 
     get "/" do
-      redirect_to "admin/posts"
+      redirect_to "admin/countries"
     end
 
     # Custom error management

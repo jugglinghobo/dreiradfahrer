@@ -1,9 +1,16 @@
-class Post < ActiveRecord::Base
-  belongs_to :group
+class Country < ActiveRecord::Base
   has_many :pages, :dependent => :destroy
 
   def self.pages
-    super.order :number
+    super.order(:number)
+  end
+
+  def to_s
+    name
+  end
+
+  def url_string
+    name.gsub(" ", "_")
   end
 
   def create_page
@@ -12,9 +19,5 @@ class Post < ActiveRecord::Base
 
   def next_page_number
     pages.count
-  end
-
-  def url_string
-    title.gsub(" ", "_")
   end
 end

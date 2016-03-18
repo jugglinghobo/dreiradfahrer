@@ -17,9 +17,7 @@
         .container
           = link_to 'DreiRadFahrer', "/", :class => 'navbar-brand', :title => 'DreiRadFahrer home'
           %ul.nav.navbar-nav
-            %li=link_to "Länder", url(:groups, :index), :class => 'navbar-nav-link'
-          %ul.nav.navbar-nav
-            %li=link_to "Einträge", url(:posts, :index), :class => 'navbar-nav-link'
+            %li=link_to "Länder", url(:countries, :index), :class => 'navbar-nav-link'
           %ul.nav.navbar-nav.navbar-right
             %li
               =link_to :logout, url(:sessions, :destroy), :class => 'navbar-nav-form'

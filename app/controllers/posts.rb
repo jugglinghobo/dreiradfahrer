@@ -1,7 +1,7 @@
-Velo::Blog.controllers :posts do
+Velo::Blog.controllers :countries do
 
   get :index do
-    @posts = Post.all
-    render 'posts/index'
+    @countries = Country.all
+    render 'countries/index'
   end
 end
