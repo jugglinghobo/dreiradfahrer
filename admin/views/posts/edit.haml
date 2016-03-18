@@ -4,6 +4,6 @@
       = f.label 'Layout', :for => :layout, class: 'control-label'
     .col-md-4
       = f.select :layout, :options => Layout.as_hash.to_a, :id => "layout_select", :class => "form-control input-large input-with-feedback"
-  #layout
-    = partial "posts/#{@post.layout}", :locals => { :post => @post }
+#layout
+  = partial "posts/#{@post.layout}", :locals => { :post => @post }
 
