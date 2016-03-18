@@ -21,6 +21,8 @@ module Velo
     layout  :application              # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
     # disable :cache
 
+    set :protect_from_csrf, true
+
     enable :sessions
 
     set :admin_model, 'Account'
@@ -34,6 +36,7 @@ module Velo
     end
 
     access_control.roles_for :admin do |role|
+      role.project_module :countries, '/countries'
       role.project_module :pages, '/pages'
     end
 

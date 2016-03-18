@@ -10,11 +10,10 @@
 - @countries.each do |country|
   .row.top-buffer
     .col-md-3.col-md-offset-1
-      = link_to country.name, url(:country, :pages, :country_id => country.id)
+      = link_to country, url(:countries, :pages, :id => country.id)
     .col-md-3
-      = "Einträge: #{country.pages.count}"
+      = link_to "Einträge: #{country.pages.count}", url(:countries, :pages, :id => country.id)
     .col-md-2
       = link_to 'edit', url(:countries, :edit, id: country.id), class: 'btn btn-default'
     .col-md-2
-      = form_for :country, url(:countries, :destroy, id: country.id), method: :delete do |f|
-        = f.submit 'delete', class: 'btn btn-danger'
+      = link_to 'delete', url(:countries, :destroy, :id => country.id, :format => :js), :method => :delete, :confirm => "Damit werden alle Einträge gelöscht!", :class => 'btn btn-danger'

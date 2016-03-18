@@ -8,6 +8,7 @@
     %meta{:content => 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
     %meta{:name => :viewport, :content => 'width=device-width,initial-scale=1'}
     %title DreiRadFahrer
+    = csrf_meta_tags
     =favicon_tag '/velo-icon.ico'
     =stylesheet_link_tag '/stylesheets/admin'
 
@@ -32,4 +33,4 @@
     %footer
       .footer-wrapper.container
 
-    =javascript_include_tag '/javascripts/jquery-1.11.0.min', "/javascripts/pages", (Padrino.env == :production ? '/javascripts/bootstrap/bootstrap.min' : %w[/javascripts/bootstrap/affix /javascripts/bootstrap/alert /javascripts/bootstrap/button /javascripts/bootstrap/carousel /javascripts/bootstrap/collapse /javascripts/bootstrap/dropdown /javascripts/bootstrap/tooltip /javascripts/bootstrap/transition /javascripts/bootstrap/modal /javascripts/bootstrap/popover /javascripts/bootstrap/scrollspy /javascripts/bootstrap/tab])
+    =javascript_include_tag '/javascripts/jquery-1.11.0.min', '/javascripts/jquery-ujs.min', "/javascripts/pages", (Padrino.env == :production ? '/javascripts/bootstrap/bootstrap.min' : %w[/javascripts/bootstrap/affix /javascripts/bootstrap/alert /javascripts/bootstrap/button /javascripts/bootstrap/carousel /javascripts/bootstrap/collapse /javascripts/bootstrap/dropdown /javascripts/bootstrap/tooltip /javascripts/bootstrap/transition /javascripts/bootstrap/modal /javascripts/bootstrap/popover /javascripts/bootstrap/scrollspy /javascripts/bootstrap/tab])

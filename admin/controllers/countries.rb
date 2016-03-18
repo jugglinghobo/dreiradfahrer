@@ -45,4 +45,16 @@ Velo::Admin.controllers :countries do
     end
     redirect url(:countries, :index)
   end
+
+  get :pages, :with => :id do
+    @country = Country.find params[:id]
+    @pages = @country.pages
+    render 'pages/index'
+  end
+
+  get :new_page, :with => :id do
+    @country = Country.find params[:id]
+    @page = @country.create_page
+    redirect_to url(:pages, :edit, :id => @page.id)
+  end
 end
