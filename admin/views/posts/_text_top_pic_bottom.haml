@@ -1,6 +1,6 @@
-- text = page.paragraphs.find_or_initialize_by(:rank => 0)
-- photo = page.photos.find_or_initialize_by(:rank => 0)
-= form_for :page, url(:pages, :update, :id => page.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
+- text = post.paragraphs.find_or_initialize_by(:rank => 0)
+- photo = post.photos.find_or_initialize_by(:rank => 0)
+= form_for :post, url(:posts, :update, :id => post.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
   #layout-text-top-pic-bottom.layout
     .row.form
       .col-xs-2
@@ -25,4 +25,4 @@
         = image_tag photo.picture.url(:small) if photo.picture.exists?
       .col-xs-2
   .form-actions
-    = partial 'pages/form_actions', :locals => { :f => f }
+    = partial 'posts/form_actions', :locals => { :f => f }

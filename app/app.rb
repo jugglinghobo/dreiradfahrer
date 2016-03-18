@@ -23,22 +23,6 @@ module Velo
       markers.to_json
     end
 
-    get '/map' do
-      render 'map'
-    end
-
-    get '/projekt' do
-      render 'projekt'
-    end
-
-    get '/wir' do
-      render 'wir'
-    end
-
-    get '/sponsoren' do
-      render 'sponsoren'
-    end
-
     Blog.helpers do
       def left_navigation
         content_tag :ul, :class => "list-group" do

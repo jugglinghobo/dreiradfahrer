@@ -1,6 +1,6 @@
 #fullpage
-  - @posts.each do |post|
-    .section{:data => {:anchor => post.url_string}}
-      - post.pages.each do |page|
+  - @countries.each do |country|
+    .section{:data => {:anchor => country.url_string}}
+      - country.posts.each do |post|
         .slide
-          = partial "pages/#{page.layout}", :locals => { :page => page }
+          = partial "posts/#{post.layout}", :locals => { :post => post }

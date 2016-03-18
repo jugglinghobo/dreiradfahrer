@@ -1,0 +1,20 @@
+.row
+  .col-md-6.col-md-offset-1
+    %h3
+      Seiten
+  .col-md-2.col-md-offset-2
+    = link_to 'Neu', url(:countries, :new_post, :id => @country.id), :class => 'btn btn-success'
+
+.top-buffer
+
+- @posts.each do |post|
+  .row.top-buffer
+    .col-md-3.col-md-offset-1
+      = post.title
+    .col-md-3
+      - if (title_image = post.title_image)
+        = image_tag title_image.picture.url(:small)
+    .col-md-2
+      = link_to 'edit', url(:posts, :edit, id: post.id), class: 'btn btn-default'
+    .col-md-2
+      = link_to 'delete', url(:posts, :destroy, :id => post.id, :js => true), :confirm => 'Wirklich löschen?', :class => 'btn btn-danger'

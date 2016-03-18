@@ -1,4 +1,4 @@
-class Page < ActiveRecord::Base
+class Post < ActiveRecord::Base
   belongs_to :country
   has_many :photos
   has_many :paragraphs
@@ -34,6 +34,6 @@ class Page < ActiveRecord::Base
   end
 
   def set_number
-    @number = country.next_page_number
+    @number = country.next_post_number
   end
 end

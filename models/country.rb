@@ -1,5 +1,5 @@
 class Country < ActiveRecord::Base
-  has_many :pages, :dependent => :destroy
+  has_many :posts, :dependent => :destroy
 
   def self.pages
     super.order(:number)

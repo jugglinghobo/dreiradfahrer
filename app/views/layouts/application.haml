@@ -25,11 +25,11 @@
           = link_to 'DreiRadFahrer', '/', :class => 'navbar-brand'
         #collapse-nav.collapse.navbar-collapse
           %ul.nav.navbar-nav
-            %li=link_to 'Tagebuch', '/posts', :class => 'navbar-nav-link'
-            %li=link_to 'Projekt', '/projekt', :class => 'navbar-nav-link'
-            %li=link_to 'Map', '/map', :class => 'navbar-nav-link'
-            %li=link_to 'Wir', '/wir', :class => 'navbar-nav-link'
-            %li=link_to 'Sponsoren', '/sponsoren', :class => 'navbar-nav-link'
+            -# %li=link_to 'Tagebuch', url(:pages, :tagebuch), :class => 'navbar-nav-link'
+            %li=link_to 'Projekt', url(:pages, :projekt), :class => 'navbar-nav-link'
+            %li=link_to 'Map', url(:pages, :map), :class => 'navbar-nav-link'
+            %li=link_to 'Wir', url(:pages, :wir), :class => 'navbar-nav-link'
+            %li=link_to 'Sponsoren', url(:pages, :sponsoren), :class => 'navbar-nav-link'
           %ul.nav.navbar-nav.navbar-right
             %li=link_to 'Login', '/admin', :class => 'navbar-nav-link'
     = yield

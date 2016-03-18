@@ -1,6 +1,5 @@
 module Velo
   class Admin < Padrino::Application
-    # register SassInitializer
     use ActiveRecord::ConnectionAdapters::ConnectionManagement
     register Padrino::Mailer
     register Padrino::Helpers
@@ -35,7 +34,7 @@ module Velo
 
     access_control.roles_for :admin do |role|
       role.project_module :countries, '/countries'
-      role.project_module :pages, '/pages'
+      role.project_module :posts, '/posts'
     end
 
     get "/" do

@@ -2,7 +2,8 @@ class Layout
 
   def self.as_hash
     {
-      'Nur Bild' => 'picture',
+      'Titel mit Bild' => 'title_with_pic',
+      'Nur Bild' => 'pic',
       'Text oben, Bild unten' => 'text_top_pic_bottom',
     }
   end

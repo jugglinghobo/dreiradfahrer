@@ -4,30 +4,4 @@
 .layout input, .layout textarea {
   text-align: center; }
 
-#text {
-  padding-top: 10px; }
-
-#photo-field {
-  padding-top: 10px; }
-
-#photo {
-  padding-top: 50px;
-  text-align: center; }
-  #photo img {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 70%;
-    max-height: 70%;
-    width: auto;
-    height: auto; }
-
-#layout-title #title {
-  padding-top: 100px;
-  text-align: center; }
-
-#layout-title #subtitle {
-  padding-top: 100px;
-  text-align: center; }
-
 /*# sourceMappingURL=layouts.css.map */

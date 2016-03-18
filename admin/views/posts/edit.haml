@@ -1,0 +1,9 @@
+= form_for :post, url(:posts, :update_layout, :id => @post.id), :method => :put, :class => 'form-horizontal', :id => 'post-form' do |f|
+  .form-group
+    .col-md-1.col-md-offset-3
+      = f.label 'Layout', :for => :layout, class: 'control-label'
+    .col-md-4
+      = f.select :layout, :options => Layout.as_hash.to_a, :id => "layout_select", :class => "form-control input-large input-with-feedback"
+  .layout
+    = partial "posts/#{@post.layout}", :locals => { :post => @post }
+
