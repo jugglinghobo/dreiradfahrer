@@ -1,20 +1,15 @@
 = form_for :post, url(:posts, :update, :id => post.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
   - photo = post.photos.find_or_initialize_by(:rank => 0)
-  #layout-picture.layout
+  .layout
     .row.form
-      .col-xs-4
-      #photo-field.col-xs-4
+      #photo-field.col-md-4.col-md-offset-4
         = f.fields_for :photos, photo do |ff|
           = ff.hidden_field :rank, :value => photo.rank
           %fieldset.control-group
-            .controls
-              = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
-      .col-xs-4
-    .row
-      .col-xs-2
-      #photo.col-xs-8
-        = image_tag photo.picture.url(:small) if photo.picture.exists?
-      .col-xs-2
+            = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
+      .row.form
+        .col-xs-8.col-md-offset-2
+          = image_tag photo.picture.url(:small) if photo.picture.exists?
 
   .form-actions
     = partial 'posts/form_actions', :locals => { :f => f }

@@ -17,10 +17,8 @@
             .controls
               = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
     .row
-      .col-md-2
-      #photo.col-md-8
+      .col-md-8.col-md-offset-2
         = image_tag photo.picture.url(:small) if photo.picture.exists?
-      .col-md-2
 
   .form-actions
     = partial 'posts/form_actions', :locals => { :f => f }

@@ -1,12 +1,5 @@
 (function() {
 
-  var replaceLayout = function() {
-    var form = $(this);
-    var path = select.data('path') + '?layout='+select.val();
-    console.log(path);
-    $("#post_form").find("#layout").load(path);
-  }
-
   var submitForm = function(e){
     e.preventDefault();
     var form = $(this.form);
@@ -21,8 +14,8 @@
     });
   }
 
-  var replaceLayout = function(a, b, c) {
-    $("#layout").html(a);
+  var replaceLayout = function(content, status, xhr) {
+    $("#layout").html(content);
   }
 
   $("#layout_select").off("change", submitForm);
