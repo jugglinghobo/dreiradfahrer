@@ -6133,7 +6133,7 @@ html.fp-enabled,
   z-index: 100; }
 
 .layout {
-  height: 500px; }
+  height: 450px; }
   .layout .title {
     text-align: center; }
   .layout .text {
@@ -6200,7 +6200,7 @@ h5, .h5 {
 
 .below-title {
   margin-top: 10px;
-  height: calc(100% - (46px - 10px)); }
+  height: calc(95% - (46px - 10px)); }
 
 .top-buffer {
   margin-top: 50px; }
