@@ -5795,9 +5795,11 @@ button.close {
     display: none !important; } }
 .layout {
   height: 400px; }
-
-.layout input, .layout textarea {
-  text-align: center; }
+  .layout .title {
+    text-align: center; }
+  .layout .text {
+    height: 100%;
+    text-align: left; }
 
 h1, .h1,
 h2, .h2,

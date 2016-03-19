@@ -1,7 +1,12 @@
 .layout {
   height: 400px;
-}
 
-.layout input, .layout textarea {
-  text-align: center;
+  .title {
+    text-align: center;
+  }
+
+  .text {
+    height: 100%;
+    text-align: left;
+  }
 }

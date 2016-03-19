@@ -3,7 +3,7 @@
     %h3
       Länder
   .col-md-2.col-md-offset-2
-    = link_to 'Neu', url(:countries, :new), :class => 'btn btn-success'
+    = link_to 'Neues Land', url(:countries, :new), :class => 'btn btn-success'
 
 .top-buffer
 
@@ -12,7 +12,7 @@
     .col-md-3.col-md-offset-1
       = link_to country, url(:countries, :posts, :id => country.id)
     .col-md-3
-      = link_to "Einträge: #{country.posts.count}", url(:countries, :posts, :id => country.id)
+      = link_to "Einträge: #{country.posts.count}", url(:countries, :posts, :id => country.id), :class => 'btn btn-default'
     .col-md-2
       = link_to 'edit', url(:countries, :edit, id: country.id), class: 'btn btn-default'
     .col-md-2

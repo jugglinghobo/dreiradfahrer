@@ -18,7 +18,7 @@ class Post < ActiveRecord::Base
   end
 
   def title
-    paragraphs.first
+    paragraphs.first.title
   end
 
   def title_image
@@ -36,4 +36,5 @@ class Post < ActiveRecord::Base
   def set_number
     @number = country.next_post_number
   end
+
 end

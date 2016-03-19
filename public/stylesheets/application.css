@@ -6134,9 +6134,11 @@ html.fp-enabled,
 
 .layout {
   height: 400px; }
-
-.layout input, .layout textarea {
-  text-align: center; }
+  .layout .title {
+    text-align: center; }
+  .layout .text {
+    height: 100%;
+    text-align: left; }
 
 .post {
   height: 100%;
@@ -6166,6 +6168,16 @@ html {
   height: 100%; }
 
 body {
+  height: 100%; }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+  margin-top: 0; }
+
+.full-height {
   height: 100%; }
 
 .bottom {

@@ -3,7 +3,7 @@
     %h3
       = @country
   .col-md-2.col-md-offset-2
-    = link_to 'Neu', url(:countries, :new_post, :id => @country.id), :class => 'btn btn-success'
+    = link_to 'Neuer Eintrag', url(:countries, :new_post, :id => @country.id), :class => 'btn btn-success'
 
 .top-buffer
 
@@ -15,6 +15,6 @@
       - if (title_image = post.title_image)
         = image_tag title_image.picture.url(:small)
     .col-md-2
-      = link_to 'edit', url(:posts, :edit, id: post.id), class: 'btn btn-default'
+      = link_to 'Eintrag anpassen', url(:posts, :edit, id: post.id), class: 'btn btn-default'
     .col-md-2
-      = link_to 'delete', url(:posts, :destroy, :id => post.id, :js => true), :confirm => 'Wirklich löschen?', :class => 'btn btn-danger'
+      = link_to 'Eintrag löschen', url(:posts, :destroy, :id => post.id, :js => true), :confirm => 'Wirklich löschen?', :class => 'btn btn-danger'

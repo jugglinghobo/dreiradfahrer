@@ -1,7 +1,7 @@
 class Country < ActiveRecord::Base
   has_many :posts, :dependent => :destroy
 
-  def self.pages
+  def self.posts
     super.order(:number)
   end
 
@@ -13,11 +13,11 @@ class Country < ActiveRecord::Base
     name.gsub(" ", "_")
   end
 
-  def create_page
-    pages.create :number => next_page_number, :layout => Layout.default
+  def create_post
+    posts.create :number => next_post_number, :layout => Layout.default
   end
 
-  def next_page_number
-    pages.count
+  def next_post_number
+    posts.count
   end
 end
