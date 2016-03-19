@@ -1,0 +1,9 @@
+.layout
+  .row
+    .col-md-4.col-md-offset-2
+      %h3= post.title
+      %p= post.content
+  .row
+    .col-md-12.below-title
+      - if (picture = post.picture)
+        = image_tag picture.url(:large), :class => 'img-responsive center-block'
