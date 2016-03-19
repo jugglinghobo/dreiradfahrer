@@ -2,14 +2,15 @@
   - photo = post.photos.find_or_initialize_by(:rank => 0)
   .layout
     .row.form.top-buffer.full-height
-      .full-height.col-md-8.col-md-offset-2
-        = f.fields_for :photos, photo do |ff|
-          = ff.hidden_field :rank, :value => photo.rank
-          - if photo.picture.exists?
+      = f.fields_for :photos, photo do |ff|
+        = ff.hidden_field :rank, :value => photo.rank
+        - if photo.picture.exists?
+          .full-height.col-md-8.col-md-offset-2
             = image_tag photo.picture.url(:large), :class => 'img-responsive center-block file-field-trigger'
             .hidden.hidden-file-field
               = ff.file_field :picture
-          - else
+        - else
+          .col-md-4.col-md-offset-4
             = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
 
   .top-buffer.form-actions

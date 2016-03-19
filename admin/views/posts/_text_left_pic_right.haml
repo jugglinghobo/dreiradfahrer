@@ -1,12 +1,18 @@
 = form_for :post, url(:posts, :update, :id => post.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
   - title = post.paragraphs.find_or_initialize_by(:rank => 0)
+  - content = post.paragraphs.find_or_initialize_by(:rank => 1)
   - photo = post.photos.find_or_initialize_by(:rank => 0)
   .layout
     .full-height.row.form.top-buffer
       .full-height.col-md-4.col-md-offset-2
-        = f.fields_for :paragraphs, title, :index => title.rank do |ff|
-          = ff.hidden_field :rank, :value => title.rank
-          ~ ff.text_area :content, :placeholder => "text", :class => 'form-control input-large input-with-feedback text'
+        .title
+          = f.fields_for :paragraphs, title, :index => title.rank do |ff|
+            = ff.hidden_field :rank, :value => title.rank
+            ~ ff.text_field :content, :placeholder => 'Titel', :class => 'form-control input-large input-with-feedback text'
+        .below-title
+          = f.fields_for :paragraphs, title, :index => title.rank do |ff|
+            = ff.hidden_field :rank, :value => title.rank
+            ~ ff.text_area :content, :placeholder => 'Text', :class => 'form-control input-large input-with-feedback text'
       .full-height.col-md-4
         = f.fields_for :photos, photo do |ff|
           = ff.hidden_field :rank, :value => photo.rank

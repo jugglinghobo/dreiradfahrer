@@ -8,16 +8,17 @@
           = ff.hidden_field :rank, :value => title.rank
           %fieldset.control-group
             .controls
-              ~ ff.text_field :content, :value => title.title, :placeholder => "Titel", :class => 'form-control input-large input-with-feedback title'
+              ~ ff.text_field :content, :placeholder => "Titel", :class => 'form-control input-large input-with-feedback title'
     .row.form.below-title
-      .full-height.col-md-8.col-md-offset-2
-        = f.fields_for :photos, photo do |ff|
-          = ff.hidden_field :rank, :value => photo.rank
-          - if photo.picture.exists?
+      = f.fields_for :photos, photo do |ff|
+        = ff.hidden_field :rank, :value => photo.rank
+        - if photo.picture.exists?
+          .full-height.col-md-8.col-md-offset-2
             = image_tag photo.picture.url(:large), :class => 'img-responsive center-block file-field-trigger'
             .hidden.hidden-file-field
               = ff.file_field :picture
-          - else
+        - else
+          .col-md-4.col-md-offset-4
             = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
 
   .top-buffer.form-actions

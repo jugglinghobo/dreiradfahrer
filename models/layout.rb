@@ -4,7 +4,6 @@ class Layout
     {
       'Titel mit Bild' => 'title_with_pic',
       'Nur Bild' => 'pic',
-      'Text oben, Bild unten' => 'text_top_pic_bottom',
       'Text links, Bild rechts' => 'text_left_pic_right',
       'Bild links, Text rechts' => 'pic_left_text_right'
     }

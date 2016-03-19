@@ -18,7 +18,7 @@ class Post < ActiveRecord::Base
   end
 
   def title
-    paragraphs.first.title
+    paragraphs.first
   end
 
   def title_image
