@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,OAAQ;EACN,MAAM,EAAE,KAAK;EAEb,cAAO;IACL,UAAU,EAAE,MAAM;EAGpB,aAAM;IACJ,MAAM,EAAE,IAAI;IACZ,UAAU,EAAE,IAAI",
+"mappings": "AAAA,OAAQ;EACN,MAAM,EAAE,KAAK;EAEb,cAAO;IACL,UAAU,EAAE,MAAM;EAGpB,aAAM;IACJ,MAAM,EAAE,IAAI;IACZ,UAAU,EAAE,IAAI;EAGlB,cAAO;IACL,MAAM,EAAE,IAAI",
 "sources": ["../../app/stylesheets/layouts.scss"],
 "names": [],
 "file": "layouts.css"

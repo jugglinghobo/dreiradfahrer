@@ -8,18 +8,17 @@
           = ff.hidden_field :rank, :value => title.rank
           %fieldset.control-group
             .controls
-              ~ ff.text_field :content, :placeholder => "Titel", :class => 'form-control input-large input-with-feedback title'
-    .row.form.top-buffer
-      .col-md-4.col-md-offset-4
+              ~ ff.text_field :content, :value => title.title, :placeholder => "Titel", :class => 'form-control input-large input-with-feedback title'
+    .row.form.below-title
+      .full-height.col-md-8.col-md-offset-2
         = f.fields_for :photos, photo do |ff|
           = ff.hidden_field :rank, :value => photo.rank
-          %fieldset.control-group
-            .controls
-              = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
-    .row.form.top-buffer
-      .col-md-8.col-md-offset-2
-        - if photo.picture.exists?
-          = image_tag photo.picture.url(:small), :class => 'img-responsive center-block'
+          - if photo.picture.exists?
+            = image_tag photo.picture.url(:large), :class => 'img-responsive center-block file-field-trigger'
+            .hidden.hidden-file-field
+              = ff.file_field :picture
+          - else
+            = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
 
-  .form-actions
+  .top-buffer.form-actions
     = partial 'posts/form_actions', :locals => { :f => f }

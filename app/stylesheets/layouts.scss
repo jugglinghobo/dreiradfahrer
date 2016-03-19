@@ -1,5 +1,5 @@
 .layout {
-  height: 400px;
+  height: $layout-height;
 
   .title {
     text-align: center;
@@ -9,4 +9,21 @@
     height: 100%;
     text-align: left;
   }
+
+  .photo {
+    height: 100%;
+  }
+
+  .col-input {
+    height: $input-height-large;
+  }
+
+  .col-image {
+    height: calc(100% - #{$input-height-large});
+
+    &.top-buffer {
+      height: calc(100% - (#{$input-height-large} + #{$top-buffer-height}))
+    }
+  }
+
 }

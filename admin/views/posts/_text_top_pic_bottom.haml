@@ -2,20 +2,18 @@
 - photo = post.photos.find_or_initialize_by(:rank => 0)
 = form_for :post, url(:posts, :update, :id => post.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
   .layout
-    .row.form
+    .row.top-buffer
       .col-md-8.col-md-offset-2
         = f.fields_for :paragraphs, text do |ff|
           = ff.hidden_field :rank, :value => text.rank
           ~ ff.text_area :content, :placeholder => "Text...", :class => 'form-control'
 
-    .row.form
+    .row.top-buffer
       .col-md-4.col-md-offset-4
         = f.fields_for :photos, photo do |ff|
           = ff.hidden_field :rank, :value => photo.rank
-          %fieldset.control-group
-            .controls
-              = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
-    .row.form
+          = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
+    .row
       .col-md-8.col-md-offset-2
         - if photo.picture.exists?
           = image_tag photo.picture.url(:small), :class => 'img-responsive center-block'

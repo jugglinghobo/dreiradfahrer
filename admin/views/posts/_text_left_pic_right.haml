@@ -7,11 +7,14 @@
         = f.fields_for :paragraphs, title, :index => title.rank do |ff|
           = ff.hidden_field :rank, :value => title.rank
           ~ ff.text_area :content, :placeholder => "text", :class => 'form-control input-large input-with-feedback text'
-      .col-md-4
+      .full-height.col-md-4
         = f.fields_for :photos, photo do |ff|
           = ff.hidden_field :rank, :value => photo.rank
-          = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
-        - if photo.picture.exists?
-          = image_tag photo.picture.url(:small), :class => 'img-responsive center-block'
-  .form-actions.top-buffer
+          - if photo.picture.exists?
+            = image_tag photo.picture.url(:large), :class => 'img-responsive center-block file-field-trigger'
+            .hidden.hidden-file-field
+              = ff.file_field :picture
+          - else
+            = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
+  .row.form-actions.top-buffer
     = partial 'posts/form_actions', :locals => { :f => f }

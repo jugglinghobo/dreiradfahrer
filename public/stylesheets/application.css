@@ -6133,12 +6133,20 @@ html.fp-enabled,
   z-index: 100; }
 
 .layout {
-  height: 400px; }
+  height: 500px; }
   .layout .title {
     text-align: center; }
   .layout .text {
     height: 100%;
     text-align: left; }
+  .layout .photo {
+    height: 100%; }
+  .layout .col-input {
+    height: 46px; }
+  .layout .col-image {
+    height: calc(100% - 46px); }
+    .layout .col-image.top-buffer {
+      height: calc(100% - (46px + 50px)); }
 
 .post {
   height: 100%;
@@ -6170,6 +6178,10 @@ html {
 body {
   height: 100%; }
 
+.content {
+  width: 100%;
+  height: 100%; }
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -6177,26 +6189,21 @@ h4, .h4,
 h5, .h5 {
   margin-top: 0; }
 
-.full-height {
-  height: 100%; }
-
-.bottom {
-  vertical-align: bottom;
-  bottom: 0; }
-
 .relative {
   position: relative; }
 
 .absolute {
   position: absolute; }
 
-.content {
-  width: 100%;
+.full-height {
   height: 100%; }
 
-.slimScrollBar {
-  background-color: transparent;
-  background: transparent; }
+.below-title {
+  margin-top: 10px;
+  height: calc(100% - (46px - 10px)); }
+
+.top-buffer {
+  margin-top: 50px; }
 
 .vertical-center {
   display: inline-block;
@@ -6208,8 +6215,16 @@ h5, .h5 {
   vertical-align: bottom;
   float: none; }
 
-.top-buffer {
-  margin-top: 50px; }
+.bottom {
+  vertical-align: bottom;
+  bottom: 0; }
+
+.slimScrollBar {
+  background-color: transparent;
+  background: transparent; }
+
+.img-responsive {
+  max-height: 100%; }
 
 #fp-nav {
   display: none; }
