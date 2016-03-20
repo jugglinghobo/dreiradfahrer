@@ -6,6 +6,8 @@ set :repo_url, 'git@github.com:jugglinghobo/dreiradfahrer.git'
 
 set :rvm_ruby_version, '2.2.3'
 
+set :branch, ENV['branch'] || fetch(:branch) || :master
+
 set :ssh_options, {
   port: 37797
 }
