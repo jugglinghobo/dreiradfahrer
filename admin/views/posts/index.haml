@@ -12,9 +12,10 @@
     .col-md-3.col-md-offset-1
       = post.title
     .col-md-3
-      - if (title_image = post.title_image)
-        = link_to image_tag(title_image.picture.url(:small), :class => 'center-block'), url(:posts, :edit, :id => post.id)
+      - picture = post.picture
+      - if picture.exists?
+        = link_to image_tag(picture.url(:small), :class => 'center-block pointer'), url(:posts, :edit, :id => post.id)
     .col-md-2
       = link_to 'Eintrag anpassen', url(:posts, :edit, id: post.id), class: 'btn btn-default'
     .col-md-2
-      = link_to 'Eintrag löschen', url(:posts, :destroy, :id => post.id, :js => true), :confirm => 'Wirklich löschen?', :class => 'btn btn-danger'
+      = link_to 'Eintrag löschen', url(:posts, :destroy, :id => post.id, :js => true), :method => :delete, :confirm => 'Wirklich löschen?', :class => 'btn btn-danger'

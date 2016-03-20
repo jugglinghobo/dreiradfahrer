@@ -33,6 +33,6 @@ Velo::Admin.controllers :posts do
     else
       flash[:error] = 'Seite wurde nicht gelöscht'
     end
-    redirect url(:countries, :edit, :id => post.country_id)
+    redirect url(:countries, :posts, :id => post.country_id)
   end
 end

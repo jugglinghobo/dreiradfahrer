@@ -2,13 +2,13 @@
   - title = post.paragraphs.find_or_initialize_by(:rank => 0)
   - content = post.paragraphs.find_or_initialize_by(:rank => 1)
   - photo = post.photos.find_or_initialize_by(:rank => 0)
-  .layout
+  .layout.layout-admin
     .row.form.top-buffer.full-height
       .full-height.col-md-4.col-md-offset-2
         = f.fields_for :photos, photo do |ff|
           = ff.hidden_field :rank, :value => photo.rank
           - if photo.picture.exists?
-            = image_tag photo.picture.url(:large), :class => 'img-responsive center-block file-field-trigger'
+            = image_tag photo.picture.url(:large), :class => 'img-responsive center-block file-field-trigger pointer'
             .hidden.hidden-file-field
               = ff.file_field :picture
           - else
@@ -17,10 +17,10 @@
         .title
           = f.fields_for :paragraphs, title, :index => title.rank do |ff|
             = ff.hidden_field :rank, :value => title.rank
-            ~ ff.text_field :content, :placeholder => 'Titel', :class => 'form-control input-large input-with-feedback text'
+            ~ ff.text_field :content, :placeholder => 'Titel', :autofocus => true, :class => 'form-control input-large input-with-feedback text'
         .below-title
-          = f.fields_for :paragraphs, title, :index => title.rank do |ff|
-            = ff.hidden_field :rank, :value => title.rank
-            ~ ff.text_area :content, :placeholder => "Text", :class => 'form-control input-large input-with-feedback text'
+          = f.fields_for :paragraphs, content, :index => content.rank do |ff|
+            = ff.hidden_field :rank, :value => content.rank
+            ~ ff.text_area :content, :placeholder => 'Text', :class => 'form-control input-large input-with-feedback text'
   .row.form-actions.top-buffer
     = partial 'posts/form_actions', :locals => { :f => f }

@@ -1,7 +1,5 @@
-- photo = page.photos.find_or_initialize_by(:rank => 0)
-.layout
-  .row.form
-  .col-xs-2
-  #photo.col-xs-8
-    = image_tag photo.picture.url(:original) if photo.picture.exists?
-  .col-xs-2
+- picture = post.picture
+.row.full-height
+  .full-height.col-md-12
+    - if picture.exists?
+      = image_tag picture.url(:huge), :class => 'img-responsive center-block'

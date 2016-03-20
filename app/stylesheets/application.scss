@@ -44,9 +44,9 @@ h5, .h5 {
   height: 100%;
 }
 
-.below-title {
-  margin-top: 10px;
-  height: calc(95% - (#{$input-height-large} - 10px))
+.fullpage-full-height {
+  height: calc(100% - #{$header-height});
+  margin-bottom: $header-height;
 }
 
 .top-buffer {
@@ -68,6 +68,10 @@ h5, .h5 {
 .bottom {
   vertical-align: bottom;
   bottom: 0;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .slimScrollBar {

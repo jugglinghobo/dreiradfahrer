@@ -1,12 +1,12 @@
 = form_for :post, url(:posts, :update, :id => post.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
   - photo = post.photos.find_or_initialize_by(:rank => 0)
-  .layout
+  .layout.layout-admin
     .row.form.top-buffer.full-height
       = f.fields_for :photos, photo do |ff|
         = ff.hidden_field :rank, :value => photo.rank
         - if photo.picture.exists?
           .full-height.col-md-8.col-md-offset-2
-            = image_tag photo.picture.url(:large), :class => 'img-responsive center-block file-field-trigger'
+            = image_tag photo.picture.url(:large), :class => 'img-responsive center-block file-field-trigger pointer'
             .hidden.hidden-file-field
               = ff.file_field :picture
         - else

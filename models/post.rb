@@ -21,8 +21,12 @@ class Post < ActiveRecord::Base
     paragraphs.first
   end
 
-  def title_image
-    photos.first
+  def content
+    paragraphs.second
+  end
+
+  def picture
+    photos.first.picture
   end
 
   def layout

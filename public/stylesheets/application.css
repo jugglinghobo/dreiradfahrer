@@ -6132,21 +6132,27 @@ html.fp-enabled,
   padding: 10% 1%;
   z-index: 100; }
 
-.layout {
+.layout.layout-blog {
+  height: 100%; }
+.layout.layout-admin {
   height: 450px; }
-  .layout .title {
-    text-align: center; }
-  .layout .text {
-    height: 100%;
-    text-align: left; }
-  .layout .photo {
-    height: 100%; }
-  .layout .col-input {
-    height: 46px; }
-  .layout .col-image {
-    height: calc(100% - 46px); }
-    .layout .col-image.top-buffer {
-      height: calc(100% - (46px + 50px)); }
+.layout .title-row {
+  height: 50px; }
+.layout .picture-row {
+  height: calc(100% - 50px); }
+.layout .title {
+  text-align: center; }
+.layout .text {
+  height: 100%;
+  text-align: justify; }
+.layout .photo {
+  height: 100%; }
+.layout .col-input {
+  height: 46px; }
+.layout .col-image {
+  height: calc(100% - 46px); }
+  .layout .col-image.top-buffer {
+    height: calc(100% - (46px + 50px)); }
 
 .post {
   height: 100%;
@@ -6201,9 +6207,9 @@ h5, .h5 {
 .full-height {
   height: 100%; }
 
-.below-title {
-  margin-top: 10px;
-  height: calc(95% - (46px - 10px)); }
+.fullpage-full-height {
+  height: calc(100% - 50px);
+  margin-bottom: 50px; }
 
 .top-buffer {
   margin-top: 50px; }
@@ -6221,6 +6227,9 @@ h5, .h5 {
 .bottom {
   vertical-align: bottom;
   bottom: 0; }
+
+.pointer {
+  cursor: pointer; }
 
 .slimScrollBar {
   background-color: transparent;

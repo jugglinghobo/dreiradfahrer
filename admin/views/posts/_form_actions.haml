@@ -1,8 +1,7 @@
 .col-md-1.col-md-offset-2
-  = link_to 'Cancel', url(:countries, :posts, :id => @post.country_id), :class => 'btn btn-primary'
-.col-md-6
-  = f.submit 'Speichern und Neuer Eintrag', :name => 'save_and_new', :class => 'btn btn-success center-block'
-.col-md-1
-  .pull-right
-    = f.submit 'Speichern', :class => 'btn btn-success'
+  = link_to 'Eintrag löschen', url(:posts, :destroy, :id => f.object.id, :js => true), :method => :delete, :confirm => 'Wirklich löschen?', :class => 'btn btn-danger'
+.col-md-6.col-md-push-5
+  = f.submit 'Speichern', :class => 'btn btn-success'
+.col-md-2.col-md-pull-4
+  = f.submit 'Speichern und Neuer Eintrag', :name => 'save_and_new', :class => 'btn btn-success pull-right'
 
