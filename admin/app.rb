@@ -20,8 +20,6 @@ module Velo
     layout  :application              # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
     # disable :cache
 
-    enable :sessions
-
     set :admin_model, 'Account'
     set :login_page,  '/sessions/new'
 
