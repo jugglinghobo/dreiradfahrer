@@ -16,16 +16,20 @@
     #dreiradfahrer-nav.navbar.navbar-default
       .navbar-inner
         .container
-          = link_to 'DreiRadFahrer', "/", :class => 'navbar-brand', :title => 'DreiRadFahrer home'
-          %ul.nav.navbar-nav
-            %li=link_to "Länder", url(:countries, :index), :class => 'navbar-nav-link'
-          %ul.nav.navbar-nav.navbar-right
-            %li
-              =link_to :logout, url(:sessions, :destroy), :class => 'navbar-nav-form'
+          .col-md-2
+            = link_to 'DreiRadFahrer', "/", :class => 'navbar-brand', :title => 'DreiRadFahrer home'
+          .col-md-2
+            %ul.nav.navbar-nav
+              %li=link_to "Länder", url(:countries, :index), :class => 'navbar-nav-link'
+          .col-md-5
+            = {:error => 'danger', :warning => 'warning', :success => 'success', :notice => 'info'}.map { |type, class_name| flash_tag(type, :class => "alert alert-#{class_name} fade in", :bootstrap => true) }.join.html_safe
+          .col-md-3
+            %ul.nav.navbar-nav.navbar-right
+              %li= link_to :logout, url(:sessions, :destroy), :class => 'navbar-nav-form'
+
 
     .container.main
       .main-wrapper
-        ={:error => 'danger', :warning => 'warning', :success => 'success', :notice => 'info'}.map { |type, class_name| flash_tag(type, :class => "alert alert-#{class_name} fade in", :bootstrap => true) }.join.html_safe
         .row
           =yield
         .main-wrapper-push

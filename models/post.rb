@@ -9,6 +9,10 @@ class Post < ActiveRecord::Base
 
   before_create :set_number
 
+  def self.ordered
+    order(:number)
+  end
+
   def self.paragraphs
     super.order :rank
   end

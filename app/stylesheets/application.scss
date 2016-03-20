@@ -16,7 +16,10 @@ body {
 }
 
 footer {
-  height: 20px;
+  bottom: 0;
+  height: $footer-height;
+  position: relative;
+  width: 100%;
 }
 
 .content {
@@ -83,6 +86,14 @@ h5, .h5 {
 // inside the container
 .img-responsive {
   max-height: 100%;
+}
+
+.alert {
+  font-size: 14px;
+  line-height: normal;
+  padding: 10px 15px;
+  margin: 5px 0;
+  text-align: center;
 }
 
 #fp-nav {

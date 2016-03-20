@@ -5,8 +5,8 @@
       = f.fields_for :photos, photo do |ff|
         = ff.hidden_field :rank, :value => photo.rank
         - if photo.picture.exists?
-          .full-height.col-md-8.col-md-offset-2
-            = image_tag photo.picture.url(:large), :class => 'img-responsive center-block file-field-trigger pointer'
+          .full-height.col-md-12
+            = image_tag photo.picture.url(:huge), :class => 'img-responsive center-block file-field-trigger pointer'
             .hidden.hidden-file-field
               = ff.file_field :picture
         - else

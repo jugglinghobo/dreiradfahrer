@@ -48,7 +48,7 @@ Velo::Admin.controllers :countries do
 
   get :posts, :with => :id do
     @country = Country.find params[:id]
-    @posts = @country.posts
+    @posts = @country.posts.ordered
     render 'posts/index'
   end
 

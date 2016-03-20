@@ -6135,13 +6135,16 @@ html.fp-enabled,
 .layout.layout-blog {
   height: 100%; }
 .layout.layout-admin {
-  height: 450px; }
+  height: 400px; }
 .layout .title-row {
   height: 50px; }
-.layout .picture-row {
+.layout .below-title-row {
   height: calc(100% - 50px); }
-.layout .title {
+.layout .row .title {
   text-align: center; }
+.layout .row .below-title {
+  margin-top: 10px;
+  height: calc(95% - (46px - 10px)); }
 .layout .text {
   height: 100%;
   text-align: justify; }
@@ -6185,7 +6188,10 @@ body {
   height: 100%; }
 
 footer {
-  height: 20px; }
+  bottom: 0;
+  height: 85px;
+  position: relative;
+  width: 100%; }
 
 .content {
   width: 100%;
@@ -6237,6 +6243,13 @@ h5, .h5 {
 
 .img-responsive {
   max-height: 100%; }
+
+.alert {
+  font-size: 14px;
+  line-height: normal;
+  padding: 10px 15px;
+  margin: 5px 0;
+  text-align: center; }
 
 #fp-nav {
   display: none; }

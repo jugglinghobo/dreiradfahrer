@@ -3,17 +3,17 @@
     %h3
       Länder
   .col-md-2.col-md-offset-2
-    = link_to 'Neues Land', url(:countries, :new), :class => 'btn btn-success'
+    = link_to 'Neues Land', url(:countries, :new), :class => 'btn btn-success btn-block'
 
 .top-buffer
 
 - @countries.each do |country|
   .row.top-buffer
     .col-md-3.col-md-offset-1
-      = link_to country, url(:countries, :posts, :id => country.id)
-    .col-md-3
-      = link_to "Einträge: #{country.posts.count}", url(:countries, :posts, :id => country.id), :class => 'btn btn-default'
+      = link_to country, url(:countries, :posts, :id => country.id), :class => 'btn btn-lg btn-link btn-block text-left'
     .col-md-2
-      = link_to 'edit', url(:countries, :edit, id: country.id), class: 'btn btn-default'
+      = link_to "Einträge: #{country.posts.count}", url(:countries, :posts, :id => country.id), :class => 'btn btn-default btn-block'
+    .col-md-2.col-md-offset-1
+      = link_to 'edit', url(:countries, :edit, id: country.id), class: 'btn btn-default btn-block'
     .col-md-2
-      = link_to 'delete', url(:countries, :destroy, :id => country.id, :format => :js), :method => :delete, :confirm => "Damit werden alle Einträge gelöscht!", :class => 'btn btn-danger'
+      = link_to 'delete', url(:countries, :destroy, :id => country.id, :format => :js), :method => :delete, :confirm => "Damit werden alle Einträge gelöscht!", :class => 'btn btn-danger btn-block'

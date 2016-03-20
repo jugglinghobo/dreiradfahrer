@@ -12,13 +12,21 @@
     height: $title-row-height;
   }
 
-  .picture-row {
+  .below-title-row {
     height: calc(100% - #{$title-row-height});
   }
 
-  .title {
-    text-align: center;
+  .row {
+    .title {
+      text-align: center;
+    }
+
+    .below-title {
+      margin-top: 10px;
+      height: calc(95% - (#{$input-height-large} - 10px))
+    }
   }
+
 
   .text {
     height: 100%;
