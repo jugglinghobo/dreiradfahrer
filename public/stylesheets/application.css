@@ -6208,8 +6208,8 @@ h5, .h5 {
   height: 100%; }
 
 .fullpage-full-height {
-  height: calc(100% - 50px);
-  margin-bottom: 50px; }
+  height: calc(100% - 80px);
+  margin-bottom: 80px; }
 
 .top-buffer {
   margin-top: 50px; }

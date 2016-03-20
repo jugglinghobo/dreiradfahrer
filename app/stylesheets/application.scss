@@ -45,8 +45,8 @@ h5, .h5 {
 }
 
 .fullpage-full-height {
-  height: calc(100% - #{$header-height});
-  margin-bottom: $header-height;
+  height: calc(100% - #{$fullpage-header-height});
+  margin-bottom: $fullpage-header-height;
 }
 
 .top-buffer {
