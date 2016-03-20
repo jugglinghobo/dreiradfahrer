@@ -88,12 +88,21 @@ h5, .h5 {
   max-height: 100%;
 }
 
+// override bootstrap alert style to fit into navbar
 .alert {
   font-size: 14px;
   line-height: normal;
   padding: 10px 15px;
   margin: 5px 0;
   text-align: center;
+}
+
+// override bootstrap navbar collapse button to be left aligned and have no
+// border
+.navbar-toggle {
+  float: left;
+  margin-left: 10px;
+  border: none;
 }
 
 #fp-nav {

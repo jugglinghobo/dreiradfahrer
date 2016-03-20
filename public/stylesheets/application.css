@@ -6251,6 +6251,11 @@ h5, .h5 {
   margin: 5px 0;
   text-align: center; }
 
+.navbar-toggle {
+  float: left;
+  margin-left: 10px;
+  border: none; }
+
 #fp-nav {
   display: none; }
 
