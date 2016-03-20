@@ -37,7 +37,7 @@ module Velo
       render 'wir'
     end
 
-    get '/sponsoren' do
+    get '/sponsoren_und_goenner' do
       render 'sponsoren'
     end
 
