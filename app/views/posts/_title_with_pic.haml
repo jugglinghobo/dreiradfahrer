@@ -2,6 +2,6 @@
   .title.col-md-12
     %h1.text-center= post.title
 - if (picture = post.picture)
-  .row.picture-row
+  .row.below-title-row
     .full-height.col-md-12
       = image_tag picture.url(:huge), :class => 'img-responsive center-block'

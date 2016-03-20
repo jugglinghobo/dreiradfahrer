@@ -30,7 +30,7 @@ class Post < ActiveRecord::Base
   end
 
   def picture
-    photos.first.picture
+    photos.first.try(:picture)
   end
 
   def layout
