@@ -105,6 +105,12 @@ h5, .h5 {
   border: none;
 }
 
+// disable bootstrap collapse animation
+.collapse {
+  -webkit-transition: none;
+  transition: none;
+}
+
 #fp-nav {
   display: none;
 }
