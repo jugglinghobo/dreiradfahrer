@@ -1,0 +1,7 @@
+.col-md-3
+  = link_to 'Eintrag löschen', url(:posts, :destroy, :id => f.object.id, :js => true), :method => :delete, :confirm => 'Wirklich löschen?', :class => 'btn btn-danger'
+.col-md-6
+  = f.submit 'Speichern', :class => 'btn btn-success center-block'
+.col-md-3
+  = f.submit 'Speichern und Neuer Eintrag', :name => 'save_and_new', :class => 'btn btn-success pull-right'
+

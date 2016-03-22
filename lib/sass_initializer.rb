@@ -10,3 +10,4 @@ module SassInitializer
     app.use Sass::Plugin::Rack
   end
 end
+

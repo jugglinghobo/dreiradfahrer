@@ -18,7 +18,7 @@ Velo::Admin.controllers :sessions do
     end
   end
 
-  delete :destroy do
+  get :destroy do
     set_current_account(nil)
     redirect url(:sessions, :new)
   end

@@ -1,0 +1,8 @@
+#fullpage
+  - @countries.each do |country|
+    .section{:data => {:anchor => country.url_string}}
+      - country.posts.each do |post|
+        .slide
+          .container.fullpage-full-height
+            .layout.layout-blog
+              = partial "posts/#{post.layout}", :locals => { :post => post }

@@ -1,43 +1,51 @@
 .layout {
-  margin: 20px 50px;
-  width: 100%;
-  height: 400px;
-  /* border: 1px solid lightgrey; */
-}
 
-.layout input, .layout textarea {
-  text-align: center;
-}
+  &.layout-blog {
+    height: 100%;
+  }
 
-#text {
-  padding-top: 10px;
-}
+  &.layout-admin {
+    height: $layout-height;
+  }
 
-#photo-field {
-  padding-top: 10px;
-}
+  .title-row {
+    height: $title-row-height;
+  }
 
-#photo {
-  padding-top: 50px;
-  text-align: center;
+  .below-title-row {
+    height: calc(100% - #{$title-row-height});
+  }
 
-  img {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 70%;
-    max-height: 70%;
-    width: auto;
-    height: auto;
+  .row {
+    .title {
+      text-align: center;
+    }
+
+    .below-title {
+      margin-top: 10px;
+      height: calc(95% - (#{$input-height-large} - 10px))
+    }
+  }
+
+
+  .text {
+    height: 100%;
+    text-align: justify;
+  }
+
+  .photo {
+    height: 100%;
+  }
+
+  .col-input {
+    height: $input-height-large;
+  }
+
+  .col-image {
+    height: calc(100% - #{$input-height-large});
+
+    &.top-buffer {
+      height: calc(100% - (#{$input-height-large} + #{$top-buffer-height}))
+    }
   }
 }
-
-#layout-title #title {
-  padding-top: 100px;
-}
-
-
-#layout-title #subtitle {
-  padding-top: 100px;
-}
-

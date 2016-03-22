@@ -1,8 +1,0 @@
-.tabs-content#page_form
-  = form_for :page, url(:pages, :update_layout, :id => @page.id), :method => :put, :class => 'form-horizontal' do |f|
-    %fieldset.control-group
-      = f.label :layout
-      .controls
-        = f.select :layout, :options => Layout.as_hash.to_a, :id => "layout_select", :class => "form-control input-large input-with-feedback"
-  #layout
-    = partial "pages/#{@page.layout}", :locals => { :page => @page }

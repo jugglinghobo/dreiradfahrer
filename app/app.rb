@@ -5,8 +5,6 @@ module Velo
     register Padrino::Mailer
     register Padrino::Helpers
 
-    enable :sessions
-
     get '/' do
       redirect_to '/projekt'
     end
@@ -23,22 +21,6 @@ module Velo
           :properties=>{}
       }
       markers.to_json
-    end
-
-    get '/map' do
-      render 'map'
-    end
-
-    get '/projekt' do
-      render 'projekt'
-    end
-
-    get '/wir' do
-      render 'wir'
-    end
-
-    get '/sponsoren_und_goenner' do
-      render 'sponsoren'
     end
 
     Blog.helpers do

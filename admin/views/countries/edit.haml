@@ -1,0 +1,2 @@
+= form_for :country, url(:countries, :update, :id => @country.id), :method => :put, :class => 'form-horizontal' do |f|
+  = partial 'countries/form', :locals => { :f => f }

@@ -1,6 +1,5 @@
 module Velo
   class Admin < Padrino::Application
-    # register SassInitializer
     use ActiveRecord::ConnectionAdapters::ConnectionManagement
     register Padrino::Mailer
     register Padrino::Helpers
@@ -17,15 +16,13 @@ module Velo
     # set :reload, false              # Reload application files (default in development)
     # set :default_builder, "foo"     # Set a custom form builder (default 'StandardFormBuilder')
     # set :locale_path, "bar"         # Set path for I18n translations (default your_app/locales)
-    # disable :sessions               # Disabled sessions by default (enable if needed)
     # disable :flash                  # Disables sinatra-flash (enabled by default if Sinatra::Flash is defined)
     layout  :application              # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
-    disable :cache
+    # disable :cache
 
     set :admin_model, 'Account'
     set :login_page,  '/sessions/new'
 
-    enable  :sessions
     disable :store_location
 
     access_control.roles_for :any do |role|
@@ -34,13 +31,12 @@ module Velo
     end
 
     access_control.roles_for :admin do |role|
-      role.project_module :pages, '/pages'
-      role.project_module :groups, '/groups'
+      role.project_module :countries, '/countries'
       role.project_module :posts, '/posts'
     end
 
     get "/" do
-      redirect_to "admin/posts"
+      redirect_to "admin/countries"
     end
 
     # Custom error management
