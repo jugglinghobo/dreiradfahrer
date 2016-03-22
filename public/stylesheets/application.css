@@ -6021,13 +6021,6 @@ html.fp-enabled,
     position: absolute;
     max-height: 100%; }
 
-#post-nav {
-  vertical-align: middle;
-  width: 200px;
-  position: fixed;
-  padding: 10% 1%;
-  z-index: 100; }
-
 .layout.layout-blog {
   height: 100%; }
 .layout.layout-admin {
