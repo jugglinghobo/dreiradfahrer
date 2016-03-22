@@ -16,4 +16,8 @@ Velo::Blog.controllers :pages do
       render 'sponsoren'
     end
 
+    get :impressum, :map => '/impressum' do
+      render 'impressum'
+    end
+
 end
