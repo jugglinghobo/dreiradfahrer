@@ -3,9 +3,10 @@
     .container
       #hajk.row
         .col-md-3
-          = image_tag 'hajk.jpg', :class => 'img-responsive vertical-center'
+          = link_to 'http://hajk.ch/', :target => :blank do
+            = image_tag 'hajk.jpg', :class => 'img-responsive vertical-center'
         .col-md-9
-          .h2 hajk
+          .h2= link_to 'hajk', 'http://hajk.ch/', :target => :blank
           %p.text-justify
             Hajk hat uns grosszügig mit Karten- und Ausrüstungsmaterial unterstützt.
             Zudem konnten wir auf eine grosszügige Preisereduktion zählen. Die
@@ -16,11 +17,13 @@
 
       #veloplus.row.top-buffer
         .col-md-3
-          = image_tag 'veloplus.jpg', :class => 'img-responsive vertical-center'
+          = link_to 'http://www.veloplus.ch/', :target => :blank do
+            = image_tag 'veloplus.jpg', :class => 'img-responsive vertical-center'
         .col-md-9
           .h2
-            VELO
-            %em><PLUS
+            = link_to 'http://www.veloplus.ch/', :target => :blank do
+              VELO
+              %em><PLUS
           %p.text-justify
             Veloplus hat uns mit seiner grossen und qualitativ hochwertigen
             Auswahl an Fahrrad- und Abenteuerausrüstung überzeugt. Dank einem
@@ -30,9 +33,10 @@
 
       #sistech.row.top-buffer
         .col-md-3
-          = image_tag 'sistech.jpg', :class => 'img-responsive vertical-center'
+          = link_to 'http://www.sistech.com/', :target => :blank do
+            = image_tag 'sistech.jpg', :class => 'img-responsive vertical-center'
         .col-md-9
-          .h2 SIStech
+          .h2= link_to 'SIStech', 'http://www.sistech.com/', :target => :blank
           %p.text-justify
             Dank dem mobilen Solarkraftwerk ist es uns möglich, die Website
             während unserer Reise fleissig mit Einträgen zu füllen, in allen
