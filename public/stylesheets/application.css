@@ -6116,7 +6116,6 @@ html.fp-enabled,
   margin-top: 50px; }
 
 #projekt,
-#sponsoren,
 #impressum {
   padding-top: 80px; }
 
@@ -6234,6 +6233,9 @@ h5, .h5 {
 .bottom {
   vertical-align: bottom;
   bottom: 0; }
+
+.justify {
+  text-align: justify; }
 
 .pointer {
   cursor: pointer; }
