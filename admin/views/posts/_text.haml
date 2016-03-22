@@ -1,0 +1,21 @@
+= form_for :post, url(:posts, :update, :id => post.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
+  - title = post.paragraphs.find_or_initialize_by(:rank => 0)
+  - content_left = post.paragraphs.find_or_initialize_by(:rank => 1)
+  - content_right = post.paragraphs.find_or_initialize_by(:rank => 2)
+  .layout.layout-admin
+    .full-height.row.form.top-buffer
+      .full-height.col-md-4.col-md-offset-2
+        .title
+          = f.fields_for :paragraphs, title, :index => title.rank do |ff|
+            = ff.hidden_field :rank, :value => title.rank
+            ~ ff.text_field :content, :placeholder => 'Titel', :autofocus => true, :class => 'form-control input-large input-with-feedback text'
+        .below-title
+          = f.fields_for :paragraphs, content_left, :index => content_left.rank do |ff|
+            = ff.hidden_field :rank, :value => content_left.rank
+            ~ ff.text_area :content, :placeholder => 'Text', :class => 'form-control input-large input-with-feedback text'
+      .full-height.col-md-4
+        = f.fields_for :paragraphs, content_right, :index => content_right.rank do |ff|
+          = ff.hidden_field :rank, :value => content_right.rank
+          ~ ff.text_area :content, :placeholder => 'Text', :class => 'form-control input-large input-with-feedback text'
+  .row.form-actions.top-buffer
+    = partial 'posts/form_actions', :locals => { :f => f }

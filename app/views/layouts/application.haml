@@ -16,22 +16,23 @@
   %body
     %nav#dreiradfahrer-navigation.navbar.navbar-default.navbar-fixed-top
       .container
-        / Brand and toggle get grouped for better mobile display
         .navbar-header
           %button.navbar-toggle.collapsed{'aria-expanded' => 'false', 'data-target' => '#collapse-nav', 'data-toggle' => 'collapse', :type => 'button'}
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          = link_to 'DreiRadFahrer', '/', :class => 'navbar-brand'
+          .pull-right
+            = link_to 'DreiRadFahrer', '/', :class => 'navbar-brand navbar-right'
         #collapse-nav.collapse.navbar-collapse
           %ul.nav.navbar-nav
-            %li=link_to 'Projekt', '/projekt', :class => 'navbar-nav-link'
-            %li=link_to 'Map', '/map', :class => 'navbar-nav-link'
-            %li=link_to 'Wir', '/wir', :class => 'navbar-nav-link'
-            %li=link_to 'Sponsoren', '/sponsoren', :class => 'navbar-nav-link'
-          -# %ul.nav.navbar-nav.navbar-right
-          -#   %li=link_to 'Login', '/admin', :class => 'navbar-nav-link'
+            %li=link_to 'Tagebuch', url(:countries, :index), :class => 'navbar-nav-link'
+            %li=link_to 'Projekt', url(:pages, :projekt), :class => 'navbar-nav-link'
+            %li=link_to 'Map', url(:pages, :map), :class => 'navbar-nav-link'
+            %li=link_to 'Wir', url(:pages, :wir), :class => 'navbar-nav-link'
+            %li=link_to 'Sponsoren', url(:pages, :sponsoren), :class => 'navbar-nav-link'
+          %ul.nav.navbar-nav.navbar-right
+            %li=link_to 'Login', '/admin', :class => 'navbar-nav-link'
     = yield
 
-    = javascript_include_tag 'jquery-1.11.0.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min jquery.fullPage.min jquery.slimscroll.min.js] : %w[bootstrap/alert bootstrap/button bootstrap/collapse bootstrap/dropdown bootstrap/modal bootstrap/tab jquery.fullPage.js jquery.slimscroll.min.js]), :application, :map
+    = javascript_include_tag 'jquery-1.11.0.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min jquery.fullPage.min jquery.slimscroll.min.js] : %w[bootstrap/alert bootstrap/button bootstrap/collapse jquery.fullPage.js jquery.slimscroll.min.js]), :application, :map
 

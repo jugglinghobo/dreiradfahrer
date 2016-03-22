@@ -1,20 +1,48 @@
 class Post < ActiveRecord::Base
-  belongs_to :group
-  has_many :pages
+  belongs_to :country
+  has_many :photos
+  has_many :paragraphs
+  accepts_nested_attributes_for :photos, :reject_if => :all_blank
+  accepts_nested_attributes_for :paragraphs, :reject_if => :all_blank
 
-  def self.pages
-    super.order :number
+  validates_presence_of :country, :number
+
+  before_create :set_number
+
+  def self.ordered
+    order(:number)
   end
 
-  def create_page
-    pages.create :number => next_page_number, :layout => Layout.default
+  def self.paragraphs
+    super.order :rank
   end
 
-  def next_page_number
-    pages.count
+  def self.photos
+    super.order :rank
   end
 
-  def url_string
-    title.gsub(" ", "_")
+  def title
+    paragraphs.first
   end
+
+  def content
+    paragraphs.second
+  end
+
+  def picture
+    photos.first.try(:picture)
+  end
+
+  def layout
+    read_attribute(:layout) || Layout.default
+  end
+
+  def layout_s
+    Layout.as_hash.key(layout)
+  end
+
+  def set_number
+    @number = country.next_post_number
+  end
+
 end

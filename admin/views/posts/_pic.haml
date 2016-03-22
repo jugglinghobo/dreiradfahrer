@@ -1,0 +1,17 @@
+= form_for :post, url(:posts, :update, :id => post.id), :method => :put, :multipart => true, :class => 'form-horizontal' do |f|
+  - photo = post.photos.find_or_initialize_by(:rank => 0)
+  .layout.layout-admin
+    .row.form.top-buffer.full-height
+      = f.fields_for :photos, photo do |ff|
+        = ff.hidden_field :rank, :value => photo.rank
+        - if photo.picture.exists?
+          .full-height.col-md-12
+            = image_tag photo.picture.url(:huge), :class => 'img-responsive center-block file-field-trigger pointer'
+            .hidden.hidden-file-field
+              = ff.file_field :picture
+        - else
+          .col-md-4.col-md-offset-4
+            = ff.file_field :picture, :class => 'form-control input-large input-with-feedback'
+
+  .row.top-buffer.form-actions
+    = partial 'posts/form_actions', :locals => { :f => f }
