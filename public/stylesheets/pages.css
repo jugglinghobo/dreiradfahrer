@@ -12,7 +12,7 @@ Error: Undefined variable: "$header-height".
 8: }
 9: 
 10: #projekt,
-11: #sponsoren,
+11: #impressum {
 
 Backtrace:
 /Users/simon/Projects/velo/app/stylesheets/pages.scss:6
@@ -90,4 +90,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$header-height\".\A         on line 6 of /Users/simon/Projects/velo/app/stylesheets/pages.scss\A \A 1: .page {\A 2:   height: 100%;\A 3: }\A 4: #map {\A 5:   width: 100%;\A 6:   height: calc(100% - #{$header-height});\A 7:   margin-top: $header-height;\A 8: }\A 9: \A 10: #projekt,\A 11: #sponsoren,"; }
+  content: "Error: Undefined variable: \"$header-height\".\A         on line 6 of /Users/simon/Projects/velo/app/stylesheets/pages.scss\A \A 1: .page {\A 2:   height: 100%;\A 3: }\A 4: #map {\A 5:   width: 100%;\A 6:   height: calc(100% - #{$header-height});\A 7:   margin-top: $header-height;\A 8: }\A 9: \A 10: #projekt,\A 11: #impressum {"; }
