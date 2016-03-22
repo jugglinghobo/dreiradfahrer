@@ -11,7 +11,7 @@
     slidesNavPosition: 'bottom',
     navigation: true,
     navigationPosition: 'left',
-    navigationTooltips: ['Joachim', 'Noah', 'Sandro'],
+    navigationTooltips: false,
     showActiveTooltip: false,
     autoScrolling: true,
     scrollOverflow: true,
