@@ -12,8 +12,8 @@ Velo::Blog.controllers :pages do
       render 'wir'
     end
 
-    get :sponsoren, :map => '/sponsoren' do
-      render 'sponsoren'
+    get :sponsoren_und_goenner, :map => '/sponsoren_und_goenner' do
+      render 'sponsoren_und_goenner'
     end
 
     get :impressum, :map => '/impressum' do
