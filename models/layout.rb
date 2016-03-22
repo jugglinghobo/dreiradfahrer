@@ -5,7 +5,8 @@ class Layout
       'Titel mit Bild' => 'title_with_pic',
       'Nur Bild' => 'pic',
       'Text links, Bild rechts' => 'text_left_pic_right',
-      'Bild links, Text rechts' => 'pic_left_text_right'
+      'Bild links, Text rechts' => 'pic_left_text_right',
+      'Nur Text' => 'text',
     }
   end
 

@@ -1,0 +1,9 @@
+- content_left = post.paragraphs.find_by(:rank => 1)
+- content_right = post.paragraphs.find_by(:rank => 2)
+.row.full-height
+  .col-md-6
+    %h2= post.title
+    %p.text= content_left
+  .full-height.col-md-6
+    %h2 &nbsp;
+    %p.text= content_right
