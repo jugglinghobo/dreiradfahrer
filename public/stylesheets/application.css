@@ -5971,8 +5971,8 @@ html.fp-enabled,
     left: 17px; }
   #fp-nav ul li .fp-tooltip {
     position: absolute;
-    top: -2px;
-    color: #fff;
+    top: -5px;
+    color: #6F6E6E;
     font-size: 14px;
     font-family: arial, helvetica, sans-serif;
     white-space: nowrap;
@@ -5984,6 +5984,8 @@ html.fp-enabled,
     cursor: pointer; }
     #fp-nav ul li .fp-tooltip.right {
       right: 20px; }
+    #fp-nav ul li .fp-tooltip.left {
+      left: 20px; }
   #fp-nav ul li:hover .fp-tooltip {
     -webkit-transition: opacity 0.2s ease-in;
     transition: opacity 0.2s ease-in;

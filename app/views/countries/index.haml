@@ -1,6 +1,6 @@
 #fullpage
   - @countries.each do |country|
-    .section{:data => {:anchor => country.url_string}}
+    .section{:data => { :anchor => country.url_string, :tooltip => country.to_s }}
       - country.posts.each do |post|
         .slide
           .container.fullpage-full-height
