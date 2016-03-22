@@ -1,7 +1,7 @@
 .row.full-height
   .col-md-6
     %h2= post.title
-    %p.text= post.content
+    = simple_format post.content, :class => 'text'
   .full-height.col-md-6
     - if (picture = post.picture)
       = image_tag picture.url(:huge), :class => 'img-responsive center-block'

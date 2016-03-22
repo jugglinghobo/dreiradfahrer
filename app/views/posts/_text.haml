@@ -3,7 +3,7 @@
 .row.full-height
   .col-md-6
     %h2= post.title
-    %p.text= content_left
+    = simple_format content_left, :class => 'text'
   .full-height.col-md-6
     %h2 &nbsp;
-    %p.text= content_right
+    = simple_format content_right, :class => 'text'

@@ -6256,6 +6256,10 @@ h5, .h5 {
   margin-left: 10px;
   border: none; }
 
+.collapse {
+  -webkit-transition: none;
+  transition: none; }
+
 #fp-nav {
   display: none; }
 

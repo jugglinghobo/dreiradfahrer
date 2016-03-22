@@ -4,4 +4,4 @@
       = image_tag picture.url(:large), :class => 'img-responsive center-block'
   .col-md-6
     %h2= post.title
-    %p.text= post.content
+    = simple_format post.content, :class => 'text'
