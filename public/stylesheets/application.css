@@ -6155,8 +6155,7 @@ html.fp-enabled,
     max-width: 100%;
     max-height: 100%; }
 
-#projekt,
-#sponsoren {
+#projekt {
   padding-top: 50px; }
 
 #sponsoren .h2 {
@@ -6219,6 +6218,9 @@ body {
   display: inline-block;
   vertical-align: bottom;
   float: none; }
+
+.justify {
+  text-align: justify; }
 
 .top-buffer {
   margin-top: 50px; }
