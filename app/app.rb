@@ -30,6 +30,18 @@ module Velo
         tag(:img, options)
       end
 
+      def lazy_video_tag(video, options = {})
+        options.reverse_merge!(
+          :controls => true,
+          :preload => 'auto',
+          :poster => video.url(:thumb),
+          :autoplay => true
+        )
+        content_tag(:video, options) do
+          tag(:source, :type => "video/mp4", :data => { :src => video.url(:medium) })
+        end
+      end
+
       def left_navigation
         content_tag :ul, :class => "list-group" do
           Group.all.each do |group|

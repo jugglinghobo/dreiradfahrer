@@ -26,6 +26,9 @@ ActiveRecord::Base.configurations[Padrino.env] = {
 # Setup our logger
 ActiveRecord::Base.logger = logger
 
+# Silence warning about new behaviour
+ActiveRecord::Base.raise_in_transactional_callbacks = true
+
 if ActiveRecord::VERSION::MAJOR.to_i < 4
   # Raise exception on mass assignment protection for Active Record models.
   ActiveRecord::Base.mass_assignment_sanitizer = :strict

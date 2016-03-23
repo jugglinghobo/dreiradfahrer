@@ -1,0 +1,8 @@
+.row.title-row
+  .title.col-md-12
+    %h1.text-center= post.title
+- if (video = post.video)
+  .row.below-title-row
+    .full-height.col-md-12
+      = lazy_video_tag video, :class => 'center-block'
+

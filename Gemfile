@@ -23,7 +23,7 @@ gem 'pg'
 gem 'dotenv'
 
 gem 'paperclip'
-gem 'paperclip-rack'
+gem 'paperclip-rack', require: 'paperclip/rack'
 gem 'paperclip-av-transcoder'
 gem 'tux'
 gem 'pry'
