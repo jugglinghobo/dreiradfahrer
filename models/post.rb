@@ -21,6 +21,19 @@ class Post < ActiveRecord::Base
     super.order :rank
   end
 
+  def self.update_multiple(posts_attributes)
+    Post.transaction do
+      posts_attributes.each do |post_id, post_attributes|
+        post = Post.find post_id
+        post.update_attributes post_attributes
+      end
+    end
+  end
+
+  def url_string
+    "/countries##{country.url_string}/#{number}"
+  end
+
   def title
     paragraphs.first
   end

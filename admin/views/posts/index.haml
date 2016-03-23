@@ -4,22 +4,34 @@
     = link_to url(:countries, :index), :class => 'btn btn-lg btn-link' do
       %span.glyphicon.glyphicon-arrow-left
       %span Alle Länder
-  .col-md-7
-    = link_to @country, url(:countries, :posts, :id => @country.id), :class => 'btn btn-lg btn-link'
   .col-md-2
+    = link_to @country, url(:countries, :posts, :id => @country.id), :class => 'btn btn-lg btn-link'
+
+  .col-md-2.col-md-offset-1
+    = submit_tag 'Reihenfolge Speichern', :class => 'btn btn-success', :form => 'update-numbers'
+  .col-md-2.col-md-offset-2
     = link_to 'Neuer Eintrag', url(:countries, :new_post, :id => @country.id), :class => 'btn btn-success btn-block'
 
 .top-buffer
 
-- @posts.each do |post|
-  .row.top-buffer
-    .col-md-2.col-md-offset-2
-      = link_to post.title, url(:posts, :edit, :id => post.id), :class => 'btn btn-lg btn-link'
-    .col-md-3
-      - picture = post.picture
-      - if (picture && picture.exists?)
-        = link_to image_tag(picture.url(:small), :class => 'center-block pointer'), url(:posts, :edit, :id => post.id)
-    .col-md-2
-      = link_to 'Eintrag anpassen', url(:posts, :edit, id: post.id), class: 'btn btn-default btn-block'
-    .col-md-2
-      = link_to 'Eintrag löschen', url(:posts, :destroy, :id => post.id, :js => true), :method => :delete, :confirm => 'Wirklich löschen?', :class => 'btn btn-danger btn-block'
+= form_for :posts, url(:posts, :update_multiple), :id => 'update-numbers', :method => :put do
+  = hidden_field_tag 'country_id', :value => @country.id
+  - @posts.each do |post|
+    .row.post.top-buffer.sortable
+      = hidden_field_tag "posts[#{post.id}]number", :value => post.number, :class => 'post-number'
+      .col-md-2.col-md-offset-1
+        = link_to post.title, url(:posts, :edit, :id => post.id), :class => 'btn btn-lg btn-link'
+      .col-md-2
+        - picture = post.picture
+        - if (picture && picture.exists?)
+          = link_to image_tag(picture.url(:small), :class => 'img-responsive center-block pointer'), url(:posts, :edit, :id => post.id)
+      .col-md-1.text-right
+        .btn.btn-link.btn-lg.move-up
+          %span.glyphicon.glyphicon-arrow-up
+      .col-md-1.text-right
+        .btn.btn-link.btn-lg.move-down
+          %span.glyphicon.glyphicon-arrow-down
+      .col-md-2
+        = link_to 'Eintrag anpassen', url(:posts, :edit, id: post.id), class: 'btn btn-default btn-block'
+      .col-md-2
+        = link_to 'Eintrag löschen', url(:posts, :destroy, :id => post.id, :js => true), :method => :delete, :confirm => 'Wirklich löschen?', :class => 'btn btn-danger btn-block'

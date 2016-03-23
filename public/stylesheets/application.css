@@ -6030,7 +6030,8 @@ html.fp-enabled,
 .layout .title-row {
   height: 10%; }
 .layout .below-title-row {
-  height: 84%; }
+  height: 83%;
+  margin-top: 5px; }
 .layout .row .title {
   text-align: center; }
 .layout .row .below-title {
@@ -6047,10 +6048,6 @@ html.fp-enabled,
   height: calc(100% - 46px); }
   .layout .col-image.top-buffer {
     height: calc(100% - (46px + 50px)); }
-
-.post {
-  height: 100%;
-  margin: 0 5% 0 2%; }
 
 #small-legend,
 #legend {

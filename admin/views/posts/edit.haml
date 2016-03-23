@@ -3,12 +3,14 @@
     = link_to url(:countries, :posts, :id => @post.country), :class => 'btn btn-lg btn-link' do
       %span.glyphicon.glyphicon-arrow-left
       %span= @post.country
-  = form_for :post, url(:posts, :update_layout, :id => @post.id), :method => :put, :class => 'form-horizontal', :id => 'post-layout-form', :remote => true do |f|
+  = form_for :post, url(:posts, :update_layout, :id => @post.id), :method => :put, :class => 'form', :id => 'post-layout-form', :remote => true do |f|
     .form-group
-      .col-md-4.col-md-offset-2
+      .col-md-4
         = f.select :layout, :options => Layout.as_hash.to_a, :id => "layout_select", :class => "form-control input-large input-with-feedback"
       .col-md-2
-        = f.submit 'Anpassen', :class => 'btn btn-default'
+        = f.submit 'Anpassen', :class => 'btn btn-default btn-block'
+  .col-md-2.col-md-offset-2
+    = link_to 'Anschauen', url(:posts, :show, :id => @post.id), :class => 'btn btn-default btn-block', :target => :blank
 #layout
   = partial "posts/#{@post.layout}", :locals => { :post => @post }
 

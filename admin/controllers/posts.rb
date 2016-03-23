@@ -1,5 +1,11 @@
 Velo::Admin.controllers :posts do
 
+  # Redirect to Blog App
+  get :show, :with => :id do
+    @post = Post.find params[:id]
+    redirect_to @post.url_string
+  end
+
   put :update_layout, :with => :id do
     @post = Post.find params[:id]
     @post.update_attributes params[:post]
@@ -34,5 +40,15 @@ Velo::Admin.controllers :posts do
       flash[:error] = 'Seite wurde nicht gelöscht'
     end
     redirect url(:countries, :posts, :id => post.country_id)
+  end
+
+  put :update_multiple do
+    @country = Country.find params[:country_id]
+    if Post.update_multiple params[:posts]
+      flash[:success] = 'Einträge angepasst'
+    else
+      flash[:error] = 'Einträge wurden nicht angepasst'
+    end
+    redirect url(:countries, :posts, :id => @country.id)
   end
 end
