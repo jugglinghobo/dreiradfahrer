@@ -6024,13 +6024,13 @@ html.fp-enabled,
     max-height: 100%; }
 
 .layout.layout-blog {
-  height: 100%; }
+  height: 90%; }
 .layout.layout-admin {
   height: 400px; }
 .layout .title-row {
-  height: 50px; }
+  height: 10%; }
 .layout .below-title-row {
-  height: calc(100% - 50px); }
+  height: 84%; }
 .layout .row .title {
   text-align: center; }
 .layout .row .below-title {

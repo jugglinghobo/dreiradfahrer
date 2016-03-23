@@ -3,7 +3,7 @@ Error: Undefined variable: "$layout-height".
         on line 8 of /Users/simon/Projects/velo/app/stylesheets/layouts.scss
 
 3:   &.layout-blog {
-4:     height: 100%;
+4:     height: 90%;
 5:   }
 6: 
 7:   &.layout-admin {
@@ -11,7 +11,7 @@ Error: Undefined variable: "$layout-height".
 9:   }
 10: 
 11:   .title-row {
-12:     height: $title-row-height;
+12:     height: 10%
 13:   }
 
 Backtrace:
@@ -99,4 +99,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$layout-height\".\A         on line 8 of /Users/simon/Projects/velo/app/stylesheets/layouts.scss\A \A 3:   &.layout-blog {\A 4:     height: 100%;\A 5:   }\A 6: \A 7:   &.layout-admin {\A 8:     height: $layout-height;\A 9:   }\A 10: \A 11:   .title-row {\A 12:     height: $title-row-height;\A 13:   }"; }
+  content: "Error: Undefined variable: \"$layout-height\".\A         on line 8 of /Users/simon/Projects/velo/app/stylesheets/layouts.scss\A \A 3:   &.layout-blog {\A 4:     height: 90%;\A 5:   }\A 6: \A 7:   &.layout-admin {\A 8:     height: $layout-height;\A 9:   }\A 10: \A 11:   .title-row {\A 12:     height: 10%\A 13:   }"; }
