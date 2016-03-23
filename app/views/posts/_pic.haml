@@ -2,4 +2,4 @@
 .row.full-height
   .full-height.col-md-12
     - if picture.exists?
-      = image_tag picture.url(:huge), :class => 'img-responsive center-block'
+      = lazy_image_tag picture.url(:huge), :class => 'img-responsive center-block'

@@ -4,4 +4,4 @@
 - if (picture = post.picture)
   .row.below-title-row
     .full-height.col-md-12
-      = image_tag picture.url(:huge), :class => 'img-responsive center-block'
+      = lazy_image_tag picture.url(:huge), :class => 'img-responsive center-block'

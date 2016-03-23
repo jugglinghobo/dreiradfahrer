@@ -1,24 +1,46 @@
 /*
-Error: Undefined variable: "$control-arrow-prev".
-        on line 80 of /Users/simon/Projects/velo/app/stylesheets/jquery.fullPage.scss
+Error: Undefined variable: "$text-color".
+        on line 159 of /Users/simon/Projects/velo/app/stylesheets/jquery.fullPage.scss
 
-75:   transform: translate3d(0,0,0);
-76: 
-77:   &.fp-prev {
-78:     left: 15px;
-79:     width: 0;
-80:     border-width: $control-arrow-prev;
-81:     border-color: transparent #000 transparent transparent;
-82:   }
-83: 
-84:   &.fp-next {
-85:     right: 15px;
+154:                 position: absolute;
+155:                 z-index: 1;
+156:                 height: 4px;
+157:                 width: 4px;
+158:                 border: 0;
+159:                 background: $text-color;
+160:                 left: 50%;
+161:                 top: 50%;
+162:                 margin: -2px 0 0 -2px;
+163:                 -webkit-transition: all 0.1s ease-in-out;
+164:                 -moz-transition: all 0.1s ease-in-out;
 
 Backtrace:
-/Users/simon/Projects/velo/app/stylesheets/jquery.fullPage.scss:80
+/Users/simon/Projects/velo/app/stylesheets/jquery.fullPage.scss:159
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
@@ -99,4 +121,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$control-arrow-prev\".\A         on line 80 of /Users/simon/Projects/velo/app/stylesheets/jquery.fullPage.scss\A \A 75:   transform: translate3d(0,0,0);\A 76: \A 77:   &.fp-prev {\A 78:     left: 15px;\A 79:     width: 0;\A 80:     border-width: $control-arrow-prev;\A 81:     border-color: transparent #000 transparent transparent;\A 82:   }\A 83: \A 84:   &.fp-next {\A 85:     right: 15px;"; }
+  content: "Error: Undefined variable: \"$text-color\".\A         on line 159 of /Users/simon/Projects/velo/app/stylesheets/jquery.fullPage.scss\A \A 154:                 position: absolute;\A 155:                 z-index: 1;\A 156:                 height: 4px;\A 157:                 width: 4px;\A 158:                 border: 0;\A 159:                 background: $text-color;\A 160:                 left: 50%;\A 161:                 top: 50%;\A 162:                 margin: -2px 0 0 -2px;\A 163:                 -webkit-transition: all 0.1s ease-in-out;\A 164:                 -moz-transition: all 0.1s ease-in-out;"; }

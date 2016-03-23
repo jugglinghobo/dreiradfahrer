@@ -38,10 +38,8 @@ var WorldMap = function() {
     }
   }
 
-}();
+};
 
 $(document).on('ready', function() {
-  if ($("#map").length) {
-    WorldMap.initialize();
-  }
+  WorldMap.initialize();
 });

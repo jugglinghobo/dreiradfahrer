@@ -1,7 +1,7 @@
 .row.full-height
   .full-height.col-md-6
     - if (picture = post.picture)
-      = image_tag picture.url(:large), :class => 'img-responsive center-block'
+      = lazy_image_tag picture.url(:large), :class => 'img-responsive center-block'
   .col-md-6
     %h2= post.title
     = simple_format post.content, :class => 'text'

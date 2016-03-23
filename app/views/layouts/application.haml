@@ -11,7 +11,6 @@
     -# = favicon_tag 'velo-icon.ico'
     %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
     = stylesheet_link_tag 'application'
-    = stylesheet_link_tag 'https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css'
 
   %body
     %nav#dreiradfahrer-navigation.navbar.navbar-default.navbar-fixed-top
@@ -35,5 +34,5 @@
             %li=link_to 'Login', '/admin', :class => 'navbar-nav-link'
     = yield
 
-    = javascript_include_tag 'jquery-1.11.0.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min jquery.fullPage.min jquery.slimscroll.min.js] : %w[bootstrap/alert bootstrap/button bootstrap/collapse jquery.fullPage.js jquery.slimscroll.min.js]), :application, :map
+    = javascript_include_tag 'jquery-1.11.0.min', 'jquery.fullPage', 'jquery.slimscroll.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min] : %w[bootstrap/alert bootstrap/button bootstrap/collapse]), :fullpage
 

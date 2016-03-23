@@ -1,7 +1,7 @@
 .layout {
 
   &.layout-blog {
-    height: 100%;
+    height: 90%;
   }
 
   &.layout-admin {
@@ -9,11 +9,11 @@
   }
 
   .title-row {
-    height: $title-row-height;
+    height: 10%
   }
 
   .below-title-row {
-    height: calc(100% - #{$title-row-height});
+    height: 84%;
   }
 
   .row {

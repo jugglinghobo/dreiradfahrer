@@ -24,6 +24,12 @@ module Velo
     end
 
     Blog.helpers do
+      def lazy_image_tag(url, options = {})
+        options.reverse_merge!(:src => nil)
+        options[:data] = { :src => image_path(url) }
+        tag(:img, options)
+      end
+
       def left_navigation
         content_tag :ul, :class => "list-group" do
           Group.all.each do |group|
