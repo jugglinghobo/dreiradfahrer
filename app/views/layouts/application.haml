@@ -34,5 +34,5 @@
             %li=link_to 'Login', '/admin', :class => 'navbar-nav-link'
     = yield
 
-    = javascript_include_tag 'jquery-1.11.0.min', 'jquery.fullPage', 'jquery.slimscroll.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min] : %w[bootstrap/alert bootstrap/button bootstrap/collapse]), :application, :map
+    = javascript_include_tag 'jquery-1.11.0.min', 'jquery.fullPage', 'jquery.slimscroll.min', (Padrino.env == :production ? %w[bootstrap/bootstrap.min] : %w[bootstrap/alert bootstrap/button bootstrap/collapse]), :fullpage
 
