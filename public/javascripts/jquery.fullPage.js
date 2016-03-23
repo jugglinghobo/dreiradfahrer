@@ -317,6 +317,7 @@
             }
 
             if (prev.length) {
+                scrollSlider(prev, 0);
                 scrollPage(prev, null, true);
             }
         };
@@ -334,6 +335,7 @@
             }
 
             if(next.length){
+                scrollSlider(next, 0);
                 scrollPage(next, null, false);
             }
         };
