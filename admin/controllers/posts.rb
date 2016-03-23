@@ -1,5 +1,11 @@
 Velo::Admin.controllers :posts do
 
+  # Redirect to Blog App
+  get :show, :with => :id do
+    @post = Post.find params[:id]
+    redirect_to @post.url_string
+  end
+
   put :update_layout, :with => :id do
     @post = Post.find params[:id]
     @post.update_attributes params[:post]

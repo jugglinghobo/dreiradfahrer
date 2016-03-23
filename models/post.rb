@@ -30,6 +30,10 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def url_string
+    "/countries##{country.url_string}/#{number}"
+  end
+
   def title
     paragraphs.first
   end

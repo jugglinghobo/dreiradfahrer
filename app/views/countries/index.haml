@@ -1,7 +1,7 @@
 #fullpage
   - @countries.each do |country|
     .section{:data => { :anchor => country.url_string, :tooltip => country.to_s }}
-      - country.posts.each do |post|
+      - country.posts.ordered.each do |post|
         .slide
           .container.full-height
             .layout.layout-blog

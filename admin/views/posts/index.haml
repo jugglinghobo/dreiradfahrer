@@ -8,7 +8,7 @@
     = link_to @country, url(:countries, :posts, :id => @country.id), :class => 'btn btn-lg btn-link'
 
   .col-md-2.col-md-offset-1
-    = submit_tag 'Reihenfolge Anpassen', :class => 'btn btn-submit', :form => 'update-numbers'
+    = submit_tag 'Reihenfolge Speichern', :class => 'btn btn-success', :form => 'update-numbers'
   .col-md-2.col-md-offset-2
     = link_to 'Neuer Eintrag', url(:countries, :new_post, :id => @country.id), :class => 'btn btn-success btn-block'
 

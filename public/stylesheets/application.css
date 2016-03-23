@@ -6030,7 +6030,8 @@ html.fp-enabled,
 .layout .title-row {
   height: 10%; }
 .layout .below-title-row {
-  height: 84%; }
+  height: 83%;
+  margin-top: 5px; }
 .layout .row .title {
   text-align: center; }
 .layout .row .below-title {
