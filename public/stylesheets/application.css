@@ -6048,10 +6048,6 @@ html.fp-enabled,
   .layout .col-image.top-buffer {
     height: calc(100% - (46px + 50px)); }
 
-.post {
-  height: 100%;
-  margin: 0 5% 0 2%; }
-
 #small-legend,
 #legend {
   display: none; }
