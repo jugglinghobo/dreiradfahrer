@@ -24,6 +24,7 @@ gem 'dotenv'
 
 gem 'paperclip'
 gem 'paperclip-rack'
+gem 'paperclip-av-transcoder'
 gem 'tux'
 gem 'pry'
 
