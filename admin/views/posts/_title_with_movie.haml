@@ -14,7 +14,7 @@
         = ff.hidden_field :rank, :value => movie.rank
         - if movie.video.exists?
           .full-height.col-md-12
-            = image_tag movie.video.url(:huge), :class => 'img-responsive center-block file-field-trigger pointer'
+            = image_tag movie.video.url(:thumb), :class => 'img-responsive center-block file-field-trigger pointer'
             .hidden.hidden-file-field
               = ff.file_field :video
         - else

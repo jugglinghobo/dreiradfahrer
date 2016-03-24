@@ -38,7 +38,7 @@ module Velo
           :autoplay => true
         )
         content_tag(:video, options) do
-          tag(:source, :type => "video/mp4", :data => { :src => video.url(:medium) })
+          tag(:source, :type => "video/mp4", :data => { :src => video.url(:mp4) })
         end
       end
 

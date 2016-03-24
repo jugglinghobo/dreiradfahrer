@@ -3,9 +3,13 @@ class Movie < ActiveRecord::Base
 
   has_attached_file(
     :video,
+    # :source_file_options => {
+    #   :all => 'auto-orient',
+    # },
     :styles => {
-      :medium => { :geometry => "640x480", :format => 'mp4' },
-      :thumb => { :geometry => "200x200#", :format => 'jpg', :time => 10 }
+      :original => {},
+      :mp4 => { :geometry => "640x480#", :format => 'mp4' },
+      :thumb => { :geometry => "300x200#", :format => 'jpg', :time => 2 }
     },
     path: "public/system/movies/:style/:id.:extension",
     :url => "/system/movies/:style/:id.:extension",
