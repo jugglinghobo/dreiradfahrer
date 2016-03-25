@@ -1,6 +1,8 @@
 class Movie < ActiveRecord::Base
   include Paperclip::Glue
 
+  belongs_to :post
+
   has_attached_file(
     :video,
     :styles => {

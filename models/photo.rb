@@ -2,6 +2,7 @@ class Photo < ActiveRecord::Base
   include Paperclip::Glue
 
   belongs_to :post
+
   has_attached_file(
     :picture,
     :styles => {

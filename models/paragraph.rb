@@ -1,5 +1,5 @@
 class Paragraph < ActiveRecord::Base
-  belongs_to :page
+  belongs_to :post
 
   def title
     content.split("\n").first.strip
