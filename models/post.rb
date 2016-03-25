@@ -1,9 +1,9 @@
 class Post < ActiveRecord::Base
   belongs_to :country
 
-  has_many :paragraphs
-  has_many :photos
-  has_many :movies
+  has_many :paragraphs, :dependent => :destroy
+  has_many :photos, :dependent => :destroy
+  has_many :movies, :dependent => :destroy
 
   accepts_nested_attributes_for :paragraphs, :reject_if => :all_blank
   accepts_nested_attributes_for :photos, :reject_if => :all_blank
