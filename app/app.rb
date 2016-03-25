@@ -34,8 +34,7 @@ module Velo
         options.reverse_merge!(
           :controls => true,
           :preload => 'auto',
-          :poster => video.url(:thumb),
-          :autoplay => true
+          :poster => video.url(:poster),
         )
         content_tag(:video, options) do
           tag(:source, :type => "video/mp4", :data => { :src => video.url(:mp4) })
