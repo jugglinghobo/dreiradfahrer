@@ -22,9 +22,14 @@
       .col-md-2.col-md-offset-1
         = link_to post.title, url(:posts, :edit, :id => post.id), :class => 'btn btn-lg btn-link'
       .col-md-2
-        - picture = post.picture
-        - if (picture && picture.exists?)
-          = link_to image_tag(picture.url(:small), :class => 'img-responsive center-block pointer'), url(:posts, :edit, :id => post.id)
+        - if post.photos.any?
+          - picture = post.picture
+          - if (picture && picture.exists?)
+            = link_to image_tag(picture.url(:small), :class => 'img-responsive center-block pointer'), url(:posts, :edit, :id => post.id)
+        - elsif post.movies.any?
+          - video = post.video
+          - if (video && video.exists?)
+            = link_to image_tag(video.url(:poster), :class => 'img-responsive center-block pointer'), url(:posts, :edit, :id => post.id)
       .col-md-1.text-right
         .btn.btn-link.btn-lg.move-up
           %span.glyphicon.glyphicon-arrow-up

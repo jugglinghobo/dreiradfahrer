@@ -7,6 +7,8 @@ class Layout
       'Text links, Bild rechts' => 'text_left_pic_right',
       'Bild links, Text rechts' => 'pic_left_text_right',
       'Nur Text' => 'text',
+      'Titel mit Video' => 'title_with_movie',
+      'Nur Video' => 'movie'
     }
   end
 

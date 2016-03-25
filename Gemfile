@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # gemspec
 
 # Server requirements
-# gem 'thin' # or mongrel
+gem 'thin'
 # gem 'trinidad', :platform => 'jruby'
 
 # Optional JSON codec (faster performance)
@@ -23,7 +23,8 @@ gem 'pg'
 gem 'dotenv'
 
 gem 'paperclip'
-gem 'paperclip-rack'
+gem 'paperclip-rack', require: 'paperclip/rack'
+gem 'paperclip-av-transcoder'
 gem 'tux'
 gem 'pry'
 

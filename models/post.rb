@@ -1,9 +1,13 @@
 class Post < ActiveRecord::Base
   belongs_to :country
-  has_many :photos
+
   has_many :paragraphs
-  accepts_nested_attributes_for :photos, :reject_if => :all_blank
+  has_many :photos
+  has_many :movies
+
   accepts_nested_attributes_for :paragraphs, :reject_if => :all_blank
+  accepts_nested_attributes_for :photos, :reject_if => :all_blank
+  accepts_nested_attributes_for :movies, :reject_if => :all_blank
 
   validates_presence_of :country, :number
 
@@ -18,6 +22,10 @@ class Post < ActiveRecord::Base
   end
 
   def self.photos
+    super.order :rank
+  end
+
+  def self.movies
     super.order :rank
   end
 
@@ -44,6 +52,10 @@ class Post < ActiveRecord::Base
 
   def picture
     photos.first.try(:picture)
+  end
+
+  def video
+    movies.first.try(:video)
   end
 
   def layout

@@ -1,0 +1,5 @@
+- if (video = post.video)
+  .row.full-height
+    .full-height.col-md-12
+      - if video.exists?
+        = lazy_video_tag video, :class => 'img-responsive center-block'

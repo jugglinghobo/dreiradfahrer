@@ -35,6 +35,7 @@ Padrino::Logger::Config[:development][:log_static] = true
 # Add your before (RE)load hooks here
 #
 Padrino.before_load do
+  Paperclip.options[:logger] = Padrino.logger
 end
 
 ##
