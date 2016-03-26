@@ -2,7 +2,7 @@ var WorldMap = function() {
 
   var accessToken = 'pk.eyJ1IjoiZHJlaXJhZGZhaHJlciIsImEiOiJjaWtoYWE1c3AwMDF5dzhsczFiaTU1Zm5kIn0.9oZmsOhe2xy-qG6rnz-UHQ'
   var mapId = 'dreiradfahrer.p4c1b8g6'
-  var markersPath = '/markers.geojson'
+  var geoJsonPath = '/mapdata.geojson'
 
   function initMap() {
     L.mapbox.accessToken = accessToken;
@@ -32,9 +32,25 @@ var WorldMap = function() {
     return map;
   }
 
+  function loadGeoJson(map) {
+    $.ajax({
+      url: geoJsonPath,
+      success: function(data) {
+        var geoJson = JSON.parse(data);
+        L.geoJson(geoJson, {
+          style: {
+            color: 'red',
+            opacity: 1,
+          }
+        }).addTo(map);
+      },
+    })
+  }
+
   return {
     initialize: function() {
-      initMap();
+      map = initMap();
+      loadGeoJson(map);
     }
   }
 

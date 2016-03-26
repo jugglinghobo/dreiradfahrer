@@ -9,16 +9,13 @@ module Velo
       redirect_to '/projekt'
     end
 
-    get '/markers.geojson' do
+    get '/mapdata.geojson' do
       markers = {
-        :geometry=>{
-          :type=>"Point",
-          :coordinates=>[
-            7.45,
-            46.95,
-          ]},
-          :type=>"Feature",
-          :properties=>{}
+        :type=>"LineString",
+        :coordinates => [
+          [ 7.45, 46.95 ],
+          [ 7.50, 46.90 ]
+        ]
       }
       markers.to_json
     end
