@@ -11,11 +11,8 @@ module Velo
 
     get '/mapdata.geojson' do
       markers = {
-        :type=>"LineString",
-        :coordinates => [
-          [ 7.45, 46.95 ],
-          [ 7.50, 46.90 ]
-        ]
+        :type => "LineString",
+        :coordinates => MapMarker.coordinates
       }
       markers.to_json
     end

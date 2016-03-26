@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 24) do
+ActiveRecord::Schema.define(version: 25) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 24) do
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "map_markers", force: :cascade do |t|
+    t.datetime "timestamp"
+    t.decimal  "longitude"
+    t.decimal  "latitude"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
