@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # gemspec
 
 # Server requirements
-gem 'thin'
+# gem 'thin'
 
 # Project requirements
 gem 'rake'

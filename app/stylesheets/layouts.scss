@@ -6,6 +6,10 @@
 
   &.layout-admin {
     height: $layout-height;
+
+    .text {
+      height: 100%;
+    }
   }
 
   .title-row {
@@ -30,7 +34,6 @@
 
 
   .text {
-    height: 100%;
     text-align: justify;
   }
 

@@ -6027,6 +6027,8 @@ html.fp-enabled,
   height: 90%; }
 .layout.layout-admin {
   height: 400px; }
+  .layout.layout-admin .text {
+    height: 100%; }
 .layout .title-row {
   height: 10%; }
 .layout .below-title-row {
@@ -6038,7 +6040,6 @@ html.fp-enabled,
   margin-top: 10px;
   height: calc(95% - (46px - 10px)); }
 .layout .text {
-  height: 100%;
   text-align: justify; }
 .layout .photo {
   height: 100%; }
