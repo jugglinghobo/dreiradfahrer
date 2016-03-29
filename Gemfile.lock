@@ -38,6 +38,8 @@ GEM
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.1)
     daemons (1.2.3)
+    domain_name (0.5.20160310)
+      unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.0)
     enumerable-lazy (0.0.1)
     eventmachine (1.2.0.1)
@@ -47,18 +49,31 @@ GEM
     json (1.8.3)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    mechanize (2.1.1)
+      domain_name (~> 0.5, >= 0.5.1)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.4, >= 2.4.1)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (~> 0.0, >= 0.0.9)
     method_source (0.8.2)
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0221)
     mimemagic (0.3.0)
+    mini_portile2 (2.0.0)
     minitest (5.8.4)
     moneta (0.7.20)
     mustermann19 (0.4.3)
       enumerable-lazy
+    net-http-digest_auth (1.4)
+    net-http-persistent (2.9.4)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.1.1)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
+    ntlm-http (0.1.1)
     padrino (0.13.1)
       padrino-admin (= 0.13.1)
       padrino-cache (= 0.13.1)
@@ -146,6 +161,10 @@ GEM
       sinatra (>= 1.2.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
+    webrobots (0.1.2)
 
 PLATFORMS
   ruby
@@ -159,6 +178,7 @@ DEPENDENCIES
   capistrano-rvm (~> 0.1.2)
   dotenv
   haml
+  mechanize
   padrino (~> 0.13.1)
   paperclip
   paperclip-av-transcoder
