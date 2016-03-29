@@ -32,6 +32,7 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    chronic (0.10.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -159,6 +160,8 @@ GEM
       unf_ext
     unf_ext (0.0.7.2)
     webrobots (0.1.2)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -182,6 +185,7 @@ DEPENDENCIES
   rake
   sass
   tux
+  whenever
 
 BUNDLED WITH
    1.10.6

@@ -20,6 +20,8 @@ gem 'dotenv'
 
 gem 'mechanize', :require => false
 
+gem 'whenever', :require => false
+
 gem 'paperclip'
 gem 'paperclip-rack', :require => 'paperclip/rack'
 gem 'paperclip-av-transcoder'
