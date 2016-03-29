@@ -13,7 +13,7 @@ set :output, "/home/dreiradfahrer/cron.log"
 #   rake "some:great:rake:task"
 # end
 #
-every 10.minutes do
+every 1.days, :at => '4:30 am' do
   rake "tracker:load_data"
 end
 
