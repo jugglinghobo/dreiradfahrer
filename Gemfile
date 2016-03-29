@@ -5,10 +5,6 @@ source 'https://rubygems.org'
 
 # Server requirements
 gem 'thin'
-# gem 'trinidad', :platform => 'jruby'
-
-# Optional JSON codec (faster performance)
-# gem 'oj'
 
 # Project requirements
 gem 'rake'
@@ -22,8 +18,10 @@ gem 'pg'
 
 gem 'dotenv'
 
+gem 'mechanize', :require => false
+
 gem 'paperclip'
-gem 'paperclip-rack', require: 'paperclip/rack'
+gem 'paperclip-rack', :require => 'paperclip/rack'
 gem 'paperclip-av-transcoder'
 gem 'tux'
 gem 'pry'
