@@ -82,7 +82,6 @@ Backtrace:
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.13.1/lib/padrino-core/reloader/rack.rb:25:in `call'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.13.1/lib/padrino-core/logger.rb:470:in `call'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sinatra-1.4.7/lib/sinatra/show_exceptions.rb:25:in `call'
-/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sinatra-1.4.7/lib/sinatra/base.rb:182:in `call'
 /Users/simon/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
 /Users/simon/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/sinatra-1.4.7/lib/sinatra/base.rb:2013:in `call'
@@ -92,11 +91,10 @@ Backtrace:
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:84:in `block in call'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `each'
 /Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `call'
-/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
-/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
-/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
-/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/eventmachine-1.2.0.1/lib/eventmachine.rb:1076:in `call'
-/Users/simon/.rbenv/versions/2.2.3/gemsets/velo/gems/eventmachine-1.2.0.1/lib/eventmachine.rb:1076:in `block in spawn_threadpool'
+/Users/simon/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+/Users/simon/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+/Users/simon/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+/Users/simon/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 */
 body:before {
   white-space: pre;
