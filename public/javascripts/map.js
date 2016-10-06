@@ -29,6 +29,9 @@ var WorldMap = function() {
       map.legendControl.addLegend(smallLegend);
     });
 
+    map.on('mousemove', function(e) {
+      document.getElementById('tooltip').innerHTML = JSON.stringify(e.latlng);
+    });
     return map;
   }
 
