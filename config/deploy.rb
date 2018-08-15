@@ -4,13 +4,18 @@
 set :application, 'dreiradfahrer'
 set :repo_url, 'git@github.com:jugglinghobo/dreiradfahrer.git'
 
-set :rvm_ruby_version, '2.2.3'
+set :rbenv_type, :user
+set :rbenv_ruby, '2.4.0'
 
 set :branch, ENV['branch'] || fetch(:branch) || :master
 
 set :ssh_options, {
   port: 37797
 }
+
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+set :rbenv_roles, :all # default value
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
