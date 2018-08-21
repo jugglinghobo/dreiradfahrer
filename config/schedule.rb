@@ -13,14 +13,14 @@ set :output, "/home/dreiradfahrer/cron.log"
 #   rake "some:great:rake:task"
 # end
 #
-every 1.days, :at => '11:30 am' do
-  rake "tracker:load_data"
-end
-every 1.days, :at => '05:30 pm' do
-  rake "tracker:load_data"
-end
-every 1.days, :at => '11:30 pm' do
-  rake "tracker:load_data"
-end
+# every 1.days, :at => '11:30 am' do
+#   rake "tracker:load_data"
+# end
+# every 1.days, :at => '05:30 pm' do
+#   rake "tracker:load_data"
+# end
+# every 1.days, :at => '11:30 pm' do
+#   rake "tracker:load_data"
+# end
 
 # Learn more: http://github.com/javan/whenever
