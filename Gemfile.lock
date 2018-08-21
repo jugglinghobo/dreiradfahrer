@@ -178,7 +178,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (>= 3.1)
+  activerecord
   bcrypt
   capistrano (~> 3.9)
   capistrano-bundler (~> 1.1, >= 1.1.4)
@@ -187,7 +187,7 @@ DEPENDENCIES
   dotenv
   haml
   mechanize
-  padrino (~> 0.14.3)
+  padrino
   paperclip
   paperclip-av-transcoder
   paperclip-rack

@@ -13,7 +13,7 @@ gem 'rake'
 gem 'bcrypt'
 gem 'sass'
 gem 'haml'
-gem 'activerecord', '>= 3.1', :require => 'active_record'
+gem 'activerecord', :require => 'active_record'
 gem 'pg'
 
 gem 'dotenv'
@@ -31,7 +31,7 @@ gem 'pry'
 # Test requirements
 
 # Padrino Stable Gem
-gem 'padrino', '~> 0.14.3'
+gem 'padrino'
 
 # Deployment with capistrano
 gem 'capistrano', '~> 3.9'
